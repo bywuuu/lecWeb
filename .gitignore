@@ -72,3 +72,12 @@ fabric.properties
 
 # Project exclude paths
 /venv/
+将删除 .gitignore
+将删除 .idea/inspectionProfiles/
+将删除 .idea/lecWeb.iml
+将删除 .idea/misc.xml
+将删除 .idea/modules.xml
+将删除 .idea/vcs.xml
+将删除 lecWeb/
+将删除 manage.py
+将删除 templates/
