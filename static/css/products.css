@@ -1,0 +1,416 @@
+.clear { height: 0; line-height: 0; font-size: 0; clear: both; }
+.clearfix { display: block; *zoom: 1;
+}
+.clearfix:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; overflow: hidden; }
+.clearboth { clear: both; }
+.t-c { text-align: center; }
+.pengke2 .a1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke2/a1.jpg*/ no-repeat center top; height: 114px; padding-top: 350px; }
+.pengke2 .a1 a { display: block; width: 250px; height: 54px; margin: auto; background: #fff03b; color: #682f00; font-size: 24px; border-radius: 27px; text-align: center; line-height: 53px; }
+.pengke2 .a1 a:hover { background: #fdff3b; }
+.pengke2 .a2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke2/a2.jpg*/ no-repeat center top; height: 200px; padding-top: 300px; }
+.pengke2 .a2 .t1 { color: #2e2f30; font-size: 22px; position: relative; left: 50%; margin-left: -280px; width: 750px; line-height: 40px; }
+.pengke2 .a2 .t2 { color: #333; font-size: 38px; position: relative; left: 50%; margin-left: -280px; margin-top: 30px; }
+.pengke2 .a3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke2/a3.jpg*/ no-repeat center top; height: 613px; }
+.pengke2 .a4 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke2/a4.jpg*/ no-repeat center top; height: 247px; padding-top: 150px; }
+.pengke2 .a4 .t1 { color: #FFF; font-size: 26px; position: relative; left: 50%; margin-left: -530px; font-weight: bold; }
+.pengke2 .a4 .t2 { color: #FFF; font-size: 22px; position: relative; left: 50%; margin-left: -530px; margin-top: 30px; width: 450px; line-height: 40px; }
+.pengke2 .a5 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke2/a5.jpg*/ no-repeat center top; height: 277px; padding-top: 130px; }
+.pengke2 .a5 .t1 { color: #FFF; font-size: 26px; position: relative; left: 50%; margin-left: 40px; font-weight: bold; }
+.pengke2 .a5 .t2 { color: #FFF; font-size: 22px; position: relative; left: 50%; margin-left: 40px; margin-top: 30px; width: 400px; line-height: 40px; }
+.pengke2 .a6 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke2/a6.jpg*/ no-repeat center top; height: 276px; padding-top: 110px; }
+.pengke2 .a6 .t1 { color: #FFF; font-size: 26px; position: relative; left: 50%; margin-left: -530px; font-weight: bold; }
+.pengke2 .a6 .t2 { color: #FFF; font-size: 22px; position: relative; left: 50%; margin-left: -530px; margin-top: 30px; width: 400px; line-height: 40px; }
+.pengke2 .a7 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke2/a7.jpg*/ no-repeat center top; height: 267px; padding-top: 130px; }
+.pengke2 .a7 .t1 { color: #FFF; font-size: 26px; position: relative; left: 50%; margin-left: 40px; font-weight: bold; }
+.pengke2 .a7 .t2 { color: #FFF; font-size: 22px; position: relative; left: 50%; margin-left: 40px; margin-top: 30px; width: 430px; line-height: 40px; }
+.pengke2 .a8 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke2/a8.jpg*/ no-repeat center top; height: 283px; padding-top: 110px; }
+.pengke2 .a8 .t1 { color: #FFF; font-size: 26px; position: relative; left: 50%; margin-left: -530px; font-weight: bold; }
+.pengke2 .a8 .t2 { color: #FFF; font-size: 22px; position: relative; left: 50%; margin-left: -530px; margin-top: 30px; width: 400px; line-height: 40px; }
+.pengke .banner { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke/banner.jpg*/ no-repeat center top; height: 185px; padding-top: 415px; }
+.pengke .banner a { display: block; width: 250px; height: 50px; background: #3FA9F5; border-radius: 25px; text-align: center; line-height: 50px; margin: auto; font-size: 24px; color: #1b1464; }
+.pengke .banner .text { position: relative; left: 50%; margin-left: -520px; margin-top: -260px; color: #FFF; line-height: 200%; font-size: 16px; }
+.pengke .banner a:hover { background: #57b2f4; }
+.pengke .a1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke/a1.jpg*/ no-repeat center top; height: 811px; padding-top: 50px; }
+.pengke .a1 .title { font-size: 44px; position: relative; left: 50%; margin-left: -400px; }
+.pengke .a1 .text { font-size: 16px; position: relative; left: 50%; margin-left: -530px; text-indent: 2em; line-height: 26px; margin-top: 30px; width: 310px; color: #4d4d4d; }
+.pengke .a2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke/a2.jpg*/ no-repeat center top; height: 713px; padding-top: 100px; }
+.pengke .a2 .title { font-size: 34px; margin: 0 auto; width: 140px; color: #FFF; }
+.pengke .a2 .text1 { font-size: 34px; position: relative; left: 50%; width: 220px; text-align: center; margin-left: -585px; margin-top: 320px; color: #FFF; display: inline-block; }
+.pengke .a2 .text2 { font-size: 34px; position: relative; left: 50%; width: 220px; text-align: center; margin-left: 250px; display: inline-block; color: #FFF; }
+.pengke .a2 .text3 { font-size: 34px; position: relative; left: 50%; width: 220px; text-align: center; margin-left: 250px; margin-top: 320px; color: #FFF; display: inline-block; }
+.pengke .a3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke/a3.jpg*/ no-repeat center top; height: 1538px; padding-top: 50px; }
+.pengke .a3 .title { font-size: 34px; margin: 0 auto; width: 140px; color: #4d4d4d; }
+.pengke .a3 .one { font-size: 24px; position: relative; left: 50%; margin-left: -570px; margin-top: 20px; }
+.pengke .a3 .onetext { font-size: 16px; position: relative; left: 50%; margin-left: -570px; margin-top: 10px; width: 530px; line-height: 30px; }
+.pengke .a3 .two { font-size: 24px; position: relative; left: 50%; margin-left: 160px; margin-top: 150px; }
+.pengke .a3 .twotext { font-size: 16px; position: relative; left: 50%; margin-left: 160px; margin-top: 10px; width: 400px; line-height: 30px; }
+.pengke .a3 .three { font-size: 24px; position: relative; left: 50%; margin-left: -570px; margin-top: 100px; }
+.pengke .a3 .threetext { font-size: 16px; position: relative; left: 50%; margin-left: -570px; margin-top: 10px; width: 480px; line-height: 30px; }
+.pengke .a3 .four { font-size: 24px; position: relative; left: 50%; margin-left: 160px; margin-top: 150px; }
+.pengke .a3 .fourtext { font-size: 16px; position: relative; left: 50%; margin-left: 160px; margin-top: 10px; width: 400px; line-height: 30px; }
+.pengke .a3 .five { font-size: 24px; position: relative; left: 50%; margin-left: -570px; margin-top: 220px; }
+.pengke .a3 .fivetext { font-size: 16px; position: relative; left: 50%; margin-left: -570px; margin-top: 10px; width: 480px; line-height: 30px; }
+.pengke .a4 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/pengke/a4.jpg*/ no-repeat center top; height: 794px; padding-top: 100px; }
+.pengke .a4 .title { font-size: 34px; margin: 0 auto; width: 140px; color: #FFF; }
+.pengke .a4 .text1 { width: 330px; position: relative; left: 50%; margin-left: -600px; color: #FFF; font-size: 16px; margin-top: 490px; line-height: 30px; display: inline-block; }
+.pengke .a4 .text1 .smtitle { font-size: 26px; margin-bottom: 40px; text-align: center; }
+.pengke .a4 .text2 { width: 330px; position: relative; color: #FFF; left: 50%; margin-left: 100px; font-size: 16px; display: inline-block; line-height: 30px; }
+.pengke .a4 .text2 .smtitle { font-size: 26px; margin-bottom: 40px; text-align: center; }
+.pengke .a4 .text3 { width: 330px; position: relative; color: #FFF; left: 50%; margin-left: 100px; font-size: 16px; display: inline-block; line-height: 30px; margin-top: 450px; }
+.pengke .a4 .text3 .smtitle { font-size: 26px; margin-bottom: 40px; text-align: center; }
+.oms .banner { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/oms/banner.jpg*/ no-repeat center top; height: 751px; }
+.oms .banner h1 { position: relative; font-size: 380%; display: inline-block; margin-top: 150px; left: 50%; margin-left: -500px; }
+.oms .banner h1 p { margin-top: 15px; display: block; }
+.oms .banner h3 { position: relative; font-size: 140%; display: block; margin-top: 20px; left: 50%; margin-left: -500px; }
+.oms .banner h4 { position: relative; font-size: 120%; display: block; margin-top: 60px; left: 50%; margin-left: -500px; font-weight: normal; line-height: 40px; color: #828075; }
+.oms .a1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/oms/a1.jpg*/ no-repeat center top; height: 2602px; padding-top: 190px; }
+.oms .a1 .main1 h2 { margin-left: auto; margin-right: auto; width: 180px; font-size: 180%; display: block; }
+.oms .a1 .main1 h3 { position: relative; left: 50%; margin-left: 100px; margin-top: 260px; font-size: 160%; display: block; font-weight: normal; margin-bottom: 15px; }
+.oms .a1 .main1 h4 { position: relative; left: 50%; margin-left: 100px; font-size: 110%; display: block; line-height: 25px; font-weight: normal; color: #666666; }
+.oms .a1 .main2 h2 { margin-left: auto; margin-right: auto; width: 180px; font-size: 180%; display: block; margin-top: 190px; }
+.oms .a1 .main2 h3 { position: relative; left: 50%; margin-left: -490px; margin-top: 200px; font-size: 160%; display: block; font-weight: normal; margin-bottom: 15px; }
+.oms .a1 .main2 h4 { position: relative; left: 50%; margin-left: -490px; font-size: 110%; display: block; line-height: 25px; font-weight: normal; color: #666666; }
+.oms .a1 .main3 h2 { margin-left: auto; margin-right: auto; width: 220px; font-size: 180%; margin-top: 150px; display: block; }
+.oms .a1 .main3 h3 { position: relative; left: 50%; margin-left: 100px; margin-top: 200px; font-size: 160%; display: block; font-weight: normal; margin-bottom: 15px; }
+.oms .a1 .main3 h4 { position: relative; left: 50%; margin-left: 100px; font-size: 110%; display: block; line-height: 25px; font-weight: normal; color: #666666; }
+.oms .a1 .main4 h2 { margin-left: auto; margin-right: auto; width: 180px; font-size: 180%; display: block; margin-top: 130px; }
+.oms .a1 .main4 h3 { position: relative; left: 50%; margin-left: -490px; margin-top: 200px; font-size: 160%; display: block; font-weight: normal; margin-bottom: 15px; }
+.oms .a1 .main4 h4 { position: relative; left: 50%; margin-left: -490px; font-size: 110%; display: block; line-height: 25px; font-weight: normal; color: #666666; }
+.oms .a1 .main5 h2 { margin-left: auto; margin-right: auto; width: 220px; font-size: 180%; margin-top: 150px; display: block; }
+.oms .a1 .main5 h3 { position: relative; left: 50%; margin-left: 100px; margin-top: 200px; font-size: 160%; display: block; font-weight: normal; margin-bottom: 15px; }
+.oms .a1 .main5 h4 { position: relative; left: 50%; margin-left: 100px; font-size: 110%; display: block; line-height: 25px; font-weight: normal; color: #666666; }
+.oms .a2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/oms/a2.jpg*/ no-repeat center top; height: 609px; padding-top: 150px; }
+.oms .a2 .content { width: 940px; height: 140px; margin-left: auto; margin-right: auto; padding: 30px; }
+.oms .a2 .content img { float: left; }
+.oms .a2 .content .text { float: left; margin-top: 20px; width: 600px; line-height: 25px; font-size: 110%; }
+.oms .a2 ul { position: relative; left: 50%; margin-left: -475px; }
+.oms .a2 li { width: 80px; height: 80px; float: left; border-radius: 50%; margin-right: 36px; cursor: pointer; overflow: hidden; opacity: 0; filter: alpaha(opacity=0); }
+.oms .tri { position: relative; margin-top: 5px; left: 50%; margin-left: -443px; }
+.oms .a2 .btn { margin-left: auto; margin-right: auto; margin-top: 200px; width: 350px; height: 60px; }
+.oms .a2 .btn:hover { opacity: 0.85; }
+.wp .banner { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/banner2.jpg*/ no-repeat center top; height: 430px; padding-top: 170px; }
+.wp .banner h2 { font-size: 200%; color: #FFF; position: relative; left: 50%; margin-left: -450px; }
+.wp .banner h1 { font-size: 350%; color: #FFF; margin-top: 30px; position: relative; left: 50%; margin-left: -420px; }
+.wp .banner h3 { font-size: 160%; color: #FFF; margin-top: 30px; position: relative; left: 50%; margin-left: -460px; font-weight: normal; }
+.wp .banner .order { display: inline-block; width: 220px; height: 60px; margin-top: 80px; position: relative; left: 50%; margin-left: -300px; line-height: 60px; color: #000; text-align: center; border-radius: 8px; font-size: 27px; background: #FFF; }
+.wp .banner .order:hover { background: #eeeeee; }
+.wp .main1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/a1.jpg*/ no-repeat center top; height: 539px; padding-top: 100px; }
+.wp .main1 h2 { font-size: 200%; color: #000; position: relative; margin: auto; width: 460px; }
+.wp .main1 h4 { font-size: 100%; color: #000; width: 400px; position: relative; margin-top: 60px; line-height: 30px; font-weight: normal; left: 50%; margin-left: 100px; }
+.wp .main1 .p { position: relative; font-size: 120%; margin-top: 30px; font-weight: normal; left: 50%; margin-left: 100px; }
+.wp .main1 .p a { float: left; color: #00AEEA; }
+.wp .main1 .go { margin-left: 7px; margin-top: -2px; width: 13px; height: 16px; padding-left: 3px; float: right; border-radius: 50%; border: 1px solid #00AEEA; }
+.wp .main2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/a2.jpg*/ no-repeat center top; height: 693px; padding-top: 100px; }
+.wp .main2 h2 { font-size: 200%; color: #000; position: relative; margin: auto; width: 340px; }
+.wp .main3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/a3.jpg*/ no-repeat center top; height: 1144px; padding-top: 100px; }
+.wp .main3 h2 { font-size: 200%; color: #000; position: relative; margin: auto; width: 420px; line-height: 40px; text-align: center; }
+.wp .main3 h4 { font-size: 110%; color: #000; width: 420px; position: relative; margin-top: 100px; line-height: 30px; font-weight: normal; left: 50%; margin-left: 30px; }
+.wp .main3 h5 { font-size: 110%; color: #000; width: 820px; position: relative; margin-top: 720px; line-height: 30px; font-weight: normal; left: 50%; margin-left: -400px; }
+.wp .main4 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/a4.jpg*/ no-repeat center top; height: 1043px; padding-top: 100px; }
+.wp .main4 h2 { font-size: 200%; color: #000; position: relative; margin: auto; line-height: 40px; width: 420px; text-align: center; }
+.wp .main4 h4 { font-size: 110%; color: #000; width: 820px; position: relative; margin-top: 390px; line-height: 30px; font-weight: normal; left: 50%; margin-left: -390px; }
+.wp .main4 h5 { font-size: 110%; color: #000; width: 820px; position: relative; margin-top: 370px; line-height: 30px; font-weight: normal; left: 50%; margin-left: -400px; }
+.wp .main5 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/a5.jpg*/ no-repeat center top; height: 680px; padding-top: 100px; }
+.wp .main5 h2 { font-size: 200%; color: #000; position: relative; margin: auto; line-height: 40px; width: 420px; text-align: center; }
+.wp .main5 h4 { font-size: 110%; width: 370px; position: relative; margin-top: 100px; line-height: 30px; font-weight: normal; left: 50%; color: #FFF; margin-left: 90px; }
+.wp .main5 h5 { font-size: 110%; width: 370px; position: relative; margin-top: 150px; line-height: 30px; font-weight: normal; left: 50%; color: #FFF; margin-left: -450px; }
+.wp .main6 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/a6.jpg*/ no-repeat center top; height: 950px; padding-top: 100px; }
+.wp .main6 h2 { font-size: 200%; color: #000; position: relative; margin: auto; line-height: 40px; width: 420px; text-align: center; }
+.wp .main6 h4 { font-size: 110%; width: 370px; position: relative; margin-top: 100px; line-height: 30px; font-weight: normal; left: 50%; color: #000; margin-left: 90px; }
+.wp .main6 h5 { font-size: 110%; width: 900px; position: relative; margin-top: 480px; line-height: 30px; font-weight: normal; left: 50%; color: #000; margin-left: -450px; }
+.wp .main7 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/a7.jpg*/ no-repeat center top; height: 970px; padding-top: 100px; }
+.wp .main7 h2 { font-size: 200%; color: #000; position: relative; margin: auto; line-height: 40px; width: 460px; text-align: center; }
+.wp .main7 h4 { font-size: 110%; width: 370px; position: relative; margin-top: 100px; line-height: 30px; font-weight: normal; left: 50%; color: #000; margin-left: 90px; }
+.wp .main7 h5 { font-size: 110%; width: 900px; position: relative; margin-top: 480px; line-height: 30px; font-weight: normal; left: 50%; color: #000; margin-left: -450px; }
+.wp .main8 { background: #FFF; height: 922px; }
+.wp .bottom-link { position: relative; left: 50%; margin-left: -350px; }
+.wp .btn2 { width: 170px; background: #00B1F4; }
+.wp .btn2:hover { width: 170px; color: #FFF; background: #33CCFF; }
+.wp .btn1 { color: #FFF; background: #FF8D00; width: 170px; }
+.wp .btn1:hover { background: #FFAA33; }
+.wp .hcases-bd .tab-hd li { border-color: #EC1A3A; color: #EC1A3A; }
+.wp .hcases-bd .tab-hd li.active { background: #EC1A3A; }
+.crm .banner { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/newimages/banner.jpg*/ no-repeat center top; height: 535px; color: #fff; padding-top: 230px; letter-spacing: 6px; }
+.crm .banner h1 { font-size: 430%; width: 900px; margin: auto; }
+.crm .banner b { color: #FFC290; }
+.crm .a1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/newimages/a1.jpg*/ no-repeat center top; height: 90px; }
+.crm .a1 ul { width: 880px; margin: auto; }
+.crm .a1 li { margin-top: 5px; padding-top: 33px; padding-right: 20px; padding-left: 20px; height: 52px; float: left; font-size: 120%; border-right: 4px solid #AEC2DC; }
+.crm .a1 a:hover { color: #666666; }
+.crm .a2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/newimages/a2.jpg*/ no-repeat center top; background-size: 110%; height: 1800px; text-align: center; }
+.crm .a2 h2 { font-size: 180%; }
+.crm .a2 h3 { font-size: 110%; display: block; line-height: 25px; font-weight: normal; color: #666666; }
+.crm .a3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/newimages/a3.jpg*/ no-repeat center top; height: 720px; padding-top: 80px; text-align: center; }
+.crm .a3 h1 { font-size: 350%; font-weight: normal; }
+.crm .a3 .content { margin-top: 90px; width: 1300px; height: 204px; position: relative; left: 50%; margin-left: -650px; font-weight: normal; font-size: 180%; text-align: left; line-height: 35px; background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/newimages/q1.jpg*/ no-repeat center; }
+.crm .a3 .content .c { width: 1105px; margin-left: auto; margin-right: auto; padding-top: 15px; }
+.crm .a3 .l { position: relative; left: 50%; margin-left: -650px; margin-top: -48px; width: 1295px; height: 127px; background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/newimages/l.jpg*/; }
+.crm .a3 .l label { float: left; }
+.crm .a3 .btn { margin: auto; margin-top: 70px; }
+.crm .a3 ul { margin-top: 46px; margin-left: 0px; }
+.crm .a3 li { width: 120px; height: 120px; float: left; border-radius: 50%; margin-right: 10px; cursor: pointer; opacity: 0; filter: alpaha(opacity=0); overflow: hidden; }
+.crm .a3 .order:hover { opacity: 0.85; }
+.bbc .bbc-banner { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/bbc/banner.jpg*/ no-repeat center top; height: 600px; }
+.page { position: relative; width: 1000px; margin: 0 auto; }
+.bbc .bbc-banner .order { width: 320px; height: 120px; position: absolute; top: 350px; left: 77px; }
+.products-step { height: 85px; line-height: 85px; width: 100%; background: #fff; }
+.products-step li { float: left; width: 199px; position: relative; text-align: center; border-right: 1px solid #ddd; }
+.products-step li.last { border-right: none; }
+.products-step li a { display: block; background: #fff; color: #666; font-size: 16px; width: 199px; height: 85px; }
+.products-step li a i { display: inline-block; width: 10px; height: 6px; overflow: hidden; background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/bbc/icon.png*/ no-repeat left top; margin-left: 10px; }
+.products-step li.active a, .products-step li a:hover { background: #db2037; color: #fff; }
+.products-step li.active a i, .products-step li a:hover i { background-position: -10px 0; }
+.products-step.fixed { position: fixed; top: 0; z-index: 999; height: 60px; }
+.products-step.fixed li a { height: 60px; line-height: 60px; }
+.bbc .main1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/bbc/main1.jpg*/ no-repeat center top; height: 1015px; }
+.bbc .main1 .main-title h3 { font-size: 30px; color: #fff; text-align: center; padding: 80px 0 20px; }
+.bbc .main1 .main-title p { color: #fff; font-size: 20px; line-height: 180%; text-align: center; ; }
+.bbc .main2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/bbc/main2.jpg*/ no-repeat center top; height: 1060px; }
+.bbc .main2 .main-title { color: #0777b8; font-size: 30px; padding: 80px 0; text-align: center; font-weight: bold; }
+.main2-body h3 { font-size: 18px; color: #333; padding-bottom: 20px; }
+.main2-body p { font-size: 14px; line-height: 24px; color: #666; }
+.bbc .main2 .pa { position: absolute; }
+.bbc .main2 .main2-info1 { top: 25px; left: 620px; }
+.bbc .main2 .main2-info2 { top: 170px; left: 0; }
+.bbc .main2 .main2-info3 { top: 260px; left: 620px; }
+.bbc .main2 .main2-info4 { top: 400px; left: 0; }
+.bbc .main2 .main2-info5 { top: 540px; left: 620px; }
+.bbc .main2 .main2-info6 { top: 650px; left: 0; }
+.bbc .main3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/bbc/main3.jpg*/ no-repeat center top; height: 620px; }
+.bbc .main3 .main-title { color: #fff; font-size: 30px; padding: 80px 0; text-align: center; font-weight: bold; }
+.bbc .main3 .main3-box { width: 320px; height: 320px; background: #fff; border-radius: 20px; float: left; margin-right: 20px; cursor: pointer; position: relative; }
+.bbc .main3 .main3-box .main-boxhide { display: none; background: #136d99; width: 320px; height: 320px; border-radius: 20px; float: left; margin-right: 20px; position: absolute; left: 0; top: 0; }
+.bbc .main3 .main3-box .main-boxhide h3 { font-size: 24px; color: #fff; font-weight: normal; padding: 30px 0 10px; }
+.bbc .main3 .main3-box .main-boxhide p { font-size: 18px; color: #fff; line-height: 30px; padding: 0 15px; }
+.bbc .main3 .main3-box:hover .main-boxhide { display: block; }
+.bbc .main3 .main3-box.last { margin-right: 0; }
+.bbc .main3 .main3-box .box-pic { text-align: center; padding: 70px 0 25px; }
+.bbc .main3 .main3-box h3 { font-size: 24px; text-align: center; font-weight: normal; color: #333; }
+.bbc .main3 .main3-box p { font-size: 18px; color: #666; padding: 15px 20px 0; line-height: 30px; }
+.bbc .main4 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/bbc/main4.jpg*/ no-repeat center top; height: 710px; }
+.bbc .main4 .main-title { color: #0777b8; font-size: 30px; padding: 90px 0 60px; text-align: center; font-weight: bold; }
+.bbc .main4 .main4-box { width: 205px; float: left; margin-right: 60px; }
+.bbc .main4 .main4-box.last { margin-right: 0; }
+.bbc .main4 .main4-box .box-pic { text-align: center; }
+.bbc .main4 .main4-box h3 { text-align: center; font-size: 24px; padding: 30px 0; }
+.bbc .main4 .main4-box p { font-size: 16px; line-height: 24px; }
+.bbc .main5 { background: #2e4662; padding-bottom: 100px; }
+.bbc .main5 .main-title { color: #fff; font-size: 30px; padding: 90px 0 60px; text-align: center; font-weight: bold; }
+.bbc .main5 .order { display: block; width: 300px; height: 70px; line-height: 70px; background: #e0192c; border-radius: 10px; margin: 100px auto 0; text-align: center; font-size: 30px; color: #fff; }
+.bbc .main5 .order:hover { background: #ff0018; }
+.b2c .b2c-banner { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2c/banner.png*/ no-repeat center top; height: 600px; }
+.b2c .b2c-banner .order { display: block; width: 425px; height: 80px; line-height: 80px; position: absolute; left: 50%; margin-left: -212px; top: 430px; background: #cb203c; color: #fff; text-align: center; font-size: 30px; }
+.b2c .b2c-banner .order:hover { background: #ee0e33; }
+.b2c .products-step { background: #f5f5f5; }
+.b2c .products-step li a { background: #f5f5f5; }
+.b2c .products-step li a:hover, .b2c .products-step li.active a { background: #db2037; }
+.b2c .main1 .main-title h3 { font-size: 30px; padding: 90px 0 20px; text-align: center; font-weight: bold; }
+.b2c .main1 .main-title p { font-size: 20px; text-align: center; line-height: 180%; padding-bottom: 60px; }
+.b2c .main1 .main1-info1 { font-size: 30px; text-align: center; font-weight: bold; color: #345b9b; }
+.b2c .main1 .main1-img1 { text-align: center; padding: 50px 0 90px; }
+.b2c .main2 .main-title { font-size: 30px; text-align: center; font-weight: bold; color: #2b4b8a; padding: 90px 0 60px; background-color: #75a5d2; }
+.b2c .main2 .main2-boxblue { background-color: #75a5d2; padding-bottom: 60px; }
+.b2c .main2 .main2-boxblue h3 { font-size: 30px; text-align: center; color: #fff; }
+.b2c .main2 .main2-boxblue p { color: #fff; text-align: center; font-size: 20px; padding: 15px 0 60px; }
+.b2c .main2 .main2-left { float: left; width: 240px; color: #fff; font-size: 28px; text-align: center; padding-top: 60px; line-height: 200%; }
+.b2c .main2 .main3-right { float: left; }
+.b2c .main2 .main2-white { padding: 90px 0 60px; }
+.b2c .main2 .main2-white h3 { font-size: 30px; text-align: center; color: #2b4b8a; }
+.b2c .main2 .main2-white p { font-size: 20px; padding: 15px 0 10px; color: #2b4b8a; line-height: 200%; }
+.b2c .main3 { background-color: #75a5d2; padding: 90px 0; }
+.b2c .main3 h3 { font-size: 30px; text-align: center; color: #fff; padding: 0 0 60px; }
+.b2c .main4 { padding: 90px 0; }
+.b2c .main4 h3 { font-size: 30px; text-align: center; color: #2b4b8a; }
+.b2c .main4 p { font-size: 20px; padding: 15px 0 100px; color: #2b4b8a; line-height: 200%; }
+.b2c .main4 .main4-box { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2c/main4_bg.jpg*/ no-repeat center top; height: 1969px; position: relative; }
+.b2c .main4 .main4-box h3 { font-size: 30px; text-align: left; }
+.b2c .main4 .main4-box p { font-size: 20px; text-align: left; color: #272425; line-height: 180%; }
+.b2c .main4 .main4-box .box-step1 { position: absolute; width: 450px; left: 25px; top: 50px; }
+.b2c .main4 .main4-box .box-step2 { position: absolute; width: 450px; left: 580px; top: 450px; }
+.b2c .main4 .main4-box .box-step3 { position: absolute; width: 450px; left: 25px; top: 870px; }
+.b2c .main4 .main4-box .box-step4 { position: absolute; width: 450px; left: 580px; top: 1270px; }
+.b2c .main4 .main4-box .box-step5 { position: absolute; width: 450px; left: 25px; top: 1630px; }
+.b2c .main5 h3 { font-size: 30px; text-align: center; color: #2b4b8a; padding-top: 60px; }
+.hcases-bd .tab-bd .hcases-slide { height: 470px; font-size: 18px; margin-bottom: 27px; }
+.b2c .main5 .slide-info { line-height: 180%; overflow: hidden; width: 1000px; }
+.b2c .main5 .slide-info b { color: #CA1F3D; font-weight: bold; }
+.hcases-bd .tab-bd .hcases-slide .direction-nav li { width: 31px; height: 55px; top: 200px; }
+.hcases-bd .tab-bd .hcases-slide .direction-nav li.prev { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2c/icon.png*/ no-repeat left top; }
+.hcases-bd .tab-bd .hcases-slide .direction-nav li.next { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2c/icon.png*/ no-repeat right top; }
+.hcases-bd .tab-bd .hcases-thumb li { width: 233px; height: 53px; cursor: pointer; border: 1px solid #8e0404; }
+.hcases-bd .tab-bd .hcases-thumb li.active { border: 1px solid #4376bb; }
+.bottom-link { padding: 0 0 50px; width: 360px; margin: 0 auto; }
+.bottom-link a { display: block; width: 165px; height: 48px; text-align: center; line-height: 46px; color: #fff; font-size: 20px; font-weight: bold; float: left; margin-right: 30px; background: -ms-linear-gradient(top, #efc031, #d6672d); background: -moz-linear-gradient(top, #efc031, #d6672d); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#efc031), to(#d6672d)); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#efc031), to(#d6672d)); background: -webkit-linear-gradient(top, #efc031, #d6672d); background: -o-linear-gradient(top, #607eed, #d6672d); border-radius: 5px; }
+.bottom-link a:hover { background: -ms-linear-gradient(top, #d6672d, #efc031); background: -moz-linear-gradient(top, #d6672d, #efc031); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d6672d), to(#efc031)); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d6672d), to(#efc031)); background: -webkit-linear-gradient(top, #d6672d, #efc031); background: -o-linear-gradient(top, #d6672d, #efc031); }
+.hcases-bd .tab-hd li { border-color: #cb203c; color: #cb203c; }
+.hcases-bd .tab-hd li.active { background: #cb203c; }
+.dszt .banner { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/dszt/banner.jpg*/ no-repeat center top; height: 765px; }
+.dszt .banner p { font-size: 22px; color: #fff; line-height: 60px; width: 950px; margin: 0 auto; padding-top: 310px; text-align: center; }
+.dszt .banner h3 { text-align: center; font-size: 30px; color: #fff; padding-top: 10px; }
+.dszt .banner .order { display: block; width: 310px; height: 75px; line-height: 72px; text-indent: 40px; color: #fff; font-size: 30px; margin: 30px auto 0; background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/dszt/icon.png*/ no-repeat 235px center #645df5; }
+.dszt .banner .order:hover { background-color: #3d34f2; }
+.dszt .dszt-main1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/dszt/main1.png*/ no-repeat center top; height: 748px; }
+.dszt .dszt-main1 .mian1-title { font-size: 36px; color: #fff; text-align: center; padding: 60px 0 60px; font-weight: bold; }
+.dszt .dszt-main1 .main1-box { width: 220px; float: left; margin-right: 40px; }
+.dszt .dszt-main1 .main1-box.last { margin-right: 0; }
+.dszt .dszt-main1 .main1-box .box-pic { text-align: center; }
+.dszt .dszt-main1 .main1-box h3 { font-size: 18px; color: #fff; line-height: 180%; padding-top: 20px; }
+.dszt .dszt-main1 .main1-box .box-info { color: #fff; font-size: 14px; line-height: 180%; padding-top: 10px; white-space: nowrap; }
+.dszt .dszt-main2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/dszt/main2.png*/ no-repeat center top; height: 650px; }
+.dszt .dszt-main3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/dszt/main3.png*/ no-repeat center top; height: 703px; }
+.dszt .dszt-main4 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/dszt/main4.png*/ no-repeat center top; height: 651px; }
+.dszt .dszt-main5 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/dszt/main5.png*/ no-repeat center top; height: 703px; }
+.dszt .dszt-main6 { background: #fff; padding: 60px 0; text-align: center; }
+.dszt .dszt-main6 .main-title { font-size: 36px; text-align: center; padding-bottom: 30px; }
+.dszt .dszt-main6 a { display: block; width: 310px; height: 75px; line-height: 75px; background: #4298d5; color: #fff; text-align: center; margin: 0 auto; font-size: 30px; }
+.dszt .dszt-main6 a span { display: inline-block; background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/dszt/icon_down.png*/ no-repeat right center; padding-right: 40px; }
+.dszt .dszt-main6 a:hover { background: #249ff7; }
+.dszt .dszt-t .mian2-title { font-size: 36px; color: #fff; text-align: center; padding: 110px 0 70px; font-weight: bold; }
+.dszt .dszt-t .mian-info { position: absolute; width: 370px; top: 320px; left: 0; }
+.dszt .dszt-t .mian-info h3 { font-size: 36px; color: #333; font-weight: normal; padding-bottom: 20px; line-height: 120%; }
+.dszt .dszt-t .mian-info { color: #666; font-size: 18px; line-height: 180%; }
+.qqdxs .qqdsx-banner { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/qqdxs/banner.jpg*/ no-repeat center top; height: 718px; }
+.qqdxs .qqdsx-banner .page { padding-top: 410px; }
+.qqdxs .qqdsx-banner .order { display: block; width: 280px; height: 60px; line-height: 60px; color: #fff; background: #ff0000; text-align: center; font-size: 30px; border-radius: 5px; margin: 0 auto; }
+.qqdxs .qqdsx-banner .order:hover { background: #b50404; }
+.qqdxs-main1 { padding: 70px 0; text-align: center; }
+.qqdxs-title { font-size: 30px; padding-bottom: 70px; }
+.qqdxs-info { text-align: left; line-height: 200%; font-size: 18px; color: #646464; }
+.qqdxs-main2 .bg1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/qqdxs/bg1.jpg*/ no-repeat center top; height: 563px; }
+.qqdxs-main2 .bg2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/qqdxs/bg2.jpg*/ no-repeat center top; height: 376px; }
+.qqdxs-main2 .bg3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/qqdxs/bg3.jpg*/ no-repeat center top; height: 453px; }
+.qqdxs-main2 .bg1 .main2-title { color: #fff; font-size: 30px; padding: 100px 0 0; text-align: center; }
+.qqdxs-main2 .bg1-info { padding-top: 140px; }
+.qqdxs-main2 .bg2-info { padding: 50px 0 0 450px; }
+.qqdxs-main2 .bg2-info div { color: #e47f77; font-size: 14px; line-height: 150%; padding-top: 10px; }
+.qqdxs-main2 h3 { color: #fff; font-size: 24px; padding-bottom: 10px; }
+.qqdxs-main2 p { width: 550px; line-height: 200%; font-size: 18px; color: #fff; }
+.qqdxs-main3 { padding: 80px 0; }
+.qqdxs-main3 .qqdxs-title { text-align: center; }
+.qqdxs-main3 .main3-box { float: left; width: 130px; text-align: center; margin-right: 44px; }
+.qqdxs-main3 .main3-box h3 { font-size: 18px; color: #000; line-height: 180%; padding: 10px 0; }
+.qqdxs-main3 .main3-box.last { margin: 0; }
+.qqdxs-main3 .main3-box .box-info { color: #666; font-size: 14px; line-height: 180%; }
+.qqdxs-main3 .order { display: block; width: 280px; height: 60px; line-height: 60px; color: #fff; background: #ff0000; text-align: center; font-size: 30px; border-radius: 5px; margin: 50px auto; }
+.qqdxs-main3 .order:hover { background: #b50404; }
+.webpos .webpos-banner { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/banner.jpg*/ no-repeat center top; height: 734px; }
+.webpos .webpos-banner .banner-link { display: block; position: absolute; width: 165px; height: 60px; left: 244px; top: 587px; }
+.webpos .webpos-banner .banner-link2 { display: block; position: absolute; width: 165px; height: 60px; left: 563px; top: 587px; }
+.webpos .main1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/main1.jpg*/ no-repeat center top; height: 1186px; }
+.webpos .main2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/main2.jpg*/ no-repeat center top; height: 1203px; }
+.webpos .main3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/main3.jpg*/ no-repeat center top; height: 1249px; }
+.webpos .main4 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/main4.jpg*/ no-repeat center top; height: 1269px; }
+.webpos .main5 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/main5.jpg*/ no-repeat center top; height: 1257px; }
+.webpos .main6 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/main6.jpg*/ no-repeat center top; height: 1199px; }
+.webpos .main7 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/main7.jpg*/ no-repeat center top; height: 695px; }
+.webpos .main8 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/main8.jpg*/ no-repeat center top; height: 1629px; }
+.webpos .main9 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/webpos/main9.jpg*/ no-repeat center top; height: 849px; }
+.webpos .web-info { width: 960px; margin: 0 auto; position: relative; color: #666; line-height: 200%; font-size: 12px; }
+.webpos a { color: #0b5dba; }
+.webpos .main1-info { padding-top: 960px; }
+.webpos .web-info.main2-info { padding: 625px 0 0 70px; }
+.webpos .web-info.main21-info { padding: 330px 0 0 70px; }
+.webpos .web-info.main4-info { padding: 770px 0 0 40px; width: 1000px; }
+.webpos .web-info.main41-info { padding: 280px 0 0 80px; }
+.webpos .web-info.main5-info { padding: 700px 0 0 70px; }
+.webpos .web-info.main51-info { padding: 340px 0 0 70px; }
+.webpos .web-info.main6-info { padding: 605px 0 0 70px; }
+.webpos .web-info.main61-info { padding: 340px 0 0 70px; }
+.webpos .main9-a { position: absolute; font-size: 12px; color: #0b5dba; top: 605px; right: 175px; }
+.o2o h3 { font-size: 30px; padding-bottom: 30px; }
+.o2o p { font-size: 20px; line-height: 180%; }
+.o2o .o2o-banner { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/o2o/banner.png*/ no-repeat center top; height: 620px; }
+.o2o .o2o-banner .order { width: 255px; height: 68px; display: block; position: absolute; top: 425px; left: 372px; }
+.o2o .main1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/o2o/main1.png*/ no-repeat center top #2167ab; height: 764px; text-align: center; color: #fff; padding-top: 70px; }
+.o2o .main2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/o2o/main2.png*/ no-repeat center top #2e3132; height: 760px; text-align: center; color: #fff; padding-top: 70px; }
+.o2o .main3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/o2o/main3.png*/ no-repeat center top #eee; height: 1550px; text-align: center; color: #2e3132; padding-top: 70px; }
+.o2o .main4 { text-align: center; color: #2e3132; padding-top: 70px; }
+.o2o .main5 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/o2o/main5.jpg*/ no-repeat center top; height: 1577px; text-align: center; color: #fff; padding-top: 70px; }
+.b2cnew .banner { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/banner.jpg*/ no-repeat center top; height: 460px; padding-top: 140px; }
+.b2cnew .banner h1 { text-align: center; font-size: 60px; color: #FFF; font-weight: normal; margin-bottom: 35px; }
+.b2cnew .banner h2 { text-align: center; font-size: 24px; color: #FFF; font-weight: normal; line-height: 35px; margin-bottom: 40px; }
+.b2cnew .banner h3 { text-align: center; font-size: 20px; color: #FFF; font-weight: normal; }
+.b2cnew .banner .btn { width: 440px; margin-left: auto; margin-right: auto; margin-top: 40px; }
+.b2cnew .banner .btn a:nth-child(1) { display: block; width: 200px; height: 50px; border-radius: 5px; color: #FFF; background: #3eb3de; font-size: 20px; text-align: center; line-height: 48px; margin-right: 35px; float: left; }
+.b2cnew .banner .btn a:nth-child(1):hover { background: #45c4f3; }
+.b2cnew .banner .btn a:nth-child(2) { display: block; float: left; width: 200px; height: 50px; border-radius: 5px; color: #FFF; background: #ff6600; font-size: 20px; text-align: center; line-height: 48px; }
+.b2cnew .banner .btn a:nth-child(2):hover { background: #fd7a23; }
+.b2cnew .bar { width: 100%; height: 80px; background: #f6f6f6; }
+.b2cnew .bar ul { width: 1050px; height: 80px; margin: 0 auto; }
+.b2cnew .bar li { float: left; width: 170px; height: 80px; border-left: 1px solid #dedede; text-align: center; font-size: 16px; color: #666666; line-height: 75px; font-weight: bold; cursor: pointer; }
+.b2cnew .bar li:hover { background: #3eb3de; color: #FFF; }
+.b2cnew .bar li.last { border-right: 1px solid #dedede; }
+.b2cnew .bar li span { position: relative; margin-left: -13px; }
+.b2cnew .bar li span img { position: absolute; top: 0px; margin-left: 10px; }
+.b2cnew .a1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/a1.jpg*/ no-repeat center top; height: 439px; padding-top: 30px; }
+.b2cnew .a1 p { color: #333; font-size: 14px; font-weight: bold; line-height: 30px; }
+.b2cnew .a1 b { color: #666; font-size: 12px; font-weight: normal; }
+.b2cnew .a1 b font { color: #ff6600; font-weight: bold; }
+.b2cnew .a1 .a { float: left; position: relative; left: 50%; margin-left: -260px; margin-top: 60px; }
+.b2cnew .a1 .b { position: relative; left: 50%; margin-left: 140px; margin-top: 60px; }
+.b2cnew .a1 .c { float: left; position: relative; left: 50%; margin-left: -260px; margin-top: 95px; }
+.b2cnew .a1 .d { position: relative; left: 50%; margin-left: 140px; margin-top: 95px; }
+.b2cnew .a2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/a2.jpg*/ no-repeat center top; height: 1000px; padding-top: 80px; }
+.b2cnew .a2 h2 { text-align: center; color: #32aecc; font-size: 24px; margin-top: 50px; font-weight: normal; }
+.b2cnew .a2 .case { width: 1004px; height: 300px; margin-left: auto; margin-right: auto; margin-top: 30px; }
+.b2cnew .a2 .case .one { width: 239px; height: 300px; margin-right: 13px; float: left; background: #FFF; position: relative; border: 1px solid #dddddd; -webkit-transition: .4s; -o-transition: .4s; -moz-transition: .4s; -ms-transition: .4s; }
+.b2cnew .a2 .case .one.last { margin-right: 0; }
+.b2cnew .a2 .case .one #img { width: 239px; height: 165px; border-bottom: 1px solid #dddddd; -webkit-transition: .4s; -o-transition: .4s; -moz-transition: .4s; -ms-transition: .4s; }
+.b2cnew .a2 .case .one .img1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/b1.jpg*/; background-size: 100% 100%; }
+.b2cnew .a2 .case .one .img2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/b2.jpg*/; background-size: 100% 100%; }
+.b2cnew .a2 .case .one .img3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/b3.jpg*/; background-size: 100% 100%; }
+.b2cnew .a2 .case .one .img4 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/b4.jpg*/; background-size: 100% 100%; }
+.b2cnew .a2 .case .one p { text-align: center; font-size: 16px; color: #555; font-weight: normal; line-height: 42px; }
+.b2cnew .a2 .case .one b { display: block; font-size: 12px; margin-top: -20px; color: #555; font-weight: normal; line-height: 24px; padding: 15px; text-align: left; }
+.b2cnew .a2 .case .one a { position: absolute; bottom: 15px; width: 110px; height: 30px; left: 50%; margin-left: -55px; border-radius: 5px; display: block; font-size: 14px; color: #555; text-align: center; line-height: 28px; border: 1px solid #d4d4d4; }
+.b2cnew .a2 .case .one a img { width: 13px; height: 12px; margin-left: 3px; }
+.b2cnew .a2 .case .one:hover { background: #3eb3de; }
+.b2cnew .a2 .case .one:hover p, .b2cnew .a2 .case .one:hover b { color: #FFF; }
+.b2cnew .a2 .case .one:hover a { color: #FFF; border: 1px solid #FFF; }
+.b2cnew .a2 .case .one:hover .img1 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/b1after.jpg*/; background-size: 100% 100%; }
+.b2cnew .a2 .case .one:hover .img2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/b2after.jpg*/; background-size: 100% 100%; }
+.b2cnew .a2 .case .one:hover .img3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/b3after.jpg*/; background-size: 100% 100%; }
+.b2cnew .a2 .case .one:hover .img4 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/b4after.jpg*/; background-size: 100% 100%; }
+.b2cnew .a3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/a3.jpg*/ no-repeat center top; height: 1675px; padding-top: 75px; }
+.b2cnew .a3 h2 { text-align: center; color: #32aecc; font-size: 24px; margin-top: 50px; font-weight: normal; }
+.b2cnew .a3 .infor1 { width: 1010px; margin-left: auto; margin-right: auto; margin-top: 250px; display: block; }
+.b2cnew .a3 .infor2 { width: 1010px; margin-left: auto; margin-right: auto; margin-top: 60px; }
+.b2cnew .a3 .infor3 { width: 1010px; margin-left: auto; margin-right: auto; margin-top: 60px; }
+.b2cnew .a3 .infor4 { width: 1010px; margin-left: auto; margin-right: auto; margin-top: 60px; }
+.b2cnew .a3 .infor1 img { float: left; }
+.b2cnew .a3 .infor2 img { float: right; }
+.b2cnew .a3 .infor3 img { float: left; }
+.b2cnew .a3 .infor4 img { float: right; }
+.b2cnew .a3 .infor2 h1, .b2cnew .a3 .infor2 h3, .b2cnew .a3 .infor2 h4, .b2cnew .a3 .infor4 h1, .b2cnew .a3 .infor4 h3, .b2cnew .a3 .infor4 h4 { margin-left: 0; }
+.b2cnew .a3 h1 { float: left; font-size: 24px; font-weight: normal; margin-left: 60px; margin-top: 80px; }
+.b2cnew .a3 h3 { float: left; font-size: 16px; font-weight: normal; color: #666; margin-left: 60px; margin-top: 15px; line-height: 30px; }
+.b2cnew .a3 h4 { float: left; font-size: 14px; font-weight: normal; color: #0fa194; margin-left: 60px; margin-top: 20px; }
+.b2cnew .a4 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew/a4.jpg*/ no-repeat center top; height: 792px; padding-top: 75px; }
+.b2cnew .title { font-size: 30px; text-align: center; margin-bottom: 40px; }
+.b2cnew .stitle { font-size: 16px; text-align: center; color: #666; line-height: 25px; }
+.b2cnew .totop { position: fixed; right: 50px; bottom: 50px; z-index: 999; background: rgba(0,0,0,0.2); color: #FFF; width: 60px; height: 60px; text-align: center; font-size: 20px; line-height: 60px; cursor: pointer; display: none; -webkit-transition: .3s; -o-transition: .3s; -moz-transition: .3s; -ms-transition: .3s; }
+.b2cnew .totop:hover { background: rgba(0,0,0,0.4); }
+.clear { clear: both; }
+.b2cnew2 .banner { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew2/a1.jpg*/ no-repeat center top; height: 396px; padding-top: 215px; }
+.b2cnew2 .banner h1 { font-size: 46px; color: #000; font-weight: bold; position: relative; left: 50%; margin-left: -375px; }
+.b2cnew2 .banner b { font-size: 25px; display: block; position: relative; left: 50%; margin-left: -290px; margin-top: 28px; color: #000; font-weight: normal; }
+.b2cnew2 .banner a { display: block; font-size: 25px; width: 255px; height: 65px; background: #e30000; color: #FFF; text-align: center; line-height: 60px; border-radius: 5px; position: relative; left: 50%; margin-left: -310px; margin-top: 150px; }
+.b2cnew2 .banner a:hover { background: #ff0000; }
+.b2cnew2 .a2 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew2/a2.jpg*/ no-repeat center top; height: 644px; }
+.b2cnew2 .a3 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew2/a3.jpg*/ no-repeat center top; height: 435px; padding-top: 212px; }
+.b2cnew2 .a3 h1 { font-size: 36px; color: #ff0000; position: relative; left: 50%; margin-left: -160px; font-weight: bold; }
+.b2cnew2 .a3 h2 { font-size: 26px; color: #ff0000; position: relative; left: 50%; margin-left: -400px; margin-top: 40px; font-weight: normal; }
+.b2cnew2 .a4 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew2/a4.jpg*/ no-repeat center top; height: 645px; }
+.b2cnew2 .a5 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew2/a5.jpg*/ no-repeat center top; height: 310px; padding-top: 342px; }
+.b2cnew2 .a5 h1 { font-size: 40px; font-weight: normal; position: relative; left: 50%; margin-left: -215px; color: #000; }
+.b2cnew2 .a6 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew2/a6.jpg*/ no-repeat center top; height: 642px; }
+.b2cnew2 .a7 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew2/a7.jpg*/ no-repeat center top; height: 372px; padding-top: 267px; }
+.b2cnew2 .a7 h1 { font-size: 36px; font-weight: bold; position: relative; left: 50%; margin-left: -360px; color: #ff0000; }
+.b2cnew2 .a8 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew2/a8.jpg*/ no-repeat center top; height: 639px; }
+.b2cnew2 .a9 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew2/a9.jpg*/ no-repeat center top; height: 392px; padding-top: 250px; }
+.b2cnew2 .a9 h1 { font-size: 36px; font-weight: bold; position: relative; left: 50%; margin-left: -280px; color: #ff0000; }
+.b2cnew2 .a10 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew2/a10.jpg*/ no-repeat center top; height: 1174px; padding-top: 110px; }
+.b2cnew2 .a10 h1 { font-size: 36px; font-weight: normal; position: relative; left: 50%; margin-left: -365px; color: #000; }
+.b2cnew2 .a11 { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/b2cnew2/a11.jpg*/ no-repeat center top; height: 550px; padding-top: 100px; }
+.b2cnew2 .a11 h1 { font-size: 36px; font-weight: normal; position: relative; left: 50%; margin-left: -160px; color: #000; }
+.b2cnew2 .a11 h2 { font-size: 30px; font-weight: normal; position: relative; left: 50%; margin-left: -115px; color: #000; margin-top: 40px; }

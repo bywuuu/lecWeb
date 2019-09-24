@@ -1,0 +1,39 @@
+.clear { height: 0; line-height: 0; font-size: 0; clear: both; }
+.clearfix { display: block; *zoom: 1;
+}
+.clearfix:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; overflow: hidden; }
+.clearboth { clear: both; }
+.t-c { text-align: center; }
+.page { width: 1000px; }
+.fl { float: left; }
+.fr { float: right; }
+.agriculture .cross .banner { background: url(../images/agriculture/banner.jpg)/*tpa=http://images.lecshop.cn/website/images/agriculture/banner.jpg*/ no-repeat center top; height: 465px; color: #fff; padding-top: 100px; }
+.agriculture .cross .banner h3 { font-size: 36px; font-weight: normal; padding-bottom: 20px; }
+.agriculture .cross .banner h1 { font-size: 60px; font-weight: normal; padding-bottom: 20px; }
+.agriculture .cross .banner p { font-size: 20px; line-height: 200%; padding-bottom: 20px; }
+.agriculture .cross .banner .order { display: block; width: 220px; height: 60px; line-height: 60px; color: #fff; font-size: 26px; margin: 150px auto; background: #e63417; }
+.agriculture .cross .banner .order:hover { background: #fb2a08; }
+.agriculture .cross .main1 { background: url(../images/agriculture/p1.jpg)/*tpa=http://images.lecshop.cn/website/images/agriculture/p1.jpg*/ no-repeat center; height: 500px; }
+.agriculture .cross .main-title { padding-top: 90px; font-size: 30px; padding-bottom: 30px; }
+.agriculture .cross .main-info { font-size: 16px; padding-bottom: 28px; line-height: 180%; color: #FFF; padding-left: 250px; padding-right: 250px; }
+.agriculture .cross .main2 { background: url(../images/agriculture/p2.jpg)/*tpa=http://images.lecshop.cn/website/images/agriculture/p2.jpg*/ no-repeat center; height: 650px; }
+.agriculture .cross .main3 { background: url(../images/agriculture/p3.jpg)/*tpa=http://images.lecshop.cn/website/images/agriculture/p3.jpg*/ no-repeat center; height: 654px; color: #fff; }
+.agriculture .cross .main4 { background: url(../images/agriculture/p4.jpg)/*tpa=http://images.lecshop.cn/website/images/agriculture/p4.jpg*/ no-repeat center; height: 736px; color: #000; }
+.agriculture .cross .main5 { background: #00aadb; height: 700px; color: #FFF; }
+.agriculture .cross .main5 .ct { margin: 0 auto; width: 850px; height: 300px; }
+.agriculture .cross .main5 .ct .bar { width: 850px; border-bottom: 1px solid #FFF; }
+.agriculture .cross .main5 .ct li { cursor: pointer; float: left; line-height: 36px; height: 36px; width: 140px; border: 1px solid #FFF; border-bottom: none; margin-right: 5px; color: #FFF; text-align: center; }
+.agriculture .cross .main5 .ctx { width: 350px; height: 300px; padding-top: 40px; float: left; }
+.agriculture .cross .main6 { margin-top: -5px; height: 614px; color: #FFF; background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/agriculture/case.jpg*/ no-repeat center; }
+.agriculture .cross .slideTxtBox { width: 900px; margin: 0 auto; overflow: hidden; }
+.agriculture .cross .slideTxtBox .hd { height: 37px; border-bottom: 1px solid #FFF; }
+.agriculture .cross .slideTxtBox .hd li { float: left; width: 150px; height: 36px; line-height: 36px; border: 1px solid #FFF; border-bottom: none; color: #FFF; text-align: center; cursor: pointer; font-size: 16px; margin-right: 5px; }
+.agriculture .cross .slideTxtBox .hd li.on { background: #FFF; color: #00AADA; }
+.agriculture .cross .slideTxtBox .bd { padding: 40px 0 80px; }
+.agriculture .cross .hd-info { font-size: 14px; color: #FFF; line-height: 180%; }
+.agriculture .cross .hd-img img { margin-top: -30px; width: 510px; }
+.agriculture .cross .hd-info a.btn1 { width: 150px; height: 40px; background: url(../images/agriculture/btn1.jpg)/*tpa=http://images.lecshop.cn/website/images/agriculture/btn1.jpg*/ no-repeat left top; display: block; text-align: center; color: #fff; line-height: 40px; font-size: 16px; margin-top: 20px; }
+.agriculture .cross #slides2, .cross .slides_container { position: relative; height: 279px; }
+.agriculture .cross #slides2 .prev { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/agriculture/pbtn.png*/ no-repeat left top; height: 50px; width: 61px; top: 100px; }
+.agriculture .cross #slides2 .next { background: url(../../../errorpage.b0.upaiyun.com/lecshop-404.jpg)/*tpa=http://images.lecshop.cn/website/images/agriculture/nbtn.png*/ no-repeat left top; position: absolute; right: -70px; height: 50px; width: 61px; top: 100px; }
+.agriculture .cross #slides2 .pagination { display: none; }
