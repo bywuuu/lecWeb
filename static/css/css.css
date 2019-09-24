@@ -1,0 +1,285 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0 }
+body, button, input, select, textarea { font: 14px/150% 'Microsoft Yahei',Arial,'\5b8b\4f53'; color: #666; -webkit-font-smoothing: antialiased }
+html, body { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; overflow-x: hidden }
+a { color: #666; text-decoration: none; display: inline-block }
+h1, h2, h3, h4, h5, h6 { font-weight: normal }
+em { font-style: normal }
+:focus { outline: 0 }
+ol, ul { list-style: none }
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden }
+.clearfix { display: inline-block }
+* html .clearfix { height: 1% }
+.clearfix { display: block }
+.hide { display: none }
+.fll { float: left }
+.flr { float: right }
+.red { color: red }
+.orange { color: #ff6f3d }
+.topbar { width: 100%; height: 30px; line-height: 30px; background: #f7f7f7 }
+.topbar_qr { float: right; margin-right: 10px; background: url(../images/icons.png)/*tpa=http://images.lecshop.cn/website/images/icons.png*/ no-repeat 0 0; padding-left: 20px; cursor: pointer; position: relative; z-index: 99 }
+.topbar_qr img { position: absolute; top: 30px; left: -5px; display: none }
+.container { width: 1200px; margin: 0 auto }
+.logo { margin: 10px; float: left }
+.logo img { height: 60px }
+.top_right { float: right; margin-top: 85px }
+.nav { float: right; margin-right: 20px }
+.nav li { float: left }
+.nav li a { font-size: 16px; padding: 32px 40px }
+.nav li:hover a.nav_more, .nav li a.cur, .more_box .more_main a:hover { color: #ffae00 }
+.nav li a.nav_more { background: url(../images/nav_ico.png)/*tpa=http://images.lecshop.cn/website/images/nav_ico.png*/ no-repeat 90px 38px }
+.nav li :hover a.nav_more, .nav li a.nav_more.cur { background: url(../images/nav_ico_hover.png)/*tpa=http://images.lecshop.cn/website/images/nav_ico_hover.png*/ no-repeat 90px 38px }
+.nav li a.nav_more.solution { background: url(../images/nav_ico.png)/*tpa=http://images.lecshop.cn/website/images/nav_ico.png*/ no-repeat 123px 38px }
+.nav li:hover a.nav_more.solution, .nav li a.nav_more.solution.cur { background: url(../images/nav_ico_hover.png)/*tpa=http://images.lecshop.cn/website/images/nav_ico_hover.png*/ no-repeat 123px 38px }
+.index_slide { background: url(../images/index_banner.jpg)/*tpa=http://images.lecshop.cn/website/images/index_banner.jpg*/ no-repeat center top; width: 100%; height: 400px }
+.more_box { position: absolute; width: 100%; padding: 20px 0; top: 85px; left: 0; z-index: 1000; background: #fefefe; border-top: solid 1px #eee; border-bottom: solid 1px #eee; display: none }
+.more_box.solution_box { height: 180px }
+.more_box.solution_box .more_main { margin: 0 }
+.more_box.solution_box .more_main a { padding: 0 30px; margin-bottom: 15px; border-right: solid 1px #ccc }
+.more_box .more_main { font-size: 18px }
+.more_box .more_main a { width: 470px; padding: 20px; margin-left: 60px; border-bottom: solid 1px #eee }
+.more_box .more_main a p:first-child { line-height: 24px }
+.more_box .more_main a .more_text { font-size: 14px; padding-left: 35px; color: #999; margin-top: 5px }
+.more_box .more_main .b2c { padding-left: 35px; background: url(../images/icons.png)/*tpa=http://images.lecshop.cn/website/images/icons.png*/ no-repeat 0px -33px }
+.more_box .more_main a:hover .b2c { background: url(../images/icons.png)/*tpa=http://images.lecshop.cn/website/images/icons.png*/ no-repeat 0px -56px }
+.more_box .more_main .bbc { padding-left: 35px; background: url(../images/icons.png)/*tpa=http://images.lecshop.cn/website/images/icons.png*/ no-repeat 0px -103px }
+.more_box .more_main a:hover .bbc { background: url(../images/icons.png)/*tpa=http://images.lecshop.cn/website/images/icons.png*/ no-repeat 0px -126px }
+.more_box .more_main .b2b { padding-left: 35px; background: url(../images/icons.png)/*tpa=http://images.lecshop.cn/website/images/icons.png*/ no-repeat 0px -282px }
+.more_box .more_main a:hover .b2b { background: url(../images/icons.png)/*tpa=http://images.lecshop.cn/website/images/icons.png*/ no-repeat 0px -305px }
+.more_box .more_main .c2b { padding-left: 35px; background: url(../images/icons.png)/*tpa=http://images.lecshop.cn/website/images/icons.png*/ no-repeat 0px -189px }
+.more_box .more_main a:hover .c2b { background: url(../images/icons.png)/*tpa=http://images.lecshop.cn/website/images/icons.png*/ no-repeat 0px -212px }
+.more_box .more_main .o2o { padding-left: 35px; background: url(../images/icons.png)/*tpa=http://images.lecshop.cn/website/images/icons.png*/ no-repeat 0px -236px }
+.more_box .more_main a:hover .o2o { background: url(../images/icons.png)/*tpa=http://images.lecshop.cn/website/images/icons.png*/ no-repeat 0px -259px }
+.nav_btn_box { float: right; margin-top: 12px}
+.nav_btn { padding: 10px 30px; background: #ffae00; color: #fff; border-radius: 4px }
+.nav_btn:hover { background: #ffb61a }
+.index_slide .nav_btn { font-size: 28px; padding: 20px; float: left; margin: 270px 0 0 50px }
+.adv_box { width: 1100px; margin: 0 auto; padding-bottom: 50px }
+.adv_box li { float: left; width: 250px; text-align: center; color: #999; margin: 20px 11px }
+.adv_box li h3 { line-height: 35px; color: #666 }
+.floor01 { width: 100%; height: 620px; background: url(../images/index02.jpg)/*tpa=http://images.lecshop.cn/website/images/index02.jpg*/ no-repeat center top; float: left }
+.solutions_floor { width: 100%; float: left }
+.floor_title { margin: 20px 0; text-align: center; font-size: 16px; color: #999 }
+.floor_title .title { font-size: 36px; line-height: 150%; color: #666; padding: 20px 0 }
+.pro_main .pro_bg { background: #fff }
+.pro_main { width: 220px; float: left; margin: 0 10px }
+.pro_main h1 { text-align: center; line-height: 80px; font-size: 24px }
+.pro_b2c h1 { color: #f76b50 }
+.pro_bbc h1 { color: #0bb4d1 }
+.pro_bg { width: 100%; border-radius: 10px; color: #fff; position: relative }
+.pro_img img, .advantage_box img { border-top-left-radius: 10px; border-top-right-radius: 10px }
+.pro_b2c .pro_bg { background: #f76b50 }
+.pro_bbc .pro_bg { background: #0bb4d1 }
+.pro_text { font-size: 14px; line-height: 20px; padding: 170px 20px 20px 20px }
+.pro_btn { position: absolute; top: 83px; left: 50%; margin-left: -40px }
+.floor02 { width: 100%; height: 680px; background: url(../images/index03.jpg)/*tpa=http://images.lecshop.cn/website/images/index03.jpg*/ no-repeat center top; float: left }
+.floor_w, .floor_w .title { color: #fff }
+.advantage_box { width: 230px; border-radius: 10px; background: #fff; float: left; margin: 60px 22px }
+.advantage_box ul { padding: 15px; font-size: 15px; color: #999 }
+.advantage_box ul .title { text-align: center; font-size: 24px; line-height: 150%; margin-bottom: 10px }
+.floor03 { width: 100%; height: 440px; background: url(../images/index04.jpg)/*tpa=http://images.lecshop.cn/website/images/index04.jpg*/ no-repeat center top; float: left }
+.case_box { padding: 0 70px }
+.case_box li { float: left; padding: 35px 45px }
+.case_box li.one { border-bottom: dashed 1px #ccc; border-right: dashed 1px #ccc }
+.case_box li.two { border-right: dashed 1px #ccc }
+.floor04 { width: 100%; height: 358px; background: #fafafa; float: left }
+.partner_box { padding: 0 70px }
+.partner_box li { float: left; margin: 60px 42px }
+.contact { padding: 20px 20px 40px 20px; position: relative }
+.contact_text { line-height: 35px; color: #fff; margin-top: 20px }
+.contact_qr { position: absolute; top: 20px; right: 20px; float: right; text-align: center; font-size: 16px; color: #fff }
+.footer { width: 100%; float: left; background: #28292f; padding: 40px 0; color: #fff; text-align: center }
+.header { width: 100%; background: #fff }
+.header.fixed { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95) none repeat scroll 0% 0%; -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3) }
+.header.fixed .more_box { top: 85px }
+.solutions_slide { background: url(../images/solutions_pic.jpg)/*tpa=http://images.lecshop.cn/website/images/solutions_pic.jpg*/ no-repeat center top; height: 480px }
+.solutions_slide .nav_btn { margin-top: 340px }
+.pro_main_text { font-size: 30px; text-align: center; padding: 30px }
+.pro_introduce_text { font-size: 15px; text-indent: 30px; line-height: 30px; width: 93%; float: left; margin: 30px 3.5% 0 3.5%; color: #444 }
+.pro_introduce_text li { padding-bottom: 10px }
+.lestore_btn { width: 372px; float: left; margin: 30px 0 0 20px; text-align: center; line-height: 50px }
+.lestore_btn a { color: #fff; font-size: 20px }
+.pro_qr { width: 728px; margin: 60px 0 0 80px; float: left }
+.pro_qr li { margin: 0 50px; float: left; color: #fff; text-align: center; font-size: 15px; line-height: 30px }
+.pro_qr li.pro_qr_tip { width: 100%; margin: 20px 0 }
+.pro_reg_btn { width: 100%; float: left; text-align: center; margin-top: 60px }
+.pro_reg_btn .nav_btn { padding: 15px 40px; font-size: 20px; float: none; margin: 0 40px }
+.nav_btn.boss { background: #1cace0 }
+.nav_btn.boss:hover { background: #2fb6e7 }
+.about_pic { margin:30px 70px; display: inline-block }
+.about_pic p { width: 45%; float: left }
+.about_pic p:last-child { width: 55%; padding-left: 40px; box-sizing: border-box; font-size: 16px; line-height: 30px; text-indent: 32px}
+.about_text { font-size: 16px; margin: 20px 0 0 40px; text-indent: 32px }
+.reg_box { width: 870px; background: #fff; margin: 50px auto; padding: 40px 0 100px 0 }
+.reg_logo { text-align: center; font-size: 16px; line-height: 40px; color: #999 }
+.reg_main { width: 600px; margin: 40px 0 0 270px; float: left }
+.reg_main li { height: 40px; line-height: 40px; padding-bottom: 15px; position: relative }
+.reg_main input { width: 310px; height: 20px; line-height: 20px; padding: 10px; border: 1px solid #e8e8e8; float: left }
+.error_tip { float: left; display: inline-block; background: url(../images/error_ico.png)/*tpa=http://images.lecshop.cn/website/images/error_ico.png*/ no-repeat center left; padding-left: 20px; margin-left: 10px; color: #999 }
+.reg_main .reg_btn { width: 332px; height: 50px; background: #ffae00; color: #fff; font-size: 18px; border: 0; border-radius: 5px; cursor: pointer; margin-top: 30px }
+.reg_main .reg_btn:hover { background: #ffb820 }
+.code_btn { position: absolute; top: 1px; left: 250px; color: #ffae00 }
+.pro_container { padding: 0 40px; float: left }
+.pro_container .pro_main { margin: 0 auto; float: none }
+.pro_container .floor_title { margin-top: 10px }
+.pro_img { display: block; border-radius: 8px; float:left; margin:0 30px }
+.pro_bg .pro_img { margin:0 }
+.floor01 .reg_box { display: none; width: 700px; position: fixed; top: 50%; margin-top: -228px; left:50%; margin-left: -350px; padding-bottom: 40px; z-index: 1031 }
+.floor01 .reg_logo { font-size: 21px }
+.floor01 .reg_main { margin: 40px auto; width: 333px; float: none }
+.floor01 .reg_main li { height: 57px }
+.floor01 .reg_main li .error_tip { line-height: 30px }
+.floor01 .code_btn { left: 250px }
+.all-close { font-size: 40px; text-align: center; position: absolute; display: block; width: 40px; height: 40px; line-height: 34px; color: #999; right: 20px; top: 20px; cursor: pointer }
+.modal-backdrop { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1030; background-color: #000; transition: opacity .15s linear; opacity: .5}
+.fcallb { height: 70px; background-color: rgba(0,0,0,0.65); position: fixed; bottom: 0; width: 100%; z-index: 998; }
+.fcallb_btn { height: 50px; background: #ffae00; color: #fff; font-size: 18px; border: 0; padding:0 20px; border-radius: 5px; cursor: pointer; margin: 10px 0 0 40px;  }
+.solutions_list { padding: 0 70px 40px 70px; display: inline-block }
+.solutions_list li { float: left; width: 220px; margin: 20px 22px }
+.solutions_list li a { display: inline-block; width: 100% }
+.solutions_list li a:hover span { background: #ffae00; color: #fff }
+.solutions_list li img { display: block; border-top-left-radius: 6px; border-top-right-radius: 6px; width: 100% }
+.solutions_list li span { line-height: 300%; text-align: center; display: block; width: 100%; font-size: 16px; background: #eee; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px }
+.sol_list li { width: 31%; padding: 20px 1%; border-bottom: solid 1px #eee }
+.sol_list li a { padding: 0}
+.sol_list li a:hover p:first-child { color: #ffae00}
+.sol_list li div:first-child { width: 30%}
+.sol_list li img { width: 100%}
+.sol_list li .sol_text { width: 65%; padding-left: 5%; float: left; font-size: 14px; color: #999 }
+.sol_list li .sol_text p:first-child { font-size: 16px; color: #666; line-height: 26px }
+.icon-ad_tv { background-image: url(../images/sprite.png)/*tpa=http://images.lecshop.cn/website/images/sprite.png*/; background-position: 0px 0px; width: 64px; height: 40px }
+.icon-mobile { background-image: url(../images/sprite.png)/*tpa=http://images.lecshop.cn/website/images/sprite.png*/; background-position: 0px -299px; width: 35px; height: 51px }
+.icon-pc { background-image: url(../images/sprite.png)/*tpa=http://images.lecshop.cn/website/images/sprite.png*/; background-position: 0px -45px; width: 63px; height: 40px }
+.icon-tv { background-image: url(../images/sprite.png)/*tpa=http://images.lecshop.cn/website/images/sprite.png*/; background-position: 0px -139px; width: 57px; height: 45px }
+.icon-consult { background-image: url(../images/sprite.png)/*tpa=http://images.lecshop.cn/website/images/sprite.png*/; background-position: 0px -355px; width: 253px; height: 65px }
+.icon-left_dir { background-image: url(../images/sprite.png)/*tpa=http://images.lecshop.cn/website/images/sprite.png*/; background-position: 0px -189px; width: 28px; height: 50px }
+.icon-qoe_btn { background-image: url(../images/sprite.png)/*tpa=http://images.lecshop.cn/website/images/sprite.png*/; background-position: 0px -425px; width: 253px; height: 65px }
+.icon-right_dir { background-image: url(../images/sprite.png)/*tpa=http://images.lecshop.cn/website/images/sprite.png*/; background-position: 0px -244px; width: 28px; height: 50px }
+.icon-view_btn { background-image: url(../images/sprite.png)/*tpa=http://images.lecshop.cn/website/images/sprite.png*/; background-position: 0px -90px; width: 147px; height: 44px }
+.main-im { position: fixed; right: 10px; top: 300px; z-index: 100; width: 110px; height: 272px }
+.main-im .qq-a { display: block; width: 106px; height: 116px; font-size: 14px; color: #0484cd; text-align: center; position: relative }
+.main-im .qq-a span { bottom: 5px; position: absolute; width: 90px; left: 10px }
+.main-im .qq-hover-c { width: 70px; height: 70px; border-radius: 35px; position: absolute; left: 18px; top: 10px; overflow: hidden; z-index: 9 }
+.main-im .qq-container { z-index: 99; position: absolute; left: 0; width: 109px; height: 118px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom: 1px solid #ddd; background: url(../images/qq-icon-bg.png)/*tpa=http://images.lecshop.cn/website/images/qq-icon-bg.png*/ no-repeat center 8px }
+.main-im .img-qq { max-width: 60px; display: block; position: absolute; left: 6px; top: 3px; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s }
+.main-im .im-qq:hover .img-qq { max-width: 70px; left: 1px; top: 8px; position: absolute }
+.main-im .im_main { background: #F9FAFB; border: 1px solid #ddd; border-radius: 10px }
+.main-im .im_main .im-tel { color: #000; text-align: center; width: 109px; padding: 10px 0; border-bottom: 1px solid #ddd }
+.main-im .im_main .im-tel div { font-weight: bold; font-size: 12px; line-height: 20px }
+.main-im .im_main .im-tel .tel-num { font-family: Arial; font-weight: bold; color: #e66d15 }
+.main-im .im_main .im-tel:hover { background: #fafafa }
+.main-im .im_main .weixing-container { width: 55px; height: 47px; border-right: 1px solid #ddd; border-bottom-left-radius: 10px; background: url(../images/weixing-icon.png)/*tpa=http://images.lecshop.cn/website/images/weixing-icon.png*/ #f5f5f5 no-repeat center center; float: left }
+.main-im .im_main .weixing-show { width: 112px; height: 160px; background: #fff; border-radius: 10px; border: 1px solid #ddd; position: absolute; left: -125px; top: -116px; display: none }
+.main-im .im_main .weixing-show .weixing-sanjiao { width: 0; height: 0; border-style: solid; border-color: transparent transparent transparent #fff; border-width: 6px; left: 112px; top: 134px; position: absolute; z-index: 2 }
+.main-im .im_main .weixing-show .weixing-sanjiao-big { width: 0; height: 0; border-style: solid; border-color: transparent transparent transparent #ddd; border-width: 8px; left: 112px; top: 132px; position: absolute }
+.main-im .im_main .weixing-show .weixing-ma { width: 104px; height: 103px; padding-left: 5px; padding-top: 5px }
+.main-im .im_main .weixing-show .weixing-txt { position: absolute; top: 110px; left: 7px; width: 100px; margin: 0 auto; text-align: center }
+.main-im .im_main .go-top { width: 50px; height: 47px; border-bottom-right-radius: 10px; background: url(../images/toTop-icon.png)/*tpa=http://images.lecshop.cn/website/images/toTop-icon.png*/ #f5f5f5 no-repeat center center; float: right }
+.main-im .im_main .go-top a { display: block; width: 52px; height: 47px }
+.main-im .close-im { position: absolute; right: 10px; top: -12px; z-index: 100; width: 24px; height: 24px }
+.main-im .close-im a { display: block; width: 24px; height: 24px; background: url(../images/close_im.png)/*tpa=http://images.lecshop.cn/website/images/close_im.png*/ no-repeat left top }
+.main-im .close-im a:hover { text-decoration: none }
+.main-im .open-im { cursor: pointer; margin-left: 68px; width: 40px; height: 133px; background: url(../images/open_im.png)/*tpa=http://images.lecshop.cn/website/images/open_im.png*/ no-repeat left top; display: none }
+.sem_slide { background: url(../images/sem_pic.jpg)/*tpa=http://images.lecshop.cn/website/images/sem_pic.jpg*/ no-repeat center top; height: 490px }
+.sem_slide .reg_box { padding: 20px; height: 450px }
+.sem_slide .reg_box .reg_main { margin: 20px auto 0 auto }
+.sem_slide .reg_box .reg_main .reg_btn { margin-top: 0 }
+.sem_floor { width: 100%; padding-bottom: 60px; float: left }
+.sem_main { width: 38%; float: left; margin: 20px 0; padding: 0 6% }
+.sem_main img { display: block; float: left }
+.sem_main ul { float: left; font-size: 16px; margin: 10px 0 0 20px; line-height: 30px }
+.floor_pro { width: 100%; float: left; background: url(../images/pro_img.jpg)/*tpa=http://images.lecshop.cn/website/images/pro_img.jpg*/ no-repeat bottom center; height: 895px }
+#kf5-support-btn { margin-top: 50px!important; }
+.introduce { width: 1180px; padding-top: 5px; clear: both; margin: 0 auto; }
+.introduce_left { font-size: 30px; text-align: center; line-height: 60px; color: #353736; margin: 10px 20px; }
+.ruanjianjieshao { width: 1180px; margin: 0 auto; font-size: 14px; padding-top: 13px; margin-top: 8px; text-align: center; }
+.introduce_2 { margin-top: 30px; }
+.b2bcolum5 { width: 212px; float: left; font-size: 16px; text-align: left; padding-bottom: 20px; }
+.b2bcolum5 img { margin-bottom: 15px; text-align: center; }
+.b2bcolum5 { line-height: 24px; }
+.b2bgnzs { height: 270px; }
+.bodbtm { border-bottom: 1px dashed #ccc; }
+.bodright { border-right: 1px dashed #ccc; }
+.b2bgnzs { width: 520px; padding: 10px 30px 30px; float: left; height: 90px; font-size: 14px; line-height: 24px; }
+.imgflt { float: left; padding-bottom: 10px; width: 80px; }
+.imgflt img { width:60px }
+.txtalt { text-align: left; line-height: 30px; }
+.mgtp5 { margin-top: 50px; }
+.mglt5 { margin-left: 30px; }
+.mgrt { margin-right: 20px; }
+.pdd2l { padding-left: 20px; }
+.pddtop { padding-top: 20px; }
+.b2bintro { width: 1180px; margin: 0 auto; font-size: 16px; padding-top: 13px; margin-top: 8px; line-height: 30px; text-align: center; }
+.b2bintro_img { width: 283px; text-align: center; border: 1px solid #CCC; padding: 60px 0px; float: left; }
+.b2bintro_txt { width: 845px; height: 170px; float: left; padding: 5px 0px 10px 50px; line-height: 30px; text-align: left; word-break: normal; }
+.radiusframe { border-radius: 50px; border: 1px dashed #ccc; background: #f9f9f9; width: 640px; margin: 0 auto; }
+.radiusframe2 { background: #fff; width: 1120px; margin: 20px auto; }
+.b2bintro_reset .radiusframe2 { height: 440px !important; }
+.b2bys { width: 640px; margin: 75px auto; }
+.b2bys_in { width: 285px; float: left; text-align: center; margin-bottom: 20px; }
+.b2bys_in img { margin-bottom: 20px; }
+.b2bsquare { width: 520px; height: 205px; float: left; text-align: left; }
+.b2bsquare_txt { line-height: 30px; font-size: 14px; width: 350px; float: left; padding: 20px 10px 20px 0; }
+.b2bintro_reset .b2bsquare_txt p { background: none !important; }
+.b2bsquare_txt p { text-indent: 10px; background: url(../images/bldot.png)/*tpa=http://images.lecshop.cn/website/images/bldot.png*/ no-repeat left; }
+.b2bintro_reset .sqimg img { width: 90px; }
+.b2bsquare .sqimg { width: 120px; height: 120px; float: left; text-align: center; margin-top:24px }
+.b2bib_right { border-right: 1px dashed #ccc; }
+.b2bib_bottom { border-bottom: 1px dashed #ccc; }
+.mgtp2 { margin-top: 20px; }
+.ry_box { padding-bottom: 20px; display: inline-block}
+.ry_box li { float: left; margin: 20px 45px; text-align: center}
+.ry_box li p:last-child { line-height: 30px }
+.tec_item { width: 500px; margin: 50px 50px 20px 50px; float: left;}
+.tec_item li { background: #fff; padding: 10px}
+.tec_item li:first-child { font-size: 18px}
+.tec_item li:nth-child(2n) { background: #eee}
+.tec_box { width: 1000px; margin: 0 auto; padding: 20px 100px}
+.tec_box h2 { margin-bottom: 10px; background: #f1f1f1; padding: 10px; font-weight: normal}
+.tec_box p { font-size: 15px; line-height: 1.6; margin-bottom: 20px}
+.gridtable { width: 700px; margin: 20px auto}
+.gridtable th { padding: 10px; font-size: 16px; font-weight: normal}
+.gridtable td { padding: 10px; border-bottom: 1px solid #e1e7ee; text-align: center }
+.gridtable tr:nth-child(2n) td { background: #f6fafe}
+.tec_top { height: 122px; background:url(../images/tec_bg.png)/*tpa=http://images.lecshop.cn/website/images/tec_bg.png*/ #f9f9f9 center; border-bottom: 1px solid #e8eaec; background-size: cover; color: #fff; text-align: center; line-height: 122px; font-size: 32px }
+.floor3d { width: 100%; background: #d7e1eb; float: left }
+.floor3d_text { font-size: 24px; width: 530px; line-height: 1.6; float: left; margin: 80px 0 0 80px;}
+.floor3d_text li:first-child { color:#333; padding-bottom: 10px }
+.floor3d_text li:last-child { color:#999 }
+.slideshow_wrapper { position: relative; z-index: 2; width: 100%; height: 400px; overflow: hidden }
+.slideshow_footbar { z-index: 5; position: absolute; width: 100%; text-align: center; bottom: 10px; left: 0; height: 30px }
+.slideshow_photo { width: 100%; height: 400px; margin: 0 auto }
+.slideshow_photo li { width: 100%; height: 400px; text-align: center; position: absolute; left: 0 }
+.slideshow_footbar .slideshow-bt { background: #d2d3d4; opacity: .8; margin: 10px 10px 0px 0px; border-radius: 6px; width: 12px; height: 12px; display: inline-block; cursor: pointer }
+.slideshow_footbar .bt-on { background: #fff }
+.function_list { width: 960px; margin: 50px auto }
+.function_list li { width:232px; height: 440px; margin:0 20px 20px 0; padding: 0 34px; background: #fff; float: left }
+.function_list li img { display: block; width: 110px; margin: 0 auto; margin-top: 43px;}
+.function_list li p { font-size: 18px; color: #34b8d0; text-align:center; line-height:40px; margin-top: 8px }
+.function_list li span {font-size: 14px; color: #8e8e8e; display: block; margin-top: 20px }
+.b_box { width: 499px; height: 200px; float: left; padding-top: 32px;}
+.b_box .images {float:left; text-align:center; width: 87px; padding-left: 35px;}
+.b_box .images em {margin-top: 15px; display: block; font-size: 20px;}
+.b_box .text {float:left;width: 346px; padding-right: 30px;}
+.b_box .text p {font-size: 14px;color: #333; text-align: left;}
+.b_box .text ul {margin-top: 14px; display: inline-block}
+.b_box .text ul li {float: left;margin:8px 6px 0 0; border-radius: 5px; width: 106px; height: 26px; background: #f7f7f7; line-height: 26px; text-align: center; font-size: 14px; color: #666;}
+.b_box .text ul li:hover {background: #b2bcc4; color: #fff;}
+.slideTxtBox { width: 1200px; margin: 0 auto; overflow: hidden; }
+.slideTxtBox .hd { height: 37px; border-bottom: 1px solid #FFF; }
+.slideTxtBox .hd li { float: left; width: 150px; height: 36px; line-height: 36px; border: 1px solid #FFF; border-bottom: none; color: #FFF; text-align: center; cursor: pointer; font-size: 16px; margin-right: 5px; }
+.slideTxtBox .hd li.on { background: #FFF; color: #00AADA; }
+.slideTxtBox .bd { padding: 40px 0 80px; }
+.slideTxtBox .bd img { margin: 0 10px }
+.slideTxtBox .bd .app img { margin: 0 48px }
+.landingbanner { width:100%; background:url(../images/landingbanner.jpg)/*tpa=http://images.lecshop.cn/website/images/landingbanner.jpg*/ no-repeat center; height:500px; text-align:center }
+.landingbanner.app { background:url(../images/appbanner.jpg)/*tpa=http://images.lecshop.cn/website/images/appbanner.jpg*/ no-repeat center }
+.landingbanner.h5 { background:url(../images/h5banner.jpg)/*tpa=http://images.lecshop.cn/website/images/h5banner.jpg*/ no-repeat center }
+.landingbanner a {display: inline-block; width: 220px; height: 60px; line-height: 60px; color: #fff; font-size: 26px; text-align:center; border-radius:4px; margin-top: 360px; background: #ffae00 }
+.app_list li { height:350px }
+.bannerBtn { position:absolute; top:270px; left:60px; background:#ffa402; border-radius:4px; font-size:28px; color:#fff; padding:20px 30px; text-align:center }
+.bannerBtn.fcallb_btn { border:solid 2px #ffa402; color:#ffa402; background:none; padding:18px 28px; left:300px; height:auto; margin:0 }
+.tabNav { margin: 50px auto 0 auto; width: 1200px; text-align: center; border-bottom: solid 1px #eee }
+.tabNav li { display: inline-block; line-height: 40px; text-align: center; cursor: pointer; border: solid 1px #eee; border-bottom: 0; padding: 0 20px }
+.tabNav li:last-child { border-left: 0; border-top-right-radius: 6px }
+.tabNav li:first-child { border-top-left-radius: 6px }
+.tabNav li.active { background: #ffae00; color: #fff }

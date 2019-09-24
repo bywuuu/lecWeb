@@ -1,0 +1,55 @@
+.clear { height: 0; line-height: 0; font-size: 0; clear: both; }
+.clearfix { display: block; *zoom: 1; }
+.clearfix:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; overflow: hidden; }
+.clearboth { clear: both; }
+.t-c { text-align: center; }
+.page { width: 1000px; }
+.fl { float: left; }
+.fr { float: right; }
+.jiaju .banner-box { height: 500px; background: url(../images/solutions/jiaju.jpg)/*tpa=http://images.lecshop.cn/website/images/solutions/jiaju.jpg*/ center no-repeat; }
+.kxp .banner-box { height: 500px; background: url(../images/solutions/d04c0bdd425719ef4efb377d027c7127.jpg)/*tpa=http://images.lecshop.cn/website/images/solutions/d04c0bdd425719ef4efb377d027c7127.jpg*/ center no-repeat; }
+.xls .banner-box { height: 500px; background: url(../images/solutions/xls_banner.jpg)/*tpa=http://images.lecshop.cn/website/images/solutions/xls_banner.jpg*/ center no-repeat; }
+.qp .banner-box { height: 500px; background: url(../images/solutions/qp_banner.jpg)/*tpa=http://images.lecshop.cn/website/images/solutions/qp_banner.jpg*/ center no-repeat; }
+.banner-wrap { position: relative; width: 1200px; height: 100%; margin: 0 auto; }
+.banner-box .wrap-content { position: absolute; left: 78px; top: 127px; }
+.pro-center .wrap-content h1 { color: #fff; font-size: 40px; line-height: 100px; }
+.pro-center .wrap-content p { color: #fff; font-size: 18px; line-height: 28px; }
+.btn-banner { line-height: 36px; text-align: center; color: #fff; font-size: 20px; border-radius: 4px; margin-top: 40px; background: #ffae00; padding: 10px 20px; }
+.pb60 { padding-bottom: 60px; }
+.pro-center h3 { font-weight: 400; font-size: 30px; padding-top: 27px; line-height: 160px; text-align: center; }
+.flex1 { text-align: center; }
+.flex1 > li { display: inline-block; vertical-align: top; margin: 0 3px; }
+.pro-center .s3 ul li { width: 250px; margin-bottom: 40px; }
+.pro-center img { display: block; margin: 0 auto; }
+.pro-center .s3 img { width: 125px; }
+.pro-center h4 { color: #343434; text-align: center; }
+.pro-center .s3 h4 { font-size: 16px; line-height: 62px; }
+.bg-fa { background-color: #fafafa; }
+.c-90 { width: 900px; margin: 0 auto; }
+.yxzx h3 { line-height: 80px; }
+.jiaju-tab { width: 424px; margin: 0 auto 30px; }
+.jiaju-tab div { width: 212px; float: left; text-align: center; border-bottom: 1px solid #ddd; cursor: pointer; padding: 10px 0; }
+.jiaju-tab div.active { color: #ff9314; border-bottom: 2px solid #ff9314; }
+.yxzx .s-title { font-size: 16px; text-align: center; }
+.mb30 { margin-bottom: 30px; }
+.wx-item { width: 450px; height: 532px; border: 1px solid transparent; position: relative; }
+.yxzx .wx-item { height: 380px; }
+.yxzx .wx-item img { position: absolute; top: 40px; }
+.wx-item ul { margin: 100px 0; }
+.wx-item ul .c-title { font-size: 18px; color: #343434; margin: 10px 0; }
+.wx-item ul .c-content { font-size: 16px; color: #343434; margin: 10px 0; }
+.wx-item ul .h-img { font-size: 16px; color: #333; margin: 10px 0; }
+.wx-item ul .h-img p { display: inline-block; }
+.wx-item ul .h-img p span { display: inline-block; font-size: 54px; vertical-align: top; margin-right: 5px; }
+.pro-center .s1 { padding: 0 45px 78px; }
+.mb01 > li { margin: 0 15px; }
+.pro-center .s1 h4 { font-size: 18px; line-height: 36px; margin-bottom: 8px; }
+.pro-center p { color: #343434; font-size: 14px; line-height: 24px; }
+.flex1 > li p { text-align: left; }
+.pro-center .s1 p { margin-bottom: 38px; }
+.mb60 { margin-bottom: 60px; }
+.pro-center .s2 ul li { width: 248px; }
+.mb05 > li { margin: 0 170px; }
+.pro-center .s2 h4 { font-size: 16px; line-height: 55px; }
+.mb02 > li { margin: 0 50px; }
+.pro-center.xls .s1 ul li, .pro-center.qp .s1 ul li { width: 242px; }
