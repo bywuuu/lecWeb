@@ -1,10 +1,664 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>LecShop提供专业的电商解决方案，促进传统企业电商转型！</title>
-</head>
-<body>
+    <link rel="icon" href="../../../static/favicon.ico" />
+    <link href="../../../static/css/css.css" rel="stylesheet" type="text/css">
+    <script src="../../../static/js/jquery-1.11.3.min.js"></script>
+    <script src="../../../static/js/jquery.slides.min.js"></script>
+    <script>
+        if (document.URL.lastIndexOf('?') != -1) {
+            //cookie
+            document.cookie = "mykeyword=" + document.URL.substr(document.URL.lastIndexOf('?') + 1, document.URL.length);
+        }
+        //首页轮播图
+        $(function () {
+            //生成下部小按钮
+            var length = $('.slideshow_photo li').length;
+            for (var i = 0; i < length; i++) {
+                $('.slideshow_footbar').prepend('<a class="slideshow-bt" index="' + (length - i) + '"></a>');
+            }
+            $('.slideshow_footbar .slideshow-bt:first').addClass('bt-on');
+            $('.slideshow_footbar .slideshow-bt').mousedown(function (e) {
+                slideTo(this);
+            });
 
+
+            var indexAllowAutoSlide = true;
+            $('.slideshow_wrapper').mousedown(function () {
+                indexAllowAutoSlide = false;
+            }).mouseleave(function () {
+                indexAllowAutoSlide = true;
+            });
+
+            //滚动
+            setInterval(function () {
+                if (indexAllowAutoSlide) slideDown();
+            }, 3000);
+
+        });
+
+        function slideDown() {
+            var currentBt = $('.slideshow_footbar .slideshow-bt.bt-on');
+            if (currentBt.length <= 0) return;
+            var nxt = currentBt.get(0).nextSibling;
+            slideTo(nxt ? nxt : $('.slideshow_footbar .slideshow-bt:first').get(0));
+        }
+
+        function slideTo(o) {
+            if (!o) return;
+            var currentIndex = $('.slideshow_footbar .slideshow-bt.bt-on').attr('index'),
+                current = $('.slideshow_photo li[index=' + currentIndex + ']');
+            var nxt = $('.slideshow_photo li[index=' + $(o).attr('index') + ']');
+            if (currentIndex == $(o).attr('index')) {
+                return;
+            }
+
+            $('.slideshow_footbar .slideshow-bt.bt-on').removeClass('bt-on');
+            $(o).addClass('bt-on');
+
+            nxt.css('z-index', 2);
+
+            current.css('z-index', 3).stop().fadeOut(500, function () {
+                $(this).css('z-index', '1').show();
+            });
+        }
+    </script>
+    <script src="../../../static/js/common.js"></script>
+    <script type="text/javascript">
+        function regsub() {
+            $("#usernameerror").hide();
+            $("#qqnumerror").hide();
+            $("#mobilenumerror").hide();
+            $("#smscodeerror").hide();
+            var username = $("#username").val();
+            var mobilenum = $("#mobilenum").val();
+            var qqnum = $("#qqnum").val();
+            var smscode = $("#smscode").val();
+
+            if (!checkPhone(mobilenum)) {
+                $("#mobilenumerror").html("您输入的手机号码不正确");
+                $("#mobilenumerror").show();
+                return false;
+            }
+
+            if (smscode == '' || smscode == null) {
+                $("#smscodeerror").html("请填写验证码!");
+                $("#smscodeerror").show();
+                return false;
+            }
+
+            if (!checksmscode(smscode)) {
+                $("#smscodeerror").html("验证码只能为数字!");
+                $("#smscodeerror").show();
+                return false;
+            }
+
+            $.ajax({
+                type: "post",
+                url: "/RegisterSub",
+                data: {
+                    username: username,
+                    mobilenum: mobilenum,
+                    qqnum: qqnum,
+                    smscode: smscode,
+                    searchkey: getCookie("wd"),
+                    keyword: getCookie("mykeyword")
+                },
+                dataType: "html",
+                success: function (data) {
+                    if (data == "success") {
+                        window.location.href = "/complete.html";
+                    }
+                    if (data == "smserror") {
+                        $("#smscodeerror").html("您输入的验证码不正确");
+                        $("#smscodeerror").show();
+                    }
+                }
+            });
+        }
+
+        function sendSMS() {
+            $("#mobilenumerror").hide();
+            $("#kaptchaerror").hide();
+            var mobilenum = $("#mobilenum").val();
+            var verifyKaptcha = $("#kaptcha").val();
+            if (!checkPhone(mobilenum)) {
+                $("#mobilenumerror").html("您输入的手机号码不正确");
+                $("#mobilenumerror").show();
+                return false;
+            }
+            if (verifyKaptcha.replace(/\s/g, "") == "") {
+                $("#kaptchaerror").html("请输入验证码");
+                $("#kaptchaerror").show();
+                return false;
+            }
+            $.ajax({
+                type: "post",
+                url: "SendSMS",
+                data: {
+                    mobilenum: mobilenum,
+                    verifyKaptcha: verifyKaptcha
+                },
+                dataType: "html",
+                success: function (data) {
+                    if (data == "kaptchaerror") {
+                        $("#kaptchaerror").html("您输入的验证码不正确");
+                        $("#kaptchaerror").show();
+                    }
+                    if (data == "success") {
+                        settime();
+                        $("#mobilenumerror").hide();
+                    }
+                    if (data == "error") {
+                        $("#mobilenumerror").html("您输入的手机号码已注册");
+                        $("#mobilenumerror").show();
+                    }
+                }
+            });
+
+        }
+
+        function checkPhone(phone) {
+            var sPhone = phone;
+            if (!/^1\d{10}$/i.test(sPhone)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function checkQQ(qq) {
+            var k = qq;
+            //^表示不匹配。d表示任意数字，{5,10}表示长度为5到10。
+            var reg = /^\d{5,10}$/;
+
+            //用上面定义的正则表达式测试，如果不匹配则返回false
+            if (!reg.test(k)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        // 点击切换验证码
+        function changeVerifyCode() {
+            $("#yzmImg").attr("src", "Kaptcha.jpg?" + Math.floor(Math.random() * 100));
+        }
+
+        function checksmscode(code) {
+            var k = code;
+            var reg = /^[0-9]*$/;
+
+            //用上面定义的正则表达式测试，如果不匹配则返回false
+            if (!reg.test(k)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        var countdown = 30;
+
+        function settime() {
+            if (countdown == 0) {
+                $("#ss").hide();
+                $("#sendsms").show();
+                countdown = 30;
+            } else {
+                $("#ss").html(countdown + "秒后重发");
+                $("#sendsms").hide();
+                $("#ss").show();
+                countdown--;
+                setTimeout(function () {
+                    settime()
+                }, 1000)
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="header fixed">
+        <div class="container clearfix">
+            <div class="logo">
+                <a href="mainpage.html">
+                    <img src="../../../static/images/logo.png" alt="not find this pic">
+                </a>
+            </div>
+            <div class="nav_btn_box">
+                <p class="nav_btn">售前热线：025-58830029</p>
+                <p style="text-align: center;color: #aaa;line-height: 28px">周一至周五9：00-18：00</p>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="mainpage.html" class="mainpage">首页</a>
+                </li>
+                <li>
+                    <a class="nav_more" href="javascript:;">产品</a>
+                    <!-- #                                鼠标移入，弹出下拉的页面，在css中应该有体现 -->
+                    <div class="more_box" style="display: none;">
+                        <div class="container clearfix">
+                            <div class="more_main clearfix">
+                                <a href="b2c.html">
+                                    <p class="b2c">单用户商城</p>
+                                    <p class="more_text">跟随消费者节奏，打造独一无二的B2C商城</p>
+                                </a>
+                                <a class="bbc.html">
+                                    <p class="bbc">多用户商城</p>
+                                    <p class="more_text">为企业打造类似京东、天猫的电子商务平台的B2B2C多用户商城系统</p>
+                                </a>
+                                <a href="landingpage_app.html">
+                                    <p class="o2o">iOS/Android手机商城</p>
+                                    <p class="more_text">为用户提供交互式可视化的购物体验</p>
+                                </a>
+                                <a href="landingpage_h5.html">
+                                    <p class="o2o">H5手机商城</p>
+                                    <p class="more_text">与微信完美结合,轻松搭建微信商城</p>
+                                </a>
+                                <a href="o2o.html">
+                                    <p class="o2o">电商O2O</p>
+                                    <p class="more_text">帮助传统连锁企业打通线上线下，实现网上和门店一体化营销解决方案</p>
+                                </a>
+                                <a href="b2b.html">
+                                    <p class="b2b">B2B分销</p>
+                                    <p class="more_text">面向品牌商或分销商，打造网上批发市场</p>
+                                </a>
+                                <a href="b2b_multi.html">
+                                    <p class="b2b">B2B2B多供货商分销</p>
+                                    <p class="more_text">整合上游供应，管理下游分销，实现批发订货业务的全周期管理</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav_more solution" href="javascript:;">解决方案</a>
+                    <div class="more_box">
+                        <div class="container clearfix">
+                            <ul class="sol_list">
+                                <li><a href="solutions_cross.html" title="跨境电商解决方案">
+                                        <div class="fll">
+                                            <img src="../../../static/images/solutions_img01.jpg" alt="跨境电商解决方案" />
+                                        </div>
+                                        <div class="sol_text">
+                                            <p>跨境电商解决方案</p>
+                                            <p>跨境业务流通、全网会员营销、全渠道统一管理的一站式跨境电商解决方案</p>
+                                        </div>
+                                    </a></li>
+                                <li><a href="solutions_agriculture.html" title="农业电商解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img02.jpg"
+                                                alt="农业电商解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>农业电商解决方案</p>
+                                            <p>支持”自营+商家入驻模式“来迅速扩充工业和农产品品类</p>
+                                        </div>
+                                    </a></li>
+                                <li><a href="solutions_jiaju.html" title="家居行业解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img09.jpg"
+                                                alt="家居行业解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>家居行业解决方案</p>
+                                            <p>线上与线下深度融合、相互引导，实现体验闭环</p>
+                                        </div>
+                                    </a></li>
+                                <li><a href="solutions_car.html" title="汽配行业解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img10.jpg"
+                                                alt="汽配行业解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>汽配行业解决方案</p>
+                                            <p>线上+线下相结合，加速零售模式转型、电商落地</p>
+                                        </div>
+                                    </a></li>
+                                <li><a href="solutions_kxp.html" title="快消品行业解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img11.jpg"
+                                                alt="快消品行业解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>快消品行业解决方案</p>
+                                            <p>通过互联网工具优化业务流程、提升运转效率，帮助零售终端轻松管理</p>
+                                        </div>
+                                    </a></li>
+                                <li><a href="solutions_xls.html" title="新零售业务解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img12.jpg"
+                                                alt="新零售业务解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>新零售业务解决方案</p>
+                                            <p>有效结合移动社交流量、门店流量、抢占线上线下市场</p>
+                                        </div>
+                                    </a></li>
+                                <li style="border:0"><a href="solutions_medicine.html" title="医药行业解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img03.jpg"
+                                                alt="医药行业解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>医药行业解决方案</p>
+                                            <p>多渠道统一在线销售，结合分布式门店协同和商客关系持久经营的O2O业务</p>
+                                        </div>
+                                    </a></li>
+                                <li style="border:0"><a href="solutions_circulation.html" title="专业市场特征的流通电商">
+                                        <div class="fll"><img src="../../../static/images/solutions_img07.jpg"
+                                                alt="专业市场特征的流通电商" /></div>
+                                        <div class="sol_text">
+                                            <p>专业市场流通电商</p>
+                                            <p>针对传统的专业市场，提供开展多商家多店铺特征电商业务的系统解决方案</p>
+                                        </div>
+                                    </a></li>
+                                <li style="border:0"><a href="solutions_Integrated_commercial.html" title="综合商业体电商解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img08.jpg"
+                                                alt="综合商业体电商解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>综合商业体电商</p>
+                                            <p>充分展现消费者动员能力，持续开展以综合商业体为核心的客户忠诚度管理</p>
+                                        </div>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="technology.html" class="technology">技术架构</a>
+                </li>
+                <li>
+                    <a href="about.html" class="about">关于我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="slideshow_wrapper">
+        <ul class="slideshow_photo">
+            <li style="z-index: 2" index="1">
+                <div
+                    style="background:url(../../../static/images/index_banner1.jpg) no-repeat center top; width:100%; height:400px">
+                    <div class="container" style="position:relative">
+                        <a class="bannerBtn" href="bbc.html" target="_blank">了解详情</a>
+                        <a class="bannerBtn fcallb_btn" href="javascript:;" target="_blank">免费试用</a>
+                    </div>
+                </div>
+            </li>
+            <li style="z-index: 1" index="2">
+                <div
+                    style="background:url(../../../static/images/index_banner4.jpg) no-repeat center top; width:100%; height:400px">
+                    <div class="container" style="position:relative">
+                        <a class="bannerBtn fcallb_btn"
+                            style="left:60px; top:230px; background:#ffa402; padding:20px 45px; border:0; color: #fff"
+                            href="javascript:;" target="_blank">还等什么，立即申请试用吧</a>
+                    </div>
+                </div>
+            </li>
+            <li style="z-index: 1" index="3">
+                <div
+                    style="background:url(../../../static/images/index_banner2.jpg) no-repeat center top; width:100%; height:400px">
+                    <div class="container" style="position:relative">
+                        <a class="bannerBtn" style="padding:20px 60px" href="solutions_agriculture.html"
+                            target="_blank">了解详情</a>
+                        <a class="bannerBtn fcallb_btn"
+                            style="border:solid 2px #fff; color:#fff; padding:18px 60px; left:360px" href="javascript:;"
+                            target="_blank">免费试用</a>
+                    </div>
+                </div>
+            </li>
+            <li style="z-index: 1" index="4">
+                <div
+                    style="background:url(../../../static/images/index_banner3.jpg) no-repeat center top; width:100%; height:400px">
+                    <div class="container" style="position:relative">
+                        <a class="bannerBtn" style="padding:20px 60px" href="solutions_cross.html"
+                            target="_blank">了解详情</a>
+                        <a class="bannerBtn fcallb_btn" style="padding:18px 60px; left:360px" href="javascript:;"
+                            target="_blank">免费试用</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="slideshow_footbar"></div>
+    </div>
+    <!-- 动态页面 -->
+    <div class="floor01">
+        <div class="container clearfix">
+            <div class="modal-backdrop"></div>
+            <div class="reg_box clearfix">
+                <a href="javascript:;" class="all-close">×</a>
+                <div class="reg_logo">免费申请试用,试用有礼</div>
+                <ul class="reg_main">
+                    <li>
+                        <input type="text" id="mobilenum" placeholder="手机号码">
+                        <div class="error_tip" id="mobilenumerror" style="display: none;">您输入的手机号码不正确</div>
+                    </li>
+                    <li>
+                        <p style="height: 42px;">
+                            <input type="text" id="kaptcha" placeholder="验证码" style=" width: 200px; ">
+                            <img src="Kaptcha.jpg" onclick="changeVerifyCode()" id="yzmImg"
+                                style="width: 100px; height: 42px; margin-left: 10px; cursor: pointer;">
+                        </p>
+                        <div class="error_tip" style="display: none;" id="kaptchaerror">您输入的验证码不正确</div>
+                    </li>
+                    <li>
+                        <input type="text" id="smscode" placeholder="短信验证码">
+                        <a id="sendsms" onclick="sendSMS();" class="code_btn" href="javascript:;">获取验证码</a><span
+                            class="code_btn" id="ss" style="color: #ccc;display: none;">30秒后重发</span>
+                        <div class="error_tip" style="display: none;" id="smscodeerror">您输入的验证码不正确</div>
+                    </li>
+                    <li>
+                        <input class="reg_btn" type="submit" onclick="regsub();" value="确认提交">
+                    </li>
+                </ul>
+            </div>
+            <div class="floor_title">
+                <p class="title">产品</p>
+                <p>评估您业务的现状和未来，选择最适合的功能版本</p>
+            </div>
+            <div class="pro_main pro_bbc">
+                <h1>单用户商城B2C</h1>
+                <a href="b2c.html">
+                    <ul class="pro_bg">
+                        <li class="pro_img"><img src="../../../static/images/index01_pic01.jpg" width="100%" alt="" />
+                        </li>
+                        <li class="pro_text">单用户商城(B2C)，面向中小客户，为企业和网商快速实现移动电商和传统电商的双线布局</li>
+                        <li class="pro_btn"><img src="../../../static/images/view_btn.png" width="80" alt="" /></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="pro_main pro_bbc">
+                <h1>多用户商城B2B2C</h1>
+                <a href="bbc.html">
+                    <ul class="pro_bg">
+                        <li class="pro_img"><img src="../../../static/images/index01_pic02.jpg" width="100%" alt="" />
+                        </li>
+                        <li class="pro_text">多店铺商城（B2B2C），面向中高端客户,为企业和大中型网商打造类似京东、天猫的电子商务平台</li>
+                        <li class="pro_btn"><img src="../../../static/images/view_btn.png" width="80" alt="" /></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="pro_main pro_bbc">
+                <h1>B2B分销</h1>
+                <a href="b2b.html">
+                    <ul class="pro_bg">
+                        <li class="pro_img"><img src="../../../static/images/index01_pic05.jpg" width="100%" alt="">
+                        </li>
+                        <li class="pro_text">企业与企业之间通过互联网进行产品、服务及信息的交换，缩短流通渠道，让优质货源直达门店</li>
+                        <li class="pro_btn"><img src="../../../static/images/view_btn.png" width="80" alt=""></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="pro_main pro_bbc">
+                <h1>B2B2B多供货商分销</h1>
+                <a href="c2b.html">
+                    <ul class="pro_bg">
+                        <li class="pro_img"><img src="../../../static/images/index01_pic03.jpg" width="100%" alt="">
+                        </li>
+                        <li class="pro_text">帮助企业整合优质上游供货渠道，连接厂商、经销商、代理商、批发商和零售商，快速搭建专属订货平台。</li>
+                        <li class="pro_btn"><img src="../../../static/images/view_btn.png" width="80" alt=""></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="pro_main pro_bbc">
+                <h1>电商O2O</h1>
+                <a href="o2o.html">
+                    <ul class="pro_bg">
+                        <li class="pro_img"><img src="../../../static/images/index01_pic04.jpg" width="100%" alt="" />
+                        </li>
+                        <li class="pro_text">类似饿了么、百度外卖、美团外卖、京东到家，集实体与虚拟于一体的专业O2O高频领域。</li>
+                        <li class="pro_btn"><img src="../../../static/images/view_btn.png" width="80" alt="" /></li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 静态页面 -->
+    <div class="floor02">
+        <div class="container clearfix" style="width:1100px">
+            <div class="floor_title floor_w">
+                <p class="title">为什么选择我们</p>
+                <p>成熟的产品，先进的技术，专业的团队，为您提供优质的产品及专业的服务</p>
+            </div>
+            <div class="advantage_box"><img src="../../../static/images/advantage_pic01.jpg" width="100%" alt="" />
+                <ul>
+                    <li class="title">成熟的产品</li>
+                    <li>全线<span class="orange">成熟的</span>电商产品，构建一站式电商解决方案，降低客户成本</li>
+                </ul>
+            </div>
+            <div class="advantage_box"><img src="../../../static/images/advantage_pic02.jpg" width="100%" alt="" />
+                <ul>
+                    <li class="title">先进的技术</li>
+                    <li>采用<span class="orange">JAVA</span>技术进行分层开发，选用目前主流的MVC开发方式</li>
+                </ul>
+            </div>
+            <div class="advantage_box"><img src="../../../static/images/advantage_pic03.jpg" width="100%" alt="" />
+                <ul>
+                    <li class="title">专业的团队</li>
+                    <li>来自<span class="orange">苏宁易购</span>的精英技术团队，凭借优质的服务、倍受客户青睐</li>
+                </ul>
+            </div>
+            <div class="advantage_box"><img src="../../../static/images/advantage_pic04.jpg" width="100%" alt="" />
+                <ul>
+                    <li class="title">完善的服务</li>
+                    <li><span class="orange">精英客服团队</span>，凭借优质的服务、创新进取的精神、倍受客户青睐</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 动态页面 -->
+    <div class="solutions_floor">
+        <div class="floor_title">
+            <p class="title">行业解决方案</p>
+            <p>为企业匹配适应的专业级解决方案，细分行业，互联网+颠覆传统商业未来</p>
+        </div>
+        <div class="container clearfix">
+            <ul class="solutions_list">
+                <li><a href="solutions_cross.html" title="跨境电商解决方案"> <img
+                            src="../../../static/images/solutions_img01.jpg" alt="跨境电商解决方案" /><span>跨境电商解决方案</span> </a>
+                </li>
+                <li><a href="solutions_agriculture.html" title="农业电商解决方案"> <img
+                            src="../../../static/images/solutions_img02.jpg" alt="农业电商解决方案" /><span>农业电商解决方案</span> </a>
+                </li>
+                <li><a href="solutions_jiaju.html" title="家居行业解决方案"> <img
+                            src="../../../static/images/solutions_img09.jpg" alt="家居行业解决方案" /><span>家居行业解决方案</span> </a>
+                </li>
+                <li><a href="solutions_car.html" title="汽配行业解决方案"><img src="../../../static/images/solutions_img10.jpg"
+                            alt="汽配行业解决方案" /><span>汽配行业解决方案</span> </a></li>
+                <li><a href="solutions_kxp.html" title="快消品行业解决方案"><img src="../../../static/images/solutions_img11.jpg"
+                            alt="快消品行业解决方案" /><span>快消品行业解决方案</span> </a></li>
+                <li><a href="solutions_xls.html" title="新零售业务解决方案"><img src="../../../static/images/solutions_img12.jpg"
+                            alt="新零售业务解决方案" /><span>新零售业务解决方案</span> </a></li>
+                <li><a href="solutions_medicine.html" title="医药行业解决方案"> <img
+                            src="../../../static/images/solutions_img03.jpg" alt="医药行业解决方案" /><span>医药行业解决方案</span> </a>
+                </li>
+                <li><a href="solutions_circulation.html" title="专业市场特征的流通电商"> <img
+                            src="../../../static/images/solutions_img07.jpg" alt="专业市场特征的流通电商" /><span>专业市场流通电商</span>
+                    </a></li>
+                <li><a href="solutions_Integrated_commercial.html" title="综合商业体电商解决方案"> <img
+                            src="../../../static/images/solutions_img08.jpg" alt="综合商业体电商解决方案" /><span>综合商业体电商</span>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 静态页面 -->
+    <div class="floor03">
+        <div class="container clearfix">
+            <div class="floor_title">
+                <p class="title">客户案例</p>
+                <p>他们都在用乐商网的产品和服务</p>
+            </div>
+            <ul class="case_box">
+                <li class="one"><img src="../../../static/images/cont.jpg" alt="" /></li>
+                <li class="one"><img src="../../../static/images/cont-01.jpg" alt="" /></li>
+                <li class="one"><img src="../../../static/images/cont-05.jpg" alt="" /></li>
+                <li class="one"><img src="../../../static/images/cont-06.jpg" alt="" /></li>
+                <li class="one" style="border-right:0"><img src="../../../static/images/cont-07.jpg" alt="" /></li>
+                <li class="two"><img src="../../../static/images/cont-08.jpg" alt="" /></li>
+                <li class="two"><img src="../../../static/images/cont-09.jpg" alt="" /></li>
+                <li class="two"><img src="../../../static/images/cont-10.jpg" alt="" /></li>
+                <li class="two"><img src="../../../static/images/cont-11.jpg" alt="" /></li>
+                <li class="two" style="border-right:0"><img src="../../../static/images/cont-12.jpg" alt="" /></li>
+            </ul>
+        </div>
+    </div>
+    <!--动态页面 -->
+    <div class="floor04">
+        <div class="container clearfix">
+            <div class="floor_title">
+                <p class="title">合作伙伴</p>
+                <p>与国内外知名公司和团队合作，为您带来优质的价值，为您的电商之路保驾护航</p>
+            </div>
+            <ul class="partner_box">
+                <li><img src="../../../static/images/alipay.png" alt="" /></li>
+                <li><img src="../../../static/images/tenpay.png" alt="" /></li>
+                <li><img src="../../../static/images/unionpay.png" alt="" /></li>
+                <li><img src="../../../static/images/weixin.png" alt="" /></li>
+                <li><img src="../../../static/images/aliyun.png" alt="" /></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 企业信息 -->
+    <div class="clearfix" style="float:left; width: 100%; background: #232529">
+        <div class="container contact clearfix" style="clear:both">
+            <div class="contact_text">
+                <p>软件企业编号：苏R-2016-0055&nbsp;&nbsp;&nbsp;&nbsp;高新技术企业编号：GR201643000270</p>
+                <p>软件产品编号：苏DGY-2016-0155&nbsp;&nbsp;&nbsp;&nbsp;软件著作权登记号：2017SR153214 2017SR149924 2017SR154030</p>
+                <p>售前电话：025-58830029</p>
+                <p>公司地址：北京市达内教育python中心</p>
+            </div>
+            <div class="contact_qr">关注我们<br />
+                <br />
+                <img src="../../../static/images/qr_code.png" width="129" height="129" alt="" /></div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <div class="footer">© Copyright 2016 LecShop 网店系统 商城系统 微信商城系统 分销系统 江苏乐商信息科技有限公司版权所有 | <a
+            href="http://www.beian.miit.gov.cn" target="_blank" style="color: #fff">苏ICP备16012749号</a></div>
+
+    <!-- 右下角弹窗 -->
+    <div class="main-im">
+        <div class="open-im">&nbsp;</div>
+        <div class="im_main">
+            <div class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+            <a href="javascript:;" onclick="openZoosUrl('chatwin');" class="im-qq qq-a" title="在线客服" target="_blank">
+                <div class="qq-container"></div>
+                <div class="qq-hover-c"><img class="img-qq" src="../../../static/images/kefu.png">
+                </div>
+                <span> 在线咨询</span>
+            </a>
+            <div class="im-tel">
+                <div>咨询热线</div>
+                <div class="tel-num">025-58830029</div>
+            </div>
+            <div class="im-footer" style="position:relative">
+                <div class="weixing-container">
+                    <div class="weixing-show">
+                        <div class="weixing-txt">微信扫一扫<br>
+                            获取更多信息
+                        </div>
+                        <img class="weixing-ma" src="../../../static/images/qr_code.png">
+                        <div class="weixing-sanjiao"></div>
+                        <div class="weixing-sanjiao-big"></div>
+                    </div>
+                </div>
+                <div class="go-top"><a href="javascript:;" title="返回顶部"></a></div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
