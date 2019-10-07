@@ -11,7 +11,7 @@ $(document).ready(function () {
 	});
 	$(window).scroll(function (){
 	    var $filter = $('.header');
-        var $filterTop = $filter.offset().top;
+        var $filterTop = $filter.offset().top;//这里设置了快速返回到页面顶端的方法
 		if ( $(window).width() > 1000 ) {
 	      if ( $(window).scrollTop() > $filterTop ) {
 			  $filter.addClass("fixed");
@@ -94,6 +94,7 @@ $(document).ready(function () {
 
 });
 
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|opera mini|opera mobile|appleWebkit.*mobile|mobile/i.test(navigator.userAgent) ) {
-    window.location = '../../../www.lecshop.cn/mobile/m_index.html'/*tpa=http://www.lecshop.cn/mobile/m_index.html*/;
-}
+// 这里是设置手机端访问的时候，访问哪个html，这里屏蔽了，我们暂时不做手机的适配
+// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|opera mini|opera mobile|appleWebkit.*mobile|mobile/i.test(navigator.userAgent) ) {
+//     window.location = '../../../www.lecshop.cn/mobile/m_index.html'/*tpa=http://www.lecshop.cn/mobile/m_index.html*/;
+// }

@@ -25,7 +25,7 @@ ol, ul { list-style: none }
 .nav { float: right; margin-right: 20px }
 .nav li { float: left }
 .nav li a { font-size: 16px; padding: 32px 40px }
-.nav li:hover a.nav_more, .nav li a.cur, .more_box .more_main a:hover { color: #ffae00 }
+.nav li:hover a.nav_more, .nav li a.cur,.more_box .more_main a:hover,.nav li a.mainpage:hover,.nav li a.technology:hover,.nav li a.about:hover  { color: #ffae00 }
 .nav li a.nav_more { background: url(../images/nav_ico.png)/*tpa=http://images.lecshop.cn/website/images/nav_ico.png*/ no-repeat 90px 38px }
 .nav li :hover a.nav_more, .nav li a.nav_more.cur { background: url(../images/nav_ico_hover.png)/*tpa=http://images.lecshop.cn/website/images/nav_ico_hover.png*/ no-repeat 90px 38px }
 .nav li a.nav_more.solution { background: url(../images/nav_ico.png)/*tpa=http://images.lecshop.cn/website/images/nav_ico.png*/ no-repeat 123px 38px }
