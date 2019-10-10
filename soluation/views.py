@@ -78,3 +78,6 @@ def server(request):
 # Create your views here.
 def solutions_Integrated_commercial(request):
     return render(request, 'soluation/solutions_Integrated_commercial.html')
+
+def test(request):
+    pass
