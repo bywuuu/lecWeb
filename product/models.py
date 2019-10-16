@@ -9,23 +9,22 @@ class User(models.Model):
     password = models.CharField(max_length=32, verbose_name='密码')
     email = models.EmailField(verbose_name='邮箱')
     created_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
-    money = models.PositiveIntegerField(default=0,verbose_name='账户余额')
+    money = models.PositiveIntegerField(default=0, verbose_name='账户余额')
 
     class Meta:
         db_table = 'user'
 
 
-# class Product(models.Model):
-#     product_id = models.AutoField(primary_key=True, verbose_name='产品id')
-#     brand = models.CharField(max_length=30,verbose_name='品牌名称')
-#     product_name = models.CharField(max_length=30,verbose_name='产品名称')
-#     # product_img = models.img
-#     product_stock = models.PositiveIntegerField(verbose_name='产品库存')
-#     price = models.FloatField(verbose_name='产品定价')
-#     updated_time = models.DateTimeField(auto_now=True,verbose_name='修改时间')
-#
-#     class Meta:
-#         db_table = 'product'
+class Product(models.Model):
+    product_id = models.AutoField(primary_key=True, verbose_name='产品id')
+    brand = models.CharField(max_length=30, verbose_name='品牌名称')
+    product_name = models.CharField(max_length=30, verbose_name='产品名称')
+    product_stock = models.PositiveIntegerField(verbose_name='产品库存')
+    price = models.FloatField(verbose_name='产品定价')
+    updated_time = models.DateTimeField(auto_now=True, verbose_name='修改时间')
+
+    class Meta:
+        db_table = 'product'
 #
 #
 # class Order(models.Model):

@@ -27,12 +27,48 @@ def reg_view(request):
                 User.objects.create(username=username, password=password, email=email)
             except Exception as e:
                 print(e)
-                return render(request, 'product/register.html', {'error': '请输入正确的邮箱格式'})
-            res = render(request, 'product/register.html', {'error': '注册成功'})
-            res.set_cookie('username',username)
+                return render(request, 'product/register.html', {'info': '请输入正确的邮箱格式'})
+            res = render(request, 'product/register.html', {'info': '注册成功'})
+            res.set_cookie('username', username)
             return res
 
-        return render(request, 'product/register.html', {'error': '账号已被注册'})
+        return render(request, 'product/register.html', {'info': '账号已被注册'})
 
     elif request.method == 'GET':
         return render(request, 'product/register.html')
+
+
+def log_view(request):
+    if request.method == 'GET':
+        return render(request, 'product/login.html')
+    elif request.method == 'POST':
+        username = request.POST.get('username', '')
+        password = request.POST.get('password', '')
+        if not username or not password:
+            return render(request, 'product/login.html', {'info': '请输入用户名和密码'})
+        user = User.objects.filter(username=username)
+        if not user:
+            return render(request, 'product/login.html', {'info': '此用户不存在'})
+        else:
+            res = render(request, 'product/login.html', {'info': '登录成功'})
+            res.set_cookie('username', username)
+            return res
+
+
+def product_list_view(request):
+    if request.method == 'GET':
+        return render(request, 'product/product_list.html')
+    return render(request, 'product/product_list.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
