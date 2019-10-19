@@ -82,13 +82,62 @@ def product_all(request):
         ul_data = Product.objects.all()
         return render(request, 'product/product_list.html', locals())
     else:
-        return HttpResponse('404 Not Found')
+        return render(request, 'product/404.html')
 
 
-@logging_view('POST')
+@logging_view('GET')
 def product_buy(request, product_id):
+    # 筛选出product
+    product = Product.objects.get(product_id=product_id)
+    user = request.user
+
+    if not product:
+        return render(request, 'product/404.html')
     if request.method == 'GET':
-        print(product_id)
+        if user.money < product.product_price:
+            info = '你的余额不足，无法购买'
+            return render(request, 'product/detail.html', locals())
+        else:
+            user.money -= product.product_price
+            user.save()
+            try:
+                Order.objects.create(user=user, product=product, is_pay=True)
+            except Exception as e:
+                print(e)
+                info = '购买失败'
+                return render(request, 'product/detail.html', locals())
+            info = '购买成功'
+            return render(request, 'product/detail.html', locals())
+
+
+@logging_view('GET')
+def order_buy(request, order_id):
+    if request.method == 'GET':
+        user = request.user
+        try:
+            order = Order.objects.get(order_id=order_id, is_pay=False)
+        except Exception as e:
+            print(e)
+            info = '购买失败'
+            paid_ul = Order.objects.filter(user=user, is_pay=True)
+            unpaid_ul = Order.objects.filter(user=user, is_pay=False)
+            return render(request, 'product/show_order.html', locals())
+        if user.money < order.product.product_price:
+            info = '余额不足,请充值后购买'
+            paid_ul = Order.objects.filter(user=user, is_pay=True)
+            unpaid_ul = Order.objects.filter(user=user, is_pay=False)
+            return render(request, 'product/show_order.html', locals())
+        user.money -= order.product.product_price
+        user.save()
+        order.is_pay = True
+        order.save()
+        info = '购买成功'
+        paid_ul = Order.objects.filter(user=user, is_pay=True)
+        unpaid_ul = Order.objects.filter(user=user, is_pay=False)
+        return render(request, 'product/show_order.html', locals())
+
+    else:
+        return render(request, 'product/404.html')
 
 
 @logging_view('GET', 'POST')
@@ -103,7 +152,7 @@ def change_info(request, username=None):
         if username is None:
             return render(request, 'product/login.html')
         if username != user.username:
-            info = 'you have no right change other`s info, please login'
+            info = '你无权修改他人信息，请登录'
             res = render(request, 'product/login.html', locals())
             res.delete_cookie('username')
             return res
@@ -111,7 +160,7 @@ def change_info(request, username=None):
         username_user = request.POST.get('username', '')
         email = request.POST.get('email', '')
         if user.username == username_user and email == user.email:
-            info = 'you haven`t change anything'
+            info = '你没有修改任何信息'
             return render(request, 'product/change_info.html', locals())
 
 
@@ -191,6 +240,52 @@ def change_password(request, username):
         return render(request, 'product/change_info.html', locals())
     else:
         return render(request, 'product/404.html')
+
+
+def product_info(request, product_id):
+    if request.method == 'GET':
+        product = Product.objects.filter(product_id=product_id)
+        if not product:
+            info = '不存在此商品'
+            return render(request, 'product/detail.html', {'info':info})
+        product = product[0]
+        return render(request, 'product/detail.html', locals())
+    else:
+        return render(request, 'product/404.html')
+
+
+@logging_view('GET')
+def add_order(request, product_id):
+    user = request.user
+    product = Product.objects.get(product_id=product_id)
+    if request.method == 'GET':
+        Order.objects.create(user=user, product=product, is_pay=False)
+        info = '添加购物车成功'
+        return render(request, 'product/detail.html', locals())
+
+
+@logging_view('GET')
+def show_order(request):
+    user = request.user
+    if request.method == 'GET':
+        paid_ul = Order.objects.filter(user=user, is_pay=True)
+        unpaid_ul = Order.objects.filter(user=user, is_pay=False)
+        return render(request, 'product/show_order.html', locals())
+    else:
+        return render(request, 'product/404.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

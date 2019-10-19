@@ -15,11 +15,13 @@
     <div class="list">
         <div class="change_info">
             {% if info == 'login' %}
-            <a style="display: block" href="/product/change_info">修改个人信息</a>
+                <a style="display: block" href="/product/change_info">修改个人信息</a>
+                <a style="display: block" href="/product/order">查看购物车</a>
             {% else %}
-            <a style="display: block" href="/product/login">登录</a>
+                <a style="display: block" href="/product/login">登录</a>
+                <a style="display: block" href="/product/register">注册</a>
             {% endif %}
-            <a style="display: block" href="/product/order">查看个人账单</a>
+
         </div>
         <div class="a post" style="line-height: 30px">
 
@@ -43,7 +45,7 @@
                 <img src= {{ li.pic_url }}>
                 <span><p class="product_name">{{ li.product_name }}</p></span>
                 <span><p class="price">{{ li.product_price }}</p></span>
-                  <span><a href="/product/buy/{{ li.product_id }}">购买</a></span>
+                <span><a href="/product/{{ li.product_id }}">查看详情</a></span>
               </li>
             {% endfor %}
             </ul>

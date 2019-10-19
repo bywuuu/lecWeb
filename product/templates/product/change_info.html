@@ -21,12 +21,13 @@
             <a href="/product/add_money/{{ user.username }}">充值</a>
         </p>
         <p>
-            <a href="/product/order/{{ user.username }}">查看购物车</a>
+            <a href="/product/order">查看购物车</a>
             <a href="/product/change_password/{{ user.username }}">修改密码</a>
             <a href="/product/quit_login/{{ user.username }}">注销</a>
         </p>
         <p>
             <input type="submit" value="提交修改">
+            <a href="/product/all">返回商品列表</a>
         </p>
         <p>
             {{ info }}
