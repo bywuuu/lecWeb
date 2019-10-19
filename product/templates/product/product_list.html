@@ -13,6 +13,14 @@
 {#		<img src="/static/images/product/b.jpg" alt="">#}
 {#	</div>#}
     <div class="list">
+        <div class="change_info">
+            {% if info == 'login' %}
+            <a style="display: block" href="/product/change_info">修改个人信息</a>
+            {% else %}
+            <a style="display: block" href="/product/login">登录</a>
+            {% endif %}
+            <a style="display: block" href="/product/order">查看个人账单</a>
+        </div>
         <div class="a post" style="line-height: 30px">
 
         <form method="post" action="/product/list" >
@@ -21,7 +29,7 @@
             <a href="/product/all"  class="b">查看所有商品</a>
 
             {% csrf_token %}
-            {% if info != '' %}
+            {% if info != '' and info != 'login' %}
             <p class="b">{{ info }}</p>
             {% endif %}
 
@@ -35,7 +43,7 @@
                 <img src= {{ li.pic_url }}>
                 <span><p class="product_name">{{ li.product_name }}</p></span>
                 <span><p class="price">{{ li.product_price }}</p></span>
-                  <span><a href="aa">购买</a></span>
+                  <span><a href="/product/buy/{{ li.product_id }}">购买</a></span>
               </li>
             {% endfor %}
             </ul>
