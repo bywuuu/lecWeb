@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^change_info$', views.change_info),
     url(r'^change_info/(?P<username>\w+)$', views.change_info),
     url(r'^quit_login/(?P<username>\w+)$', views.quit_login),
-    url(r'^add_money/(?P<username>\w+)$', views.add_money)
+    url(r'^add_money/(?P<username>\w+)$', views.add_money),
+    url(r'^change_password/(?P<username>\w+)$', views.change_password)
 ]
