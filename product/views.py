@@ -124,6 +124,8 @@ def quit_login(request, username=None):
         res = render(request, 'product/product_list.html')
         res.delete_cookie('username')
         return res
+    else:
+        return render(request, 'product/404.html')
 
 
 @logging_view('GET', 'POST')
@@ -151,8 +153,44 @@ def add_money(request, username=None):
         info = '充值{}元成功'.format(money)
         return render(request, 'product/change_info.html', locals())
     else:
-        return HttpResponse('404 Not Found')
+        return render(request, 'product/404.html')
 
+
+@logging_view('GET', 'POST')
+def change_password(request, username):
+    user = request.user
+    if username != user.username:
+        info = '你无权修改他人账号'
+        return render(request, 'product/change_info.html', locals())
+    if request.method == 'GET':
+        return render(request, 'product/change_password.html', locals())
+    elif request.method == 'POST':
+        old_password = request.POST.get('old_password', '')
+        password_1 = request.POST.get('password_1', '')
+        password_2 = request.POST.get('password_2', '')
+        if not old_password or not password_1 or not password_2:
+            info = '密码不得为空'
+            return render(request, 'product/change_password.html', locals())
+        if password_1 != password_2:
+            info = '两次输入的密码不一致'
+            return render(request, 'product/change_password.html', locals())
+        if len(password_1) < 6:
+            info = '密码长度不得小于6'
+            return render(request, 'product/change_password.html', locals())
+        if old_password == password_1:
+            info = '不得与原密码一致'
+            return render(request, 'product/change_password.html', locals())
+        old_password = md5(old_password)
+        if old_password != user.password:
+            info = '请输入正确的原密码'
+            return render(request, 'product/change_password.html', locals())
+        new_password = md5(password_1)
+        user.password = new_password
+        user.save()
+        info = '密码修改成功'
+        return render(request, 'product/change_info.html', locals())
+    else:
+        return render(request, 'product/404.html')
 
 
 
