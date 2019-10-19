@@ -1,6 +1,11 @@
 from django.db import models
-
+import random
 # Create your models here.
+
+
+def random_price():
+    random_int = [x for x in range(5000, 30000, 1000)]
+    return random.choice(random_int)
 
 
 class User(models.Model):
@@ -17,11 +22,13 @@ class User(models.Model):
 
 class Product(models.Model):
     product_id = models.AutoField(primary_key=True, verbose_name='产品id')
-    brand = models.CharField(max_length=30, verbose_name='品牌名称')
     product_name = models.CharField(max_length=30, verbose_name='产品名称')
-    product_stock = models.PositiveIntegerField(verbose_name='产品库存')
-    price = models.FloatField(verbose_name='产品定价')
+    product_price = models.PositiveIntegerField(default=random_price, verbose_name='产品定价')
     updated_time = models.DateTimeField(auto_now=True, verbose_name='修改时间')
+    pic_url = models.CharField(default='', max_length=50, verbose_name='图片url')
+
+    def __repr__(self):
+        return str(self.product_id).center(3) +  self.product_name.center(15) + str(self.product_price).center(7) + self.pic_url.center(30)
 
     class Meta:
         db_table = 'product'
