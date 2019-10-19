@@ -1,5 +1,6 @@
 from django.db import models
 import random
+import time
 # Create your models here.
 
 
@@ -32,12 +33,16 @@ class Product(models.Model):
 
     class Meta:
         db_table = 'product'
-#
-#
-# class Order(models.Model):
-#     order_id = models.AutoField(primary_key=True,verbose_name='订单id')
-#     user_id = models.ForeignKey(User,verbose_name='用户id外键')
-#     product_id = models.ForeignKey(Product,verbose_name='商品id外键')
-#     invalid_time = models.DateTimeField(verbose_name='订单失效时间')
-#     is_pay = models.BooleanField(verbose_name='是否付款')
 
+
+class Order(models.Model):
+    order_id = models.AutoField(primary_key=True, verbose_name='订单id')
+    user = models.ForeignKey(User, verbose_name='用户id外键')
+    product = models.ForeignKey(Product, verbose_name='商品id外键')
+    is_pay = models.BooleanField(verbose_name='是否付款')
+
+    def __repr__(self):
+        return 'Order_id:' + str(self.order_id) + '   User_id:' + str(self.user_id) + '   Product_id:' + str(self.product_id) + '   is_pay:' + str(self.is_pay)
+
+    class Meta:
+        db_table = 'order'
