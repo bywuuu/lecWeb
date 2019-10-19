@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from .tools import *
 from .models import *
@@ -58,11 +59,23 @@ def log_view(request):
 def product_list_view(request):
     if request.method == 'GET':
         return render(request, 'product/product_list.html')
+    elif request.method == 'POST':
+        query = request.POST.get('query')
+        ul_data = Product.objects.filter(product_name__contains=query)
+        if not ul_data:
+            return render(request, 'product/product_list.html', {'info': '没有该产品'})
+        else:
+            return render(request, 'product/product_list.html', locals())
+
     return render(request, 'product/product_list.html')
 
 
-
-
+def product_all(request):
+    if request.method == 'GET':
+        ul_data = Product.objects.all()
+        return render(request, 'product/product_list.html', locals())
+    else:
+        return HttpResponse('404 Not Found')
 
 
 

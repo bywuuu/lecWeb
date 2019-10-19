@@ -4,20 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="/static/css/product_list.css">
+    <link rel="stylesheet" href="/static/css/product_list.css"/>
     <title>产品列表</title>
 
 </head>
 <body>
-    <div class="bg">
-		<img src="/static/images/product/b.jpg" alt="">
-	</div>
-    <div>
-        <ul style="border: none">
-            <li>
+{#    <div class="bg" style="">#}
+{#		<img src="/static/images/product/b.jpg" alt="">#}
+{#	</div>#}
+    <div class="list">
+        <div class="a post" style="line-height: 30px">
 
-            </li>
-        </ul>
+        <form method="post" action="/product/list" >
+            <input name="query" type="text" class="b" id="query">
+            <input type="submit" value="查询" class="b">
+            <a href="/product/all"  class="b">查看所有商品</a>
+
+            {% csrf_token %}
+            {% if info != '' %}
+            <p class="b">{{ info }}</p>
+            {% endif %}
+
+        </form>
+        </div>
+        <div class="a">
+        {% if ul_data %}
+            <ul style="border: none;">
+            {% for li in ul_data %}
+              <li style="overflow:hidden;">
+                <img src= {{ li.pic_url }}>
+                <span><p class="product_name">{{ li.product_name }}</p></span>
+                <span><p class="price">{{ li.product_price }}</p></span>
+                  <span><a href="aa">购买</a></span>
+              </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        </div>
     </div>
 </body>
 </html>
