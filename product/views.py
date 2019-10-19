@@ -124,6 +124,8 @@ def quit_login(request, username=None):
         res = render(request, 'product/product_list.html')
         res.delete_cookie('username')
         return res
+    else:
+        return render(request, 'product/404.html')
 
 
 @logging_view('GET', 'POST')
@@ -151,7 +153,7 @@ def add_money(request, username=None):
         info = '充值{}元成功'.format(money)
         return render(request, 'product/change_info.html', locals())
     else:
-        return HttpResponse('404 Not Found')
+        return render(request, 'product/404.html')
 
 
 @logging_view('GET', 'POST')
@@ -187,5 +189,10 @@ def change_password(request, username):
         user.save()
         info = '密码修改成功'
         return render(request, 'product/change_info.html', locals())
+    else:
+        return render(request, 'product/404.html')
+
+
+
 
 
