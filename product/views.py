@@ -29,7 +29,7 @@ def reg_view(request):
             except Exception as e:
                 print(e)
                 return render(request, 'product/register.html', {'info': '请输入正确的邮箱格式'})
-            res = render(request, 'product/register.html', {'info': '注册成功'})
+            res = render(request, 'product/product_list.html')
             res.set_cookie('username', username)
             return res
 
@@ -51,14 +51,18 @@ def log_view(request):
         if not user:
             return render(request, 'product/login.html', {'info': '此用户不存在'})
         else:
-            res = render(request, 'product/login.html', {'info': '登录成功'})
+            info = 'login'
+            res = render(request, 'product/product_list.html', locals())
             res.set_cookie('username', username)
             return res
 
 
 def product_list_view(request):
+    is_login = request.COOKIES.get('username', '')
+    if is_login:
+        info = 'login'
     if request.method == 'GET':
-        return render(request, 'product/product_list.html')
+        return render(request, 'product/product_list.html', locals())
     elif request.method == 'POST':
         query = request.POST.get('query')
         ul_data = Product.objects.filter(product_name__contains=query)
@@ -71,6 +75,9 @@ def product_list_view(request):
 
 
 def product_all(request):
+    is_login = request.COOKIES.get('username', '')
+    if is_login:
+        info = 'login'
     if request.method == 'GET':
         ul_data = Product.objects.all()
         return render(request, 'product/product_list.html', locals())
@@ -78,7 +85,73 @@ def product_all(request):
         return HttpResponse('404 Not Found')
 
 
+@logging_view('POST')
+def product_buy(request, product_id):
+    if request.method == 'GET':
+        print(product_id)
 
+
+@logging_view('GET', 'POST')
+def change_info(request, username=None):
+    if request.method == 'GET':
+        user = request.user
+        return render(request, 'product/change_info.html', locals())
+
+    elif request.method == 'POST':
+        user = request.user
+        # 如果用户提交了修改其他用户信息的请求
+        if username is None:
+            return render(request, 'product/login.html')
+        if username != user.username:
+            info = 'you have no right change other`s info, please login'
+            res = render(request, 'product/login.html', locals())
+            res.delete_cookie('username')
+            return res
+        # 如果用户没有进行任何修改
+        username_user = request.POST.get('username', '')
+        email = request.POST.get('email', '')
+        if user.username == username_user and email == user.email:
+            info = 'you haven`t change anything'
+            return render(request, 'product/change_info.html', locals())
+
+
+@logging_view('GET')
+def quit_login(request, username=None):
+    if request.method == 'GET':
+        if username != request.user.username:
+            info = 'you have no right'
+            return render(request, 'product/change_info.html', locals())
+        res = render(request, 'product/product_list.html')
+        res.delete_cookie('username')
+        return res
+
+
+@logging_view('GET', 'POST')
+def add_money(request, username=None):
+    if request.method == 'GET':
+        user = request.user
+        return render(request, 'product/add_money.html', locals())
+    elif request.method == 'POST':
+        user = request.user
+        money = request.POST.get('money')
+        if not money:
+            info = '请输入充值金额'
+            return render(request, 'product/add_money.html', locals())
+        try:
+            money = int(money)
+        except Exception as e:
+            print(e)
+            info = '请输入正确格式的数字'
+            return render(request, 'product/add_money.html', locals())
+        if money < 0:
+            info = '不可为负数！！'
+            return render(request, 'product/add_money.html', locals())
+        user.money += money
+        user.save()
+        info = '充值{}元成功'.format(money)
+        return render(request, 'product/change_info.html', locals())
+    else:
+        return HttpResponse('404 Not Found')
 
 
 
