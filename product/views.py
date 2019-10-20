@@ -29,7 +29,8 @@ def reg_view(request):
             except Exception as e:
                 print(e)
                 return render(request, 'product/register.html', {'info': '请输入正确的邮箱格式'})
-            res = render(request, 'product/product_list.html')
+            info = 'login'
+            res = render(request, 'product/product_list.html', {'info':info})
             res.set_cookie('username', username)
             return res
 
@@ -121,7 +122,7 @@ def order_buy(request, order_id):
             info = '购买失败'
             paid_ul = Order.objects.filter(user=user, is_pay=True)
             unpaid_ul = Order.objects.filter(user=user, is_pay=False)
-            return render(request, 'product/show_order.html', locals())
+            return render(request, 'product/.html', locals())
         if user.money < order.product.product_price:
             info = '余额不足,请充值后购买'
             paid_ul = Order.objects.filter(user=user, is_pay=True)
@@ -275,8 +276,25 @@ def show_order(request):
         return render(request, 'product/404.html')
 
 
-
-
+@logging_view('GET')
+def order_delete(request, order_id):
+    user = request.user
+    if request.method == 'GET':
+        try:
+            order = Order.objects.get(order_id=order_id, is_pay=False, user=user)
+        except Exception as e:
+            print(e)
+            info = '删除订单失败:{}'.format(e)
+            paid_ul = Order.objects.filter(user=user, is_pay=True)
+            unpaid_ul = Order.objects.filter(user=user, is_pay=False)
+            return render(request, 'product/show_order.html', locals())
+        order.delete()
+        info = '删除订单成功'
+        paid_ul = Order.objects.filter(user=user, is_pay=True)
+        unpaid_ul = Order.objects.filter(user=user, is_pay=False)
+        return render(request, 'product/show_order.html', locals())
+    else:
+        return render(request, 'product/404.html')
 
 
 

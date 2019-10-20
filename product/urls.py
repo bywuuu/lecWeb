@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^(?P<product_id>\d+)', views.product_info),
     url(r'^add_order/(?P<product_id>\d+)', views.add_order),
     url(r'^order$', views.show_order),
-    url(r'^order_buy/(?P<order_id>\d+)', views.order_buy)
+    url(r'^order_buy/(?P<order_id>\d+)', views.order_buy),
+    url(r'^order_delete/(?P<order_id>\d+)', views.order_delete)
 ]
