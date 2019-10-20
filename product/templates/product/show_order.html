@@ -25,11 +25,14 @@
                     <span>{{ li.product.product_price }}</span>
                     <span style="color: red;margin-left: 10px;">未购买</span>
                 </p>
-                <p style="margin-top:10px;">
+                <p style="margin-top:5px;">
                     <span><a href="/product/{{ li.product.product_id }}">查看详情</a></span>
                     <span><a href="/product/order_buy/{{ li.order_id }}">点击购买</a></span>
                 </p>
-                <span><p>{{ info }}</p></span>
+                <p>
+                    <span style="margin-left: 30px;"><a href="/product/order_delete/{{ li.order_id }}">取消订单</a></span>
+                </p>
+{#                <span><p>{{ info }}</p></span>#}
               </li>
             {% endfor %}
             </ul>
