@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #d1{
+            width: 400px;
+            height: 440px;
+            border: solid 0px red;
+            margin: 0 auto;
+            margin-top: 6%;
+            margin-left: 35%;
+            position: absolute;
+            background-color: #eee;
+            border-radius: 20px;
+        }
+        #d2{
+            width: 300px;
+            height: 300px;
+            border: solid 0px blue;
+            margin: 0 auto;
+            margin-top: 14%;
+            margin-left: 70px;
+            position: relative;
+        }
+        #d2{
+            /* 父元素相对 */
+            position: relative;
+        }
+        #d2 figure{
+            /* 子元素绝对 */
+            position: absolute;
+        }
+        #d2 figure:nth-child(2){
+            left: 5px;
+            top: 5px;
+        }
+        #d2 figure:nth-child(3){
+            left: 10px;
+            top: 10px;
+        }
+        #d2 figure:nth-child(4){
+            left: 15px;
+            top: 15px;
+        }
+        #d2 figure:nth-child(5){
+            left: 20px;
+            top: 20px;
+        }
+        #d2 figure:nth-child(6){
+            left: 15px;
+            top: 25px;
+        }
+        #d2 figure:nth-child(7){
+            left: 10px;
+            top: 30px;
+        }
+        #d2 figure:nth-child(8){
+            left: 5px;
+            top: 35px;
+        }
+        #d2 figure:nth-child(9){
+            left: 0px;
+            top: 40px;
+        }
+        #d2 figure:hover{
+            z-index: 0;
+        }
+        #d2 figure img{
+            width: 240px;
+            height: 280px;
+        }
+        #a1,#a2{
+            width: 400px;
+            height: 900px;
+            border: solid 0px rgb(219, 211, 211);
+            position: fixed;
+        }
+        #a1{
+            left: 0;
+        }
+        #a2{
+            right: 0;
+        }
+        img{
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+        <div id="a1" ></div>
+        <div id="a2"></div>
+<div id="d1">
+    <div id="d2">
+        <figure><img draggable="true" src="../../../static/images/solutions_img02.jpg" ></figure>
+        <figure><img draggable="true" src="../../../static/images/solutions_img12.jpg" ></figure>
+        <figure><img draggable="true" src="../../../static/images/solutions_img03.jpg" ></figure>
+        <figure><img draggable="true" src="../../../static/images/solutions_img07.jpg" ></figure>
+        <figure><img draggable="true" src="../../../static/images/solutions_img08.jpg" ></figure>
+        <figure><img draggable="true" src="../../../static/images/solutions_img09.jpg" ></figure>
+        <figure><img draggable="true" src="../../../static/images/solutions_img10.jpg" ></figure>
+        <figure><img draggable="true" src="../../../static/images/solutions_img11.jpg" ></figure>
+        <figure><img draggable="true" src="../../../static/images/solutions_img01.jpg" ></figure>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+window.onload=function(){
+    var fig = document.getElementsByTagName('img');
+    var ddiv1 = document.getElementById('a1');
+    var ddiv2 = document.getElementById('a2')
+    var tarfig = null
+
+    for(var i=0;i<fig.length; i ++){
+        fig[i].ondragstart=function(ev){
+            tarfig = this;
+        }
+    }
+    ddiv2.ondragover=function(ev){
+        ev.preventDefault()
+    }
+    ddiv2.ondrop=function(){
+        tarfig.parentNode.removeChild(tarfig);
+    }
+    ddiv1.ondragover=function(ev){
+        ev.preventDefault()
+    }
+    ddiv1.ondrop=function(){
+        tarfig.parentNode.removeChild(tarfig);
+    }
+}
+</script>
+</html>

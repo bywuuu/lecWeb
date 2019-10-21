@@ -1,3 +1,10 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+import json
+
+from django.http import JsonResponse
+from django.shortcuts import render
+def tec(request):
+    if request.method == 'GET':
+        return render(request,'technology/technology.html')
