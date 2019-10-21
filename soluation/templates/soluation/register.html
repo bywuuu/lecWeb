@@ -31,17 +31,17 @@
       <div class="error_tip" style="display: none;" id="smscodeerror">您输入的验证码不正确</div>
     </li>
     <li>
-      <input class="reg_btn" onclick="regsub();" type="submit" value="确认提交">
+      <input class="reg_btn" onclick="registerSub();" type="submit" value="确认提交">
     </li>
   </ul>
 </div>
     <div class="footer">© Copyright 2016 LecShop 网店系统 商城系统 微信商城系统 分销系统 江苏乐商信息科技有限公司版权所有 | <a href="http://www.beian.miit.gov.cn/" target="_blank" style="color: #fff">苏ICP备16012749号</a></div>
 
-
+<script type="text/javascript" src="//api.map.sogou.com/maps/js/api_v2.5.1.js"></script>
 <script type="text/javascript">
 
 //mobilenum(手机号码) kaptcha（验证码） smscode（短信验证码）
-    function regsub(){
+    function registerSub(){
       var mobilenum = $("#mobilenum").val();
       console.log(mobilenum);
       var kaptcha = $("#kaptcha").val();
