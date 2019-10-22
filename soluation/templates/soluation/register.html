@@ -39,7 +39,25 @@
 
 <script type="text/javascript" src="//api.map.sogou.com/maps/js/api_v2.5.1.js"></script>
 <script type="text/javascript">
-
+  function changeVerifyCode(){
+    $('yzmImg').
+    $.ajax({
+            type:'post',
+            contentType:'application/json',
+            url:'http://127.0.0.1:8000/soluation/server',
+            data:JSON.stringify(data),
+            beforeSend:function (request) {
+                request.setRequestHeader();
+            },
+            success:function (result) {
+                if(result.code == 200){
+                    $('#yzmImg').src = result.data;
+                }else {
+                    alert(result.error)
+                }
+            }
+        })
+  }
 //mobilenum(手机号码) kaptcha（验证码） smscode（短信验证码）
     function registerSub(){
       var mobilenum = $("#mobilenum").val();

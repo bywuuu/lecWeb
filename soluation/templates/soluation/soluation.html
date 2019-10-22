@@ -281,18 +281,39 @@
 </script>
 <script type="text/javascript" src="//api.map.sogou.com/maps/js/api_v2.5.1.js"></script>
 <script>
+<script type="text/javascript" src="//api.map.sogou.com/maps/js/api_v2.5.1.js"></script>
+<script type="text/javascript">
+ /**
+  * 加载指定城市区域的地图
+  */
+  function initialize() {
+    var myOptions = {
+      zoom: 10,
+      center: new sogou.maps.Point(12956000,4824875)
+    }
+    var map = new sogou.maps.Map(document.getElementById("map_canvas"),
+                                  myOptions);
+  }
+
   function sougouditu(){
       $('#kongbai').show()
       var map = new sogou.maps.Map(document.getElementById("map_canvas"),{});
       //click就点击地图后的事件。
+      map.setCenter(new sogou.maps.Point(12958328.61328125,4822451.171875),14);
       sogou.maps.event.addListener(_m,"click",function(a){
           alert("我被点了一下！")
-});
+
+
+      });
   }
+
+
   $('#kongbai').click(function(event){
     if(event.target == this){
         $("#kongbai").css("display","none")}
       })
+
+
 
 </script>
 </body>

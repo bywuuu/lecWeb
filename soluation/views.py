@@ -21,16 +21,6 @@ def login1(request):
         print(request,type(request),11111111111111111111111111111111111111111)
         result = {'code': 200}
         return JsonResponse(result)
-#登录
-def login(request):
-    if request.method =='GET':
-        return render(request,'soluation/1.html')
-def login_server(request):
-    if request.method =='GET':
-        result = {'code':1200,'error':'请求方式错误'}
-        return JsonResponse(result)
-    elif request.method=='POST':
-        users = request.body
 
 #注册
 def reg(request):
@@ -52,11 +42,18 @@ def form(request):
 
 
 from .models import *
+import random
+img_list = [{'7364':'/static/images/solutions/YZ1.jpeg'},
+            {'K4P8':'/static/images/solutions/YZ2.jpeg'},
+            {'VWO7':'/static/images/solutions/YZ3.jpeg'}]
 def server(request):
     if request.method =='GET':
         result = {'code':1002,'error':'请求方式错误'}
         return JsonResponse(result)
     elif request.method =='POST':
+        img = random.choice(img_list)
+        img_job = json.dumps(img)
+        # return JsonResponse(img_job)
         data_str = request.body
         if not data_str:
             result = {'code':1000,'error':'没有数据'}
