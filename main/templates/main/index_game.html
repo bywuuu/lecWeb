@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title></title>
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="/static/js/mycommon.js"></script>
+        
+
+</head>
+<body style="background-color: white;">
+<a href="novel">小说游戏</a>
+<a href="car">赛车游戏</a>
+<a href="football">足球游戏</a>
+<a href="erget">demo游戏</a>
+<a href="rpg">rpg游戏</a>
+{#<button onclick="getGame()">novel</button>#}
+</body>
+<script>
+    {#function getGame(){#}
+    {#    var xhr = createXhr();#}
+    {#    var params = 'novel';#}
+    {#    var url = '/index/games?params='+params;#}
+    {#    xhr.open('get',url,true);#}
+    {#    xhr.onreadystatechange=function () {#}
+    {#        if (xhr.readyState==4&&xhr.status==200){#}
+    {#            var res = xhr.responseText#}
+    {#            var show=document.getElementById('iframe')#}
+    {#            show.innerHTML=res#}
+    {#        }#}
+    {#    }#}
+    {#    xhr.send(null)#}
+    {#}#}
+</script>
+</html>
