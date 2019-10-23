@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^index/', include('main.urls')),
     url(r'^soluation/', include('soluation.urls')),
     url(r'^product/', include('product.urls')),
+    url(r'^tec/',include('skill.urls'))
 ]

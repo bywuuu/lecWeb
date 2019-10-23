@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.product_name }}商品详情</title>
+    <style>
+        .over .product{
+            margin-left:700px;
+        }
+    </style>
+</head>
+<body>
+{% if product %}
+    <div class="over">
+        <div class="product">
+                <img src= {{ product.pic_url }}>
+                <span><p class="product_name">{{ product.product_name }}</p></span>
+                <span><p class="price">{{ product.product_price }}</p></span>
+                <span><a href="/product/buy/{{ product.product_id }}">购买</a></span>
+                <span style="margin-left: 30px;"><a href="/product/add_order/{{ product_id }}">添加购物车</a></span>
+                <span style="margin-left: 30px"><a href="/product/all">返回</a></span>
+                <span><p>{{ info }}</p></span>
+        </div>
+    </div>
+{% endif %}
+</body>
+</html>
