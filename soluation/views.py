@@ -1,6 +1,8 @@
 # 史飞飞
 import json
+import re
 
+import requests as req
 from django.http import JsonResponse
 from django.shortcuts import render
 
@@ -108,7 +110,24 @@ def register(request):
     return render(request, 'soluation/register.html')
 
 def video_player(request):
-    return render(request, 'soluation/video_player.html')
+    url = 'http://www.qmaile.com'
+    rep = req.get(url)
+    headers = {'User-Agent': ''}
+    html = req.get(url=url, headers=headers).text
+    reg = '<option value="(.*?)" selected="">'
+    pattern = re.compile(reg, re.S)
+    link_list = pattern.findall(html)
+    # print(res)
+    one = link_list[0]
+    two = link_list[1]
+    three = link_list[2]
+    four = link_list[3]
+    five = link_list[4]
+
+    print(link_list)
+    return render(request, 'soluation/video_player.html', locals())
+
+
 
 def test(request):
     return None
