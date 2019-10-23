@@ -5,8 +5,9 @@
     <title>html5视频播放器</title>
     <link rel="stylesheet" href="/static/css/pure-min.css">
     <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/style_video.css">
 </head>
-<body>
+<body background="/static/images/bj.png">
 <div class="wrapper">
     <div class="pure-g">
         <div class="pure-u-1">
@@ -45,6 +46,54 @@
         </div>
     </div>
 </div>
+
+<div style="margin:0 auto; width:600px; height:150px; border:1px solid #F00; padding-left:10px;padding-top: 20px;">
+    <div class="input-group" style="width: 100%;">
+        <span class="input-group-addon input-lg" style="width: 80px; ">选择接口</span>
+        <select class="form-control input-lg" id="jk">
+            <option value="{{ one }}" selected="">⑤号通用vip引擎系统【稳定通用】</option>
+            <option value="{{ two }}" selected="">④号通用vip引擎系统【超级稳定通用】</option>
+            <option value="{{ three }}" selected="">③号通用vip引擎系统【稳定通用】</option>
+            <option value="{{ four }}" selected="">②号通用vip引擎系统【稳定通用】</option>
+            <option value="{{ five }}" selected=""><span style="color:red;">无广告超速解析</span>【通用】</option>
+            <option value="{{ six }}" selected="">①号通用vip引擎系统【稳定通用】</option>
+        </select>
+    </div>
+    <br>
+    <div class="input-group" style="width: 100%; ">
+        <span class="input-group-addon input-lg" style="width: 80px;">播放地址</span>
+        <input class="form-control input-lg" type="search" placeholder="电脑使用Ctrl+V粘贴网址-手机直接长按粘贴网址" id="url">
+    </div>
+
+    <br>
+    <div>
+        <button id="bf" type="button" class="btn btn-success btn-lg btn-block" onClick="dihejk()">Go-点击开始解析</button>
+        <button id="bf" type="button" class="btn btn-success btn-lg btn-block" onClick="dihejk()">New-点击全屏解析</button>
+    </div>
+</div>
+<div class="language">
+    <a class="btn2 btn-outline2" href="http://www.le.com/" rel="nofollow" target="_blank">进入乐视视频</a>
+    <a class="btn2 btn-outline2" href="https://www.iqiyi.com/" rel="nofollow" target="_blank">进入奇艺视频</a>
+    <a class="btn2 btn-outline2" href="http://www.mgtv.com/" rel="nofollow" target="_blank">进入芒果视频</a>
+    <a class="btn2 btn-outline2" href="http://www.tudou.com/" rel="nofollow" target="_blank">进入土豆视频</a>
+    <br>
+    <a class="btn2 btn-outline2" href="https://v.qq.com/" rel="nofollow" target="_blank">进入腾讯视频</a>
+    <a class="btn2 btn-outline2" href="https://www.youku.com/" rel="nofollow" target="_blank">进入优酷视频</a>
+    <a class="btn2 btn-outline2" href="https://tv.sohu.com/" rel="nofollow" target="_blank">进入搜狐视频</a>
+    <a class="btn2 btn-outline2" href="http://www.pptv.com/" rel="nofollow" target="_blank">进入pptv视频</a>
+</div>
+<script>
+    function dihejk() {
+        var diz = document.getElementById("url").value;
+        var jkurl = document.getElementById("jk");
+        var jk = document.getElementById("jk").selectedIndex;
+        var jkv = jkurl.options[jk].value;
+        var cljurl = document.getElementById("player");
+        window.open(jkv + diz, "_blank");
+    }
+
+</script>
+
 <script src="/static/js/jquery-1.9.0.min.js"></script>
 <script src="/static/js/main.js"></script>
 </body>
