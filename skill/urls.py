@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from soluation import views
+from skill import views
 
 urlpatterns = [
     #technology首页
