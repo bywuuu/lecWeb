@@ -39,24 +39,12 @@
 
 <script type="text/javascript" src="//api.map.sogou.com/maps/js/api_v2.5.1.js"></script>
 <script type="text/javascript">
+var img_list=[{'7364':'/static/images/solutions/YZ1.jpeg'},{'K4P8':'/static/images/solutions/YZ2.jpeg'},{'VWO7':'/static/images/solutions/YZ3.jpeg'}]
+
   function changeVerifyCode(){
-    $('yzmImg').
-    $.ajax({
-            type:'post',
-            contentType:'application/json',
-            url:'http://127.0.0.1:8000/soluation/server',
-            data:JSON.stringify(data),
-            beforeSend:function (request) {
-                request.setRequestHeader();
-            },
-            success:function (result) {
-                if(result.code == 200){
-                    $('#yzmImg').src = result.data;
-                }else {
-                    alert(result.error)
-                }
-            }
-        })
+    window.img = img_list[Math.floor(Math.random()*img_list.length)]
+    document.getElementById('yzmImg').src = Object.values(img)
+    console.log(Object.values(img))
   }
 //mobilenum(手机号码) kaptcha（验证码） smscode（短信验证码）
     function registerSub(){
@@ -69,7 +57,8 @@
             $("#mobilenumerror").html("您输入的手机号码不正确");
             $("#mobilenumerror").show();
         }
-        if(kaptcha != 'LECSHOP'){
+        if(kaptcha != Object.keys(img)){
+          console.log(Object.keys(img))
             $("#smscodeerror").html("验证码有误!");
             $("#smscodeerror").show();
         }
@@ -89,7 +78,7 @@
             success:function (result) {
                 if(result.code == 200){
                     alert('提交成功点击返回');
-                    window.location.href = '/soluation/conten1';
+                    window.location.href = '/index/';
                 }else {
                     alert(result.error)
                 }

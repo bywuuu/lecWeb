@@ -37,36 +37,52 @@
             position: absolute;
         }
         #d2 figure:nth-child(2){
-            left: 5px;
-            top: 5px;
+            left: 4px;
+            top: 4px;
         }
         #d2 figure:nth-child(3){
-            left: 10px;
-            top: 10px;
+            left: 8px;
+            top: 8px;
         }
         #d2 figure:nth-child(4){
-            left: 15px;
-            top: 15px;
+            left: 12px;
+            top: 12px;
         }
         #d2 figure:nth-child(5){
+            left: 16px;
+            top: 16px;
+        }
+        #d2 figure:nth-child(6){
             left: 20px;
             top: 20px;
         }
-        #d2 figure:nth-child(6){
-            left: 15px;
-            top: 25px;
-        }
         #d2 figure:nth-child(7){
-            left: 10px;
-            top: 30px;
+            left: 24px;
+            top: 24px;
         }
         #d2 figure:nth-child(8){
-            left: 5px;
-            top: 35px;
+            left: 24px;
+            top: 28px;
         }
         #d2 figure:nth-child(9){
-            left: 0px;
+            left: 20px;
+            top: 32px;
+        }
+        #d2 figure:nth-child(10){
+            left: 16px;
+            top: 36px;
+        }
+        #d2 figure:nth-child(11){
+            left: 12px;
             top: 40px;
+        }
+        #d2 figure:nth-child(12){
+            left: 8px;
+            top: 44px;
+        }
+        #d2 figure:nth-child(13){
+            left: 4px;
+            top: 48px;
         }
         #d2 figure:hover{
             z-index: 0;
@@ -90,49 +106,87 @@
         img{
             border-radius: 20px;
         }
+        #d1 p{
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
         <div id="a1" ></div>
         <div id="a2"></div>
 <div id="d1">
+    <P>用户名：<input id="username" type="text"></P>
     <div id="d2">
-        <figure><img draggable="true" src="../../../static/images/solutions_img02.jpg" ></figure>
-        <figure><img draggable="true" src="../../../static/images/solutions_img12.jpg" ></figure>
-        <figure><img draggable="true" src="../../../static/images/solutions_img03.jpg" ></figure>
-        <figure><img draggable="true" src="../../../static/images/solutions_img07.jpg" ></figure>
-        <figure><img draggable="true" src="../../../static/images/solutions_img08.jpg" ></figure>
-        <figure><img draggable="true" src="../../../static/images/solutions_img09.jpg" ></figure>
-        <figure><img draggable="true" src="../../../static/images/solutions_img10.jpg" ></figure>
-        <figure><img draggable="true" src="../../../static/images/solutions_img11.jpg" ></figure>
-        <figure><img draggable="true" src="../../../static/images/solutions_img01.jpg" ></figure>
+        <figure><img id="1" draggable="true" src="../../../static/images/solutions_img02.jpg" ></figure>
+        <figure><img id="2" draggable="true" src="../../../static/images/solutions_img12.jpg" ></figure>
+        <figure><img id="3" draggable="true" src="../../../static/images/solutions_img03.jpg" ></figure>
+        <figure><img id="4" draggable="true" src="../../../static/images/solutions_img07.jpg" ></figure>
+        <figure><img id="5" draggable="true" src="../../../static/images/solutions_img08.jpg" ></figure>
+        <figure><img id="6" draggable="true" src="../../../static/images/solutions_img09.jpg" ></figure>
+        <figure><img id="7" draggable="true" src="../../../static/images/solutions_img10.jpg" ></figure>
+        <figure><img id="8" draggable="true" src="../../../static/images/solutions_img11.jpg" ></figure>
+        <figure><img id="9" draggable="true" src="../../../static/images/solutions_img01.jpg" ></figure>
+        <figure><img id="10" draggable="true" src="../../../static/images/advantage_pic01.jpg" ></figure>
+        <figure><img id="11" draggable="true" src="../../../static/images/advantage_pic02.jpg" ></figure>
+        <figure><img id="12" draggable="true" src="../../../static/images/advantage_pic03.jpg" ></figure>
+        <figure><img id="12" draggable="true" src="../../../static/images/advantage_pic04.jpg" ></figure>
     </div>
 </div>
+<script src="../../../static/js/jquery-1.11.3.js"></script>
+<script src="../../../static/js/mycommon.js"></script>
 </body>
 <script type="text/javascript">
-window.onload=function(){
+     //传数据库
+    function sendSql(img_id,username,like) {
+        var xhr = createXhr();
+        var params = [img_id,username,like];
+        var url = '/tec/get_img_id?params=' + params;
+        console.log(url)
+        xhr.open('get', url, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var res = xhr.responseText;
+                //alert(params);
+            }
+        };
+        xhr.send(null);
+    }
+window.onload=function() {
     var fig = document.getElementsByTagName('img');
     var ddiv1 = document.getElementById('a1');
     var ddiv2 = document.getElementById('a2')
     var tarfig = null
 
-    for(var i=0;i<fig.length; i ++){
-        fig[i].ondragstart=function(ev){
+    for (var i = 0; i < fig.length; i++) {
+        fig[i].ondragstart = function (ev) {
             tarfig = this;
         }
     }
-    ddiv2.ondragover=function(ev){
+    ddiv2.ondragover = function (ev) {
         ev.preventDefault()
     }
-    ddiv2.ondrop=function(){
+    ddiv2.ondrop = function () {
+        console.log(tarfig.id)
+        //存入数据库，不喜欢，id
+        img_id = tarfig.id//你的图片id
+        username = document.getElementById('username').value
+        like = true;//喜欢
+        sendSql(img_id, username,like)
         tarfig.parentNode.removeChild(tarfig);
     }
-    ddiv1.ondragover=function(ev){
+    ddiv1.ondragover = function (ev) {
         ev.preventDefault()
     }
-    ddiv1.ondrop=function(){
+    ddiv1.ondrop = function () {
+        {#console.log(tarfig.id)#}
+        img_id = tarfig.id//你的图片id
+        username = document.getElementById('username').value
+        like = false;//不喜欢
+        sendSql(img_id, username,like)
         tarfig.parentNode.removeChild(tarfig);
     }
 }
+
+
 </script>
 </html>
