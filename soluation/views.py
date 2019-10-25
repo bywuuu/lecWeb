@@ -1,16 +1,20 @@
-from django.shortcuts import render
-
-#史飞飞
+# 史飞飞
 import json
+import re
 
+import requests as req
 from django.http import JsonResponse
 from django.shortcuts import render
-#立即免费体验
+
+
+# 立即免费体验
 def conten1(request):
     if request.method == 'GET':
-        return render(request,'soluation/soluation.html')
+        return render(request, 'soluation/soluation.html')
+
+
 def login1(request):
-    if request.method =='GET':
+    if request.method == 'GET':
         result = {'code': 1000, 'error': '请求方式错误'}
         # result=json.dumps(result)
         return JsonResponse(result)
@@ -18,66 +22,115 @@ def login1(request):
         # if not request.token:
         #     result={'code':1001,'error':'请登录'}
         #     return JsonResponse(result)
-        print(request,type(request),11111111111111111111111111111111111111111)
+        print(request, type(request), 11111111111111111111111111111111111111111)
         result = {'code': 200}
         return JsonResponse(result)
-#登录
+  
+
+
+# 登录
 def login(request):
-    if request.method =='GET':
-        return render(request,'soluation/1.html')
+    if request.method == 'GET':
+        return render(request, 'soluation/1.html')
+
+
 def login_server(request):
-    if request.method =='GET':
-        result = {'code':1200,'error':'请求方式错误'}
+    if request.method == 'GET':
+        result = {'code': 1200, 'error': '请求方式错误'}
         return JsonResponse(result)
-    elif request.method=='POST':
+    elif request.method == 'POST':
         users = request.body
 
-#注册
+
+
+# 注册
 def reg(request):
-    if request.method =="GET":
-        return render(request,'soluation/register.html')
+    if request.method == "GET":
+        return render(request, 'soluation/register.html')
+
+
 def reg_server(request):
-    if request.method =="GET":
-        result = {'code':1300,'error':'请求方式错误'}
+    if request.method == "GET":
+        result = {'code': 1300, 'error': '请求方式错误'}
         return JsonResponse(result)
     elif request.method == "POST":
-        result = {'code':200}
+        result = {'code': 200}
         return JsonResponse(result)
-#form
+
+
+# form
 def form(request):
-    if request.method =='GET':
-        return render(request,'soluation/form.html')
-
-
+    if request.method == 'GET':
+        return render(request, 'soluation/form.html')
 
 
 from .models import *
+
+import random
+img_list = [{'7364':'/static/images/solutions/YZ1.jpeg'},
+            {'K4P8':'/static/images/solutions/YZ2.jpeg'},
+            {'VWO7':'/static/images/solutions/YZ3.jpeg'}]
+
 def server(request):
-    if request.method =='GET':
-        result = {'code':1002,'error':'请求方式错误'}
+    if request.method == 'GET':
+        result = {'code': 1002, 'error': '请求方式错误'}
         return JsonResponse(result)
+
+
     elif request.method =='POST':
+        img = random.choice(img_list)
+        img_job = json.dumps(img)
+        # return JsonResponse(img_job)
+
         data_str = request.body
         if not data_str:
-            result = {'code':1000,'error':'没有数据'}
+            result = {'code': 1000, 'error': '没有数据'}
             return JsonResponse(result)
-        data_obj=json.loads(data_str)
+        data_obj = json.loads(data_str)
         mobileNum = data_obj['mobilenum']
         db_mobilenum = Users.objects.filter(mobilenum=mobileNum)
         if db_mobilenum:
-            result = {'code':1001,'error':'手机号以注册'}
+            result = {'code': 1001, 'error': '手机号以注册'}
             return JsonResponse(result)
         try:
             Users.objects.create(mobilenum=mobileNum)
-            result = {'code':200,'error':'OK'}
+            result = {'code': 200, 'error': 'OK'}
             return JsonResponse(result)
         except Exception as e:
-            reslut = {'code':1002,'error':e}
+            reslut = {'code': 1002, 'error': e}
             return JsonResponse(reslut)
-#以上是史飞飞的
+
+
+# 以上是史飞飞的
 # Create your views here.
 def solutions_Integrated_commercial(request):
     return render(request, 'soluation/solutions_Integrated_commercial.html')
 
+def register(request):
+    return render(request, 'soluation/register.html')
+
+def video_player(request):
+    url = 'http://www.qmaile.com'
+    rep = req.get(url)
+    headers = {'User-Agent': ''}
+    html = req.get(url=url, headers=headers).text
+    reg = '<option value="(.*?)" selected="">'
+    pattern = re.compile(reg, re.S)
+    link_list = pattern.findall(html)
+    # print(res)
+    one = link_list[0]
+    two = link_list[1]
+    three = link_list[2]
+    four = link_list[3]
+    five = link_list[4]
+
+    print(link_list)
+    return render(request, 'soluation/video_player.html', locals())
+
+
+
 def test(request):
-    pass
+    return None
+
+
+

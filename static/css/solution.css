@@ -6,10 +6,10 @@
 .page { width: 1000px; }
 .fl { float: left; }
 .fr { float: right; }
-.jiaju .banner-box { height: 500px; background: url(../images/solutions/jiaju.jpg)/*tpa=http://images.lecshop.cn/website/images/solutions/jiaju.jpg*/ center no-repeat; }
-.kxp .banner-box { height: 500px; background: url(../images/solutions/d04c0bdd425719ef4efb377d027c7127.jpg)/*tpa=http://images.lecshop.cn/website/images/solutions/d04c0bdd425719ef4efb377d027c7127.jpg*/ center no-repeat; }
-.xls .banner-box { height: 500px; background: url(../images/solutions/xls_banner.jpg)/*tpa=http://images.lecshop.cn/website/images/solutions/xls_banner.jpg*/ center no-repeat; }
-.qp .banner-box { height: 500px; background: url(../images/solutions/qp_banner.jpg)/*tpa=http://images.lecshop.cn/website/images/solutions/qp_banner.jpg*/ center no-repeat; }
+.jiaju .banner-box { height: 500px; background: url(/static/images/solutions/jiaju.jpg) center no-repeat; }
+.kxp .banner-box { height: 500px; background: url(/static/images/solutions/d04c0bdd425719ef4efb377d027c7127.jpg) center no-repeat; }
+.xls .banner-box { height: 500px; background: url(/static/images/solutions/xls_banner.jpg) center no-repeat; }
+.qp .banner-box { height: 500px; background: url(/static/images/solutions/qp_banner.jpg) center no-repeat; }
 .banner-wrap { position: relative; width: 1200px; height: 100%; margin: 0 auto; }
 .banner-box .wrap-content { position: absolute; left: 78px; top: 127px; }
 .pro-center .wrap-content h1 { color: #fff; font-size: 40px; line-height: 100px; }

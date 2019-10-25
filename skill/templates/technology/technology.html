@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1 {
+            border: solid 0px red;
+            position: relative;
+        }
+
+        #p1 {
+            border: solid 0px blue;
+            font-size: 36px;
+            color: white;
+            position: absolute;
+            top: 26px;
+            left: 540px;
+        }
+
+        #div2 {
+            margin-top: 30px;
+            width: 930px;
+            height: 30px;
+            border: solid 0px red;
+            margin-left: 200px;
+            border-bottom: solid 1px #eee;
+        }
+
+        #div2 .focus {
+            background-color: rgb(247, 152, 9);
+            color: #fff;
+        }
+
+        #div2 ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            margin-left: 300px;
+        }
+
+        #div2 ul li {
+            float: left;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            background-color: #eee;
+
+        }
+
+        #div3 ul {
+            padding: 0;
+            list-style-type: none;
+            width: 1010px;
+            border-top: solid 0px #ccc;
+            border-left: solid 0px #ccc;
+            margin-left: 240px;
+            border: solid 0px red;
+            margin-top: 70px;
+        }
+
+        #div3 ul li {
+            overflow: hidden;
+        }
+
+        #div3 ul li span {
+            float: left;
+            height: 30px;
+            color: rgb(94, 85, 85);
+            border-bottom: solid 0px rgb(228, 223, 223);
+            border-right: solid 0px #ccc;
+            font-size: 14px;
+        }
+
+        #div3 ul li span:nth-child(1) {
+            width: 500px;
+        }
+
+        #div3 ul li span:nth-child(2) {
+            width: 500px;
+            padding-left: 3px;
+        }
+
+        #div3 ul li #sp1 p {
+            border: solid 0px red;
+            width: 360px;
+            height: 30px;
+            margin-top: 0;
+            background-color: #eee;
+        }
+
+        #div4 {
+            list-style-type: none;
+            width: 800px;
+            margin-left: 300px;
+            border: solid 0px red;
+            margin-top: 70px;
+        }
+
+        #div4 div {
+            margin-left: 120px;
+        }
+
+        #div4 h2 {
+            color: #666;
+            margin-left: 300px;
+        }
+
+        #div4 h5 {
+            color: #666;
+        }
+        #div5 h2{
+            color: #666;
+            text-align: center;
+        }
+        #div5 ul {
+            padding: 0;
+            list-style-type: none;
+            width: 600px;
+            border-top: solid 0px #ccc;
+            border-left: solid 0px #ccc;
+            margin-left: 380px;
+            border: solid 0px red;
+            margin-top: 40px;
+        }
+
+        #div5 ul li {
+            overflow: hidden;
+        }
+
+        #div5 ul li span {
+            text-align: center;
+            height: 30px;
+            color: rgb(94, 85, 85);
+            border-bottom: solid 1px rgb(230, 233, 232);
+            border-right: solid 0px #ccc;
+            font-size: 14px;
+        }
+
+        #div5 ul li span:nth-child(1) {
+            width: 280px;
+        }
+
+        #div5 ul li span:nth-child(2) {
+            width: 280px;
+            padding-left: 3px;
+        }
+
+        #div5 ul li #sp2 p {
+            border: solid 0px red;
+            width: 282px;
+            height: 30px;
+            margin-top: 0;
+            background-color: rgb(248, 255, 254);
+            border-right: solid 1px rgb(248, 255, 254);
+        }
+        #a1,#a2{
+            width: 80px;
+            height: 100px;
+            border: solid 0px red;
+            position: fixed;
+            top: 50%;
+            margin-top: -100px;
+        }
+        #a1{
+            left: 0;
+        }
+        #a2{
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="div1">
+            <img id="img1" src="../../../static/images/banner.jpg" alt="" height="150" width="1350">
+            <p id="p1">产品技术架构</p>
+        </div>
+        <div id="div2">
+            <ul>
+                <li class="focus">Spring Boot架构</li>
+                <li>Spring MVC架构</li>
+            </ul>
+        </div>
+        <div id="div3">
+            <ul>
+                <li>
+                    <span>系统环境要求：</span>
+                    <span>安装环境要求：</span>
+                </li>
+                <li>
+                    <span id="sp1">
+                        <p>LecShop电商平台系统是基于JAVA运行的服务器</p>
+                    </span>
+                    <span id="sp1">
+                        <p>系统：CentOS7.3 64位</p>
+                    </span>
+                </li>
+                <li>
+                    <span>CPU：4核</span>
+                    <span>部署方式：Docket</span>
+                </li>
+                <li>
+                    <span id="sp1">
+                        <p>内存：8G</p>
+                    </span>
+                    <span></span>
+                </li>
+                <li>
+                    <span>硬盘：160G</span>
+                    <span></span>
+                </li>
+            </ul>
+            <div id="div4">
+                <h2>技术架构介绍</h2>
+                <div>
+                    <h5>一、总体架构</h5>
+                    <img src="../../../static/images/tec1.jpg" alt="" height="220" width="600">
+                    <h5>二、代码架构</h5>
+                    <img src="../../../static/images/tec2.jpg" alt="" height="350" width="550">
+                    <h5>三、部署方案</h5>
+                    <img src="../../../static/images/tec3.jpg" alt="" height="350" width="550">
+                </div>
+
+            </div>
+
+            <div  id="a1" ></div>
+            <div id="a2" >
+                <a href="../tec/add"><button>^-^</button></a>
+            </div>
+
+            <div id="div5">
+                <h2>LecShop商城技术框架</h2>
+
+                <ul>
+                    <li>
+                        <span>使用场景</span>
+                        <span>开源框架</span>
+                    </li>
+                    <li>
+                        <span id="sp2">
+                            <p>核心框架</p>
+                        </span>
+                        <span id="sp2">
+                            <p>Apache Spring Framework</p>
+                        </span>
+                    </li>
+                    <li>
+                        <span>视图框架</span>
+                        <span>VUE</span>
+                    </li>
+                    <li>
+                        <span id="sp2">
+                            <p>持久框架</p>
+                        </span>
+                        <span id="sp2">
+                            <p>Apache Mybatis</p>
+                        </span>
+                    </li>
+                    <li>
+                        <span>视图框架</span>
+                        <span>VUE</span>
+                    </li>
+                    <li>
+                        <span id="sp2">
+                            <p>持久框架</p>
+                        </span>
+                        <span id="sp2">
+                            <p>Apache Mybatis</p>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>视图框架</span>
+                        <span>VUE</span>
+                    </li>
+                    <li>
+                        <span id="sp2">
+                            <p>持久框架</p>
+                        </span>
+                        <span id="sp2">
+                            <p>Apache Mybatis</p>
+                        </span>
+                    </li>
+                    <li>
+                        <span>搜索引擎</span>
+                        <span>Apache Elasticsearch</span>
+                    </li>
+                    <li>
+                        <span id="sp2">
+                            <p>程序构建</p>
+                        </span>
+                        <span id="sp2">
+                            <p>Apache Maven</p>
+                        </span>
+                    </li>
+                    <li>
+                        <span>负载均衡、静态服务器</span>
+                        <span>Apache Nginx</span>
+                    </li>
+                    <li>
+                        <span id="sp2">
+                            <p>数据库</p>
+                        </span>
+                        <span id="sp2">
+                            <p>MySQL</p>
+                        </span>
+                    </li>
+                    <li>
+                        <span>缓存</span>
+                        <span>Apache Redis</span>
+                    </li>
+                    <li>
+                        <span id="sp2">
+                            <p>数据库连接池</p>
+                        </span>
+                        <span id="sp2">
+                            <p>阿里巴巴 Druid</p>
+                        </span>
+                    </li>
+                    <li>
+                        <span>日志处理</span>
+                        <span>Apache Log4j</span>
+                    </li>
+                    <li>
+                        <span id="sp2">
+                            <p>报表系统</p>
+                        </span>
+                        <span id="sp2">
+                            <p>vue-echarts</p>
+                        </span>
+                    </li>
+                    <li>
+                        <span>JSON处理</span>
+                        <span>Google Gson</span>
+                    </li>
+                    <li>
+                        <span id="sp2">
+                            <p>商家后台页面</p>
+                        </span>
+                        <span id="sp2">
+                            <p>vue admin+Element UI</p>
+                        </span>
+                    </li>
+                    <li>
+                        <span>富文本编辑器</span>
+                        <span>vue-tinymce</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        //获取全部li元素
+        var lis = document.getElementsByTagName("li");
+        //遍历整个li列表获取每一项并绑定单击事件
+        for (var i = 0; i < lis.length; i++) {
+            //获取每一项
+            lis[i].onclick = function () {
+                //再一次遍历获取点中项
+                for (var j = 0; j < lis.length; j++) {
+                    if (lis[j] == this) {
+                        lis[j].className = "focus";
+                    } else {
+                        lis[j].className = "";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

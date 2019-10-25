@@ -11,7 +11,8 @@
 .agriculture .cross .banner h3 { font-size: 36px; font-weight: normal; padding-bottom: 20px; }
 .agriculture .cross .banner h1 { font-size: 60px; font-weight: normal; padding-bottom: 20px; }
 .agriculture .cross .banner p { font-size: 20px; line-height: 200%; padding-bottom: 20px; }
-.agriculture .cross .banner .order { display: block; width: 220px; height: 60px; line-height: 60px; color: #fff; font-size: 26px; margin: 150px auto; background: #e63417; }
+.agriculture .cross .banner .order { display: block; width: 220px; height: 60px; line-height: 60px; color: #fff;
+font-size: 26px; margin: 250px auto; background: #e63417; }
 .agriculture .cross .banner .order:hover { background: #fb2a08; }
 .agriculture .cross .main1 { background: url(../images/agriculture/p1.jpg)/*tpa=http://images.lecshop.cn/website/images/agriculture/p1.jpg*/ no-repeat center; height: 500px; }
 .agriculture .cross .main-title { padding-top: 90px; font-size: 30px; padding-bottom: 30px; }
