@@ -87,16 +87,21 @@ ol, ul { list-style: none }
 
 
 /* 固定header样式 */
-/* .header{
-    height:120px;
-    background-color: #999;
+ .header{
+    height:50px;
     position: fixed;
     width:100%;
     overflow: hidden;
-} */
+    background-color:#eee;
+}
+.header a{
+    margin-left: 200px;
+    line-height:35px;
+    font-size:25px;
+}
 /* floor01样式 */
 .floor01{
-    margin-top:120px;
+    margin-top:50px;
     width:100%;
     float:left;
     /* border: 1px red solid; */
