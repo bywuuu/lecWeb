@@ -5,17 +5,40 @@
     <title></title>
     <meta name="viewport" content="user-scalable=0, initial-scale=1.0">
     <meta charset="utf-8">
+    <style>
+        html, body {
+            width:100%;
+            height:100%;
+            margin:0px;
+            padding:0px;
+            overflow:hidden;
+        }
+        div{
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
     <script src="/static/js/mycommon.js"></script>
         
 
 </head>
-<body style="background-color: white;">
-<a href="novel">小说游戏</a>
-<a href="car">赛车游戏</a>
-<a href="football">足球游戏</a>
-<a href="erget">demo游戏</a>
-<a href="rpg">rpg游戏</a>
-{#<button onclick="getGame()">novel</button>#}
+<body  style="background-color: white;">
+<div id="game">
+    <a href="novel">小说游戏</a>
+</div>
+<div><a href="car">赛车游戏</a></div>
+
+<div><a href="football">足球游戏</a></div>
+
+<div><a href="erget">demo游戏</a></div>
+
+<div><a href="rpg">rpg游戏</a></div>
+
+<div>
+<a href="share">游戏直播</a>
+
+</div>
+
 </body>
 <script>
     {#function getGame(){#}

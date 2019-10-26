@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^erget$',views.game_erget),
     url(r'^rpg$',views.game_rpg),
     url(r'^games$',views.game_choose),
+    url(r'^share$',views.get_showshare),
 
 ]

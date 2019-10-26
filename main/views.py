@@ -6,6 +6,7 @@ def index(request):
     return render(request,'main/mainpage.html')
 
 def game_novel(request):
+    # return render(request, 'main/index_novel.html')
     return render(request, 'main/index_novel.html')
 
 def game_car(request):
@@ -19,6 +20,8 @@ def game_erget(request):
 
 def game_rpg(request):
     return render(request, 'main/index_rpg.html')
+def get_showshare(request):
+    return render(request,'main/a.html')
 
 def game_choose(request):
     if request.GET.get('params'):
