@@ -23,16 +23,15 @@
 
 </head>
 <body  style="background-color: white;">
-<div id="game">
-    <a href="novel">小说游戏</a>
+<div id="game"><a href="all" name="novel" onclick="set('novel')">小说游戏</a>
 </div>
-<div><a href="car">赛车游戏</a></div>
+<div><a href="all" name="car" onclick="set('car')">赛车游戏</a></div>
 
-<div><a href="football">足球游戏</a></div>
+<div><a href="all" name="football" onclick="set('football')">足球游戏</a></div>
 
-<div><a href="erget">demo游戏</a></div>
+<div><a href="all" name="erget" onclick="set('erget')">demo游戏</a></div>
 
-<div><a href="rpg">rpg游戏</a></div>
+<div><a href="all" name="rpg" onclick="set('rpg')">rpg游戏</a></div>
 
 <div>
 <a href="share">游戏直播</a>
@@ -41,18 +40,15 @@
 
 </body>
 <script>
-    {#function getGame(){#}
-    {#    var xhr = createXhr();#}
-    {#    var params = 'novel';#}
-    {#    var url = '/index/games?params='+params;#}
-    {#    xhr.open('get',url,true);#}
-    {#    xhr.onreadystatechange=function () {#}
-    {#        if (xhr.readyState==4&&xhr.status==200){#}
-    {#            var res = xhr.responseText#}
-    {#            var show=document.getElementById('iframe')#}
-    {#            show.innerHTML=res#}
-    {#        }#}
-    {#    }#}
-    {#    xhr.send(null)#}
+　　function set(name) {
+　　　　//由于是一个新的技术，你可以通过下面的代码检测你的浏览器是否支持
+　　　　if (window.localStorage) {
+　　　　//存储变量的值
+                localStorage.name = name;
+　　　　　　      location.href = './recordrtc_demo.html';　
+　　　　} else {
+　　　　　　alert("NOT SUPPORT");
+　　　　}
+　　}
 </script>
 </html>
