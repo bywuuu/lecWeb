@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+     <link rel="icon" href="../../../static/favicon.ico" />
+    <link href="../../../static/css/css.css" rel="stylesheet" type="text/css">
+    <script src="../../../static/js/jquery-1.11.3.min.js"></script>
+    <script src="../../../static/js/jquery.slides.min.js"></script>
+    <style>
+        #d1 {
+            border: solid 1px blue;
+            position: relative;
+            margin-top: 88px;
+            margin-left: 520px;
+            width: 210px;
+        }
+    </style>
+</head>
+<body>
+<div class="header fixed">
+        <div class="container clearfix">
+            <div class="logo">
+                <a href="javascript:;">
+                    <img src="../../../static/images/logo.png" alt="not find this pic">
+                </a>
+            </div>
+            <div class="nav_btn_box">
+                <p class="nav_btn">售前热线：025-58830029</p>
+                <p style="text-align: center;color: #aaa;line-height: 28px">周一至周五9：00-18：00</p>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="/index" class="mainpage">首页</a>
+                </li>
+                <li>
+                    <a class="nav_more" href="../../product">产品</a>
+                </li>
+                <li>
+                    <a href="../tec/tec" class="technology">技术架构</a>
+                </li>
+                <li>
+                    <a href="about.html" class="about">关于我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+ <table  id="d1" border="1">
+    <tr>
+        <th>img_id</th>
+        <th>username</th>
+        <th>like</th>
+
+    </tr>
+        {% for tec in show_pic %}
+    <tr>
+        <td>{{ tec.img_id }}</td>>
+        <td>{{ tec.username }}</td>>
+        <td>{{ tec.like }}</td>>
+
+    </tr>>
+   {% endfor %}
+</table>
+
+</body>
+</html>
