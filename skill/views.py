@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import json
-from django.http import JsonResponse, HttpResponse
+from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from .models import Tec
 def tec(request):
@@ -24,4 +24,6 @@ def img_id(request):
         Tec.objects.create(img_id=myset[0],username=myset[1],like=islike)
         #Tec.objects.create(img_id='123',username='xuyue',like=True)
     return HttpResponse('ok')
-
+def show(request):
+    show_pic = Tec.objects.all()
+    return render(request, 'technology/show.html', locals())
