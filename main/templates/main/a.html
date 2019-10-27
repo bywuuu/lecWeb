@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>face2face一对一教室测试，纯Web前端实现</title>
+    <style type="text/css">
+        html, body {
+            width:100%;
+            height:100%;
+            margin:0px;
+            padding:0px;
+            overflow:hidden;
+
+        }
+        #divRoom {
+            width:100%;
+            height:100%;
+            display:none;
+        }
+        #divStart{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="divStart">
+        appid:
+        <input id="txtAppId" value="10074"/><br/>
+        pass:
+        <input id="txtPass"/><br/>
+        uid:
+        <input id="txtUid" value="你的id"/><br/>
+        uname:
+        <input id="txtUName" value="你的名字"/><br/>
+        ismaster:(是否主播)
+        <select id="selIsMaster">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br/>
+        vdo:
+        <select id="selVdo">
+            <option value="0">Screen</option>
+            <option value="1">Camara</option>
+        </select>
+        <br/>
+        <button id="btnEnter">Enter</button>
+    </div>
+    <div id="divRoom"></div>
+    <script type="text/javascript" src="../../static/js/face2face.js?t=500"></script>
+    <script type="text/javascript">
+        document.getElementById('btnEnter').addEventListener('click', function () {
+            var appid = document.getElementById('txtAppId').value,
+                pass = document.getElementById('txtPass').value,
+                uid = document.getElementById('txtUid').value,
+                uname = document.getElementById('txtUName').value,
+                ismaster = document.getElementById('selIsMaster').value,
+                vdo = document.getElementById('selVdo').value;
+            if (appid && pass && uid && uname) {
+                document.getElementById('divStart').style.display = 'none';
+                document.getElementById('divRoom').style.display = 'block';
+                $F.open.init({
+                    container: document.getElementById('divRoom'), // 呈现face2face教室的容器
+                    ty: 1, // 1表示一对多网络教室；3表示一对一教室；
+                    appid: appid, // 你创建的教室的编号10074
+                    pass: pass,//7PDB9YY3, // 你为教室创建的“排课”的“通行证”
+                    uid: uid, // 进入教室的用户ID，由你自己设定，建议用数字表示
+                    uname: uname, // 进入教室的用户的名字
+                    ismaster: ismaster, // 是否是该教室的老师。1表示是；0表示不是
+                    vdo: vdo // 用户进入教室后默认分享的视频。0表示电脑屏幕；1表示摄像头；
+                });
+            }
+        }, false);
+        document.getElementById('btnEnter').click();
+    </script>
+</body>
+</html>
