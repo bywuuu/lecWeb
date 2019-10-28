@@ -7,6 +7,7 @@
     <link href="../../../static/css/css.css" rel="stylesheet" type="text/css">
     <script src="../../../static/js/jquery-1.11.3.min.js"></script>
     <script src="../../../static/js/jquery.slides.min.js"></script>
+    <script src="../../../static/js/common.js"></script>
     <style>
         *{
             margin: 0;
@@ -134,16 +135,133 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="/index" class="mainpage">首页</a>
+                    <a href="javascript:;" class="mainpage">首页</a>
                 </li>
                 <li>
                     <a class="nav_more" href="../../product">产品</a>
+                    <!-- #                                鼠标移入，弹出下拉的页面，在css中应该有体现 -->
+                    <div class="more_box" style="display: none;">
+                        <div class="container clearfix">
+                            <div class="more_main clearfix">
+                                <a href="b2c.html">
+                                    <p class="b2c">单用户商城</p>
+                                    <p class="more_text">跟随消费者节奏，打造独一无二的B2C商城</p>
+                                </a>
+                                <a class="bbc.html">
+                                    <p class="bbc">多用户商城</p>
+                                    <p class="more_text">为企业打造类似京东、天猫的电子商务平台的B2B2C多用户商城系统</p>
+                                </a>
+                                <a href="landingpage_app.html">
+                                    <p class="o2o">iOS/Android手机商城</p>
+                                    <p class="more_text">为用户提供交互式可视化的购物体验</p>
+                                </a>
+                                <a href="landingpage_h5.html">
+                                    <p class="o2o">H5手机商城</p>
+                                    <p class="more_text">与微信完美结合,轻松搭建微信商城</p>
+                                </a>
+                                <a href="o2o.html">
+                                    <p class="o2o">电商O2O</p>
+                                    <p class="more_text">帮助传统连锁企业打通线上线下，实现网上和门店一体化营销解决方案</p>
+                                </a>
+                                <a href="b2b.html">
+                                    <p class="b2b">B2B分销</p>
+                                    <p class="more_text">面向品牌商或分销商，打造网上批发市场</p>
+                                </a>
+                                <a href="b2b_multi.html">
+                                    <p class="b2b">B2B2B多供货商分销</p>
+                                    <p class="more_text">整合上游供应，管理下游分销，实现批发订货业务的全周期管理</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav_more solution" href="../../soluation/conten1">解决方案</a>
+                    <div class="more_box">
+                        <div class="container clearfix">
+                            <ul class="sol_list">
+                                <li><a href="solutions_cross.html" title="跨境电商解决方案">
+                                        <div class="fll">
+                                            <img src="../../../static/images/solutions_img01.jpg" alt="跨境电商解决方案" />
+                                        </div>
+                                        <div class="sol_text">
+                                            <p>跨境电商解决方案</p>
+                                            <p>跨境业务流通、全网会员营销、全渠道统一管理的一站式跨境电商解决方案</p>
+                                        </div>
+                                    </a></li>
+                                <li><a href="solutions_agriculture.html" title="农业电商解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img02.jpg"
+                                                alt="农业电商解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>农业电商解决方案</p>
+                                            <p>支持”自营+商家入驻模式“来迅速扩充工业和农产品品类</p>
+                                        </div>
+                                    </a></li>
+                                <li><a href="solutions_jiaju.html" title="家居行业解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img09.jpg"
+                                                alt="家居行业解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>家居行业解决方案</p>
+                                            <p>线上与线下深度融合、相互引导，实现体验闭环</p>
+                                        </div>
+                                    </a></li>
+                                <li><a href="solutions_car.html" title="汽配行业解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img10.jpg"
+                                                alt="汽配行业解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>汽配行业解决方案</p>
+                                            <p>线上+线下相结合，加速零售模式转型、电商落地</p>
+                                        </div>
+                                    </a></li>
+                                <li><a href="solutions_kxp.html" title="快消品行业解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img11.jpg"
+                                                alt="快消品行业解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>快消品行业解决方案</p>
+                                            <p>通过互联网工具优化业务流程、提升运转效率，帮助零售终端轻松管理</p>
+                                        </div>
+                                    </a></li>
+                                <li><a href="solutions_xls.html" title="新零售业务解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img12.jpg"
+                                                alt="新零售业务解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>新零售业务解决方案</p>
+                                            <p>有效结合移动社交流量、门店流量、抢占线上线下市场</p>
+                                        </div>
+                                    </a></li>
+                                <li style="border:0"><a href="solutions_medicine.html" title="医药行业解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img03.jpg"
+                                                alt="医药行业解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>医药行业解决方案</p>
+                                            <p>多渠道统一在线销售，结合分布式门店协同和商客关系持久经营的O2O业务</p>
+                                        </div>
+                                    </a></li>
+                                <li style="border:0"><a href="solutions_circulation.html" title="专业市场特征的流通电商">
+                                        <div class="fll"><img src="../../../static/images/solutions_img07.jpg"
+                                                alt="专业市场特征的流通电商" /></div>
+                                        <div class="sol_text">
+                                            <p>专业市场流通电商</p>
+                                            <p>针对传统的专业市场，提供开展多商家多店铺特征电商业务的系统解决方案</p>
+                                        </div>
+                                    </a></li>
+                                <li style="border:0"><a href="solutions_Integrated_commercial.html" title="综合商业体电商解决方案">
+                                        <div class="fll"><img src="../../../static/images/solutions_img08.jpg"
+                                                alt="综合商业体电商解决方案" /></div>
+                                        <div class="sol_text">
+                                            <p>综合商业体电商</p>
+                                            <p>充分展现消费者动员能力，持续开展以综合商业体为核心的客户忠诚度管理</p>
+                                        </div>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <a href="../tec/tec" class="technology">技术架构</a>
                 </li>
                 <li>
-                    <a href="about.html" class="about">关于我们</a>
+                    <a href="../about/about" class="about">关于我们</a>
                 </li>
             </ul>
         </div>
