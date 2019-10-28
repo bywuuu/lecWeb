@@ -1,25 +1,35 @@
+import json
+
 from django.shortcuts import render
-from .models import Barrage
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+
+
 # Create your views here.
+from .models import Barrage
+
+
 def about_page(request):
     return render(request,'about/aboutpage.html')
-import time
-def Danmu(request):
 
-    if request.method =='POST':
-        t = time.time()
-        text = request.POST.get('danmu')
-        if not text:
+def Danmu(request):
+    if request.method =="GET":
+        print('111111111111')
+        return render(request,'about/danmu.html')
+
+    elif request.method == 'POST':
+        result = request.POST.get('txt')
+        if not result:
             text_error = '输入为空请重新输入'
-            return render(request,'about/aboutpage.html',locals())
-        Barrage.objects.create(text=text,t = t)
-        history = Barrage.objects.all()
-        html = "发送成功"
-        request.session['text'] = text
-        return HttpResponse(html)
-    elif request.method =='GET':
-        return render(request,'about/aboutpage.html',locals())
+            return render(request,'about/danmu.html',locals())
+        else:
+            print(result)
+            Barrage.objects.create(text=result)
+            # history = Barrage.objects.all()
+
+            request.session['txt'] = result
+            return render(request,'about/danmu.html')
+
+
 
 
 

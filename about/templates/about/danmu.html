@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<style type="text/css">
+	#box{
+		width: 1000px;
+		height: 500px;
+		border:10px solid red;
+        <!--margin-left: 420px-->
+	}
+
+</style>
+<body>
+<form method="post" onsubmit="post_data();return false;">
+
+<p id="box" class="box"></p>
+<p style="margin-left:420px">
+<input  type="text" name="txt" class="txt" id="txt"  >
+<button  onclick="send()" >发送</button></p>
+<p><button onclick="gethistory()" >历史</button></p>
+
+</form>
+
+<script src="/static/js/common.js"></script>
+<script src="/static/js/jquery-1.11.3.min.js"></script>
+<script src="/static/js/jquery.slides.min.js"></script>
+<script src="/static/js/m_common.js"></script>
+<script src="/static/js/jquery.SuperSlide.2.1.1.js"></script>
+<script>
+
+<!--<script type="text/javascript">-->
+
+
+function post_data(){
+	// ajax数据提交代码
+	return false;
+}
+
+
+function $(str) {  //这个方法的参数为一个str
+ return document.getElementById(str);
+}
+
+
+function send() {
+ var word = $('txt').value; //拿input框里面的内容getElementById
+ var span = document.createElement('span');
+ var top = Math.random()*500;  //弹幕高度(随机?)
+ var color = "red"//颜色
+
+ // 样式
+ span.style.position = 'absolute';
+ span.style.top = top + "px";
+ span.style.color = color;//
+ span.style.left = "950px";//与左边框的距离；
+
+ var s = (Math.random() * 15);
+ span.setAttribute('speed', s);   //给span添加了一个speed的属性，值为speed 随机速度;
+ span.speed = s;
+ span.innerHTML = word; //获取对象的内容$('x').innerHTML 或 ②向对象插入内容(此处是插入)；
+ $('box').appendChild(span);  //把span内容追加到p里
+ //$('txt').value = "";  //点击提交后清除输入框的文字
+}
+
+
+
+
+setInterval(move, 200);//setInterval要求第一个参数必须是含Javascript命令的字符串或函数对象。
+function move() {
+ var spanArray = $('box').children;
+ var result = $('txt').value
+ for (var i = 0; i < spanArray.length; i++) {
+  spanArray[i].style.left =  parseInt(spanArray[i].style.left) - spanArray[i].speed +  'px';
+  //与左边框的距离实时变化
+	console.log(result)
+
+ }
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
