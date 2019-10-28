@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>add</title>
+    <link rel="icon" href="../../../static/favicon.ico" />
+    <link href="../../../static/css/css.css" rel="stylesheet" type="text/css">
+    <script src="../../../static/js/jquery-1.11.3.min.js"></script>
+    <script src="../../../static/js/jquery.slides.min.js"></script>
     <style>
         *{
             margin: 0;
@@ -10,10 +14,10 @@
         }
         #d1{
             width: 400px;
-            height: 440px;
+            height: 480px;
             border: solid 0px red;
             margin: 0 auto;
-            margin-top: 6%;
+            margin-top: 10%;
             margin-left: 35%;
             position: absolute;
             background-color: #eee;
@@ -24,7 +28,7 @@
             height: 300px;
             border: solid 0px blue;
             margin: 0 auto;
-            margin-top: 14%;
+            margin-top: 5%;
             margin-left: 70px;
             position: relative;
         }
@@ -103,33 +107,66 @@
         #a2{
             right: 0;
         }
+        #a3{
+            margin-left: 290px;
+            margin-top: 5px;
+        }
         img{
             border-radius: 20px;
         }
         #d1 p{
             margin-top: 10px;
+            margin-left: 40px;
         }
     </style>
 </head>
 <body>
+<div class="header fixed">
+        <div class="container clearfix">
+            <div class="logo">
+                <a href="javascript:;">
+                    <img src="../../../static/images/logo.png" alt="not find this pic">
+                </a>
+            </div>
+            <div class="nav_btn_box">
+                <p class="nav_btn">售前热线：025-58830029</p>
+                <p style="text-align: center;color: #aaa;line-height: 28px">周一至周五9：00-18：00</p>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="/index" class="mainpage">首页</a>
+                </li>
+                <li>
+                    <a class="nav_more" href="../../product">产品</a>
+                </li>
+                <li>
+                    <a href="../tec/tec" class="technology">技术架构</a>
+                </li>
+                <li>
+                    <a href="about.html" class="about">关于我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
         <div id="a1" ></div>
         <div id="a2"></div>
 <div id="d1">
-    <P>用户名：<input id="username" type="text"></P>
+    <P>留下你的昵称吧：<input id="username" type="text"></P>
+    <a href="../tec/show"><button id="a3">查看我的选择</button></a>
     <div id="d2">
-        <figure><img id="1" draggable="true" src="../../../static/images/solutions_img02.jpg" ></figure>
-        <figure><img id="2" draggable="true" src="../../../static/images/solutions_img12.jpg" ></figure>
-        <figure><img id="3" draggable="true" src="../../../static/images/solutions_img03.jpg" ></figure>
-        <figure><img id="4" draggable="true" src="../../../static/images/solutions_img07.jpg" ></figure>
-        <figure><img id="5" draggable="true" src="../../../static/images/solutions_img08.jpg" ></figure>
-        <figure><img id="6" draggable="true" src="../../../static/images/solutions_img09.jpg" ></figure>
-        <figure><img id="7" draggable="true" src="../../../static/images/solutions_img10.jpg" ></figure>
-        <figure><img id="8" draggable="true" src="../../../static/images/solutions_img11.jpg" ></figure>
-        <figure><img id="9" draggable="true" src="../../../static/images/solutions_img01.jpg" ></figure>
-        <figure><img id="10" draggable="true" src="../../../static/images/advantage_pic01.jpg" ></figure>
-        <figure><img id="11" draggable="true" src="../../../static/images/advantage_pic02.jpg" ></figure>
-        <figure><img id="12" draggable="true" src="../../../static/images/advantage_pic03.jpg" ></figure>
-        <figure><img id="12" draggable="true" src="../../../static/images/advantage_pic04.jpg" ></figure>
+        <figure><img id="Tec-13" draggable="true" src="../../../static/images/solutions_img02.jpg" ></figure>
+        <figure><img id="Tec-12" draggable="true" src="../../../static/images/solutions_img12.jpg" ></figure>
+        <figure><img id="Tec-11" draggable="true" src="../../../static/images/solutions_img03.jpg" ></figure>
+        <figure><img id="Tec-10" draggable="true" src="../../../static/images/solutions_img07.jpg" ></figure>
+        <figure><img id="Tec-9" draggable="true" src="../../../static/images/solutions_img08.jpg" ></figure>
+        <figure><img id="Tec-8" draggable="true" src="../../../static/images/solutions_img09.jpg" ></figure>
+        <figure><img id="Tec-7" draggable="true" src="../../../static/images/solutions_img10.jpg" ></figure>
+        <figure><img id="Tec-6" draggable="true" src="../../../static/images/solutions_img11.jpg" ></figure>
+        <figure><img id="Tec-5" draggable="true" src="../../../static/images/solutions_img01.jpg" ></figure>
+        <figure><img id="Tec-4" draggable="true" src="../../../static/images/advantage_pic01.jpg" ></figure>
+        <figure><img id="Tec-3" draggable="true" src="../../../static/images/advantage_pic02.jpg" ></figure>
+        <figure><img id="Tec-2" draggable="true" src="../../../static/images/advantage_pic03.jpg" ></figure>
+        <figure><img id="Tec-1" draggable="true" src="../../../static/images/advantage_pic04.jpg" ></figure>
     </div>
 </div>
 <script src="../../../static/js/jquery-1.11.3.js"></script>

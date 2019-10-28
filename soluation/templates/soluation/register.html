@@ -22,7 +22,7 @@
       <li style="height: 57px">
           <p style="height: 42px;">
               <input type="text" id="kaptcha" placeholder="验证码" style=" width: 200px; ">
-              <img src="/static/images/logo.png" onclick="changeVerifyCode()" id="yzmImg" style="width: 100px; height: 42px; margin-left: 10px; cursor: pointer;">
+              <img src="" alt="点击刷新" onclick="changeVerifyCode()" id="yzmImg" style="width: 100px; height: 42px; margin-left: 10px; cursor: pointer;">
           </p>
           <div class="error_tip" style="display: none;line-height: 30px" id="kaptchaerror">您输入的验证码不正确</div>
       </li>
@@ -53,37 +53,44 @@ var img_list=[{'7364':'/static/images/solutions/YZ1.jpeg'},{'K4P8':'/static/imag
       var kaptcha = $("#kaptcha").val();
       var smscode = $("#smscode").val();
       var data = {'mobilenum':mobilenum,'kaptcha':kaptcha,'smscode':smscode}
+      var a = true
+      var b = true
+      var c = true
         if(mobilenum==null){
             $("#mobilenumerror").html("您输入的手机号码不正确");
             $("#mobilenumerror").show();
+            a = false
         }
         if(kaptcha != Object.keys(img)){
           console.log(Object.keys(img))
             $("#smscodeerror").html("验证码有误!");
             $("#smscodeerror").show();
+            b = false
         }
         if(smscode==null){
-             $("#smscodeerror").html("验证码只能为数字!");
-             $("#smscodeerror").show();
+            $("#smscodeerror").html("验证码只能为数字!");
+            $("#smscodeerror").show();
+            c = false
         }
-
-        $.ajax({
-            type:'post',
-            contentType:'application/json',
-            url:'http://127.0.0.1:8000/soluation/server',
-            data:JSON.stringify(data),
-            beforeSend:function (request) {
-                request.setRequestHeader(mobilenum,kaptcha,smscode);
-            },
-            success:function (result) {
-                if(result.code == 200){
-                    alert('提交成功点击返回');
-                    window.location.href = '/index/';
-                }else {
-                    alert(result.error)
-                }
-            }
-        })
+        if(a==true && b ==true && c==true){
+          $.ajax({
+              type:'post',
+              contentType:'application/json',
+              url:'http://127.0.0.1:8000/soluation/server',
+              data:JSON.stringify(data),
+              beforeSend:function (request) {
+                  request.setRequestHeader(mobilenum,kaptcha,smscode);
+              },
+              success:function (result) {
+                  if(result.code == 200){
+                      alert('提交成功点击返回');
+                      window.location.href = '/index/';
+                  }else {
+                      alert(result.error)
+                  }
+              }
+          })
+        }
     }
 </script>
 </body>

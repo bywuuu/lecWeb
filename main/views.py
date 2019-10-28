@@ -8,7 +8,7 @@ def index(request):
 def get_showshare(request):
     return render(request,'main/a.html')
 def get_showAll(request):
-    return render(request,'main/recordrtc_demo1.html')
+    return render(request,'main/recordrtc_demo.html')
 
 def game_choose(request):
     return render(request,'main/index_game.html')
