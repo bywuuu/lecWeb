@@ -6,37 +6,163 @@
     <link rel="stylesheet" href="/static/css/pure-min.css">
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/style_video.css">
+    <style>
+        .box {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        .barrage-container-wrap {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            /* background: url('./img/bg.jpg') no-repeat; */
+            background-size: 100% 100%;
+        }
+
+        .barrage-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 30px;
+            cursor: default;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .barrage-item {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            white-space: nowrap;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .barrage-item .barrage-tip {
+            display: none;
+            position: absolute;
+            top: -26px;
+            padding: 7px 15px;
+            line-height: 12px;
+            font-size: 12px;
+            color: #f20606;
+            background-color: #fff;
+            white-space: nowrap;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, .1);
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, .1);
+            -webkit-transform-origin: 15px 100%;
+            -ms-transform-origin: 15px 100%;
+            transform-origin: 15px 100%;
+            webkit-animation: tipScale cubic-bezier(.22, .58, .12, .98) .4s;
+            animation: tipScale cubic-bezier(.22, .58, .12, .98) .4s;
+        }
+
+        .send-wrap {
+            margin-top: 20px;
+        }
+
+        .input {
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            outline: none;
+            -webkit-appearance: none;
+            border-radius: 5px;
+            padding: 0;
+            padding-left: 10px;
+        }
+
+        .send-btn {
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            font-weight: bold;
+            color: #fff;
+            background: #93d0ea;
+            text-shadow: 1px 1px 1px #333;
+            border-radius: 5px;
+            margin: 0 20px 20px 0;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            padding: 5px 15px;
+        }
+
+        @-webkit-keyframes tipScale {
+
+        0
+        {
+            -webkit-transform: scale(0)
+        ;
+            transform: scale(0)
+        ;
+        }
+
+        50
+        %
+        {
+            -webkit-transform: scale(1.1)
+        ;
+            transform: scale(1.1)
+        ;
+        }
+
+        100
+        %
+        {
+            -webkit-transform: scale(1)
+        ;
+            transform: scale(1)
+        ;
+        }
+        }
+    </style>
 </head>
 <body background="/static/images/bj.png">
 <div class="wrapper">
     <a href="index">返回</a>
-    <div class="pure-g">
-        <div class="pure-u-1">
-            <div class="player">
-                <video id="player" width="600" height="450">您的浏览器不支持HTML5
-                    <source src="/static/videos/echo-hereweare.mp4"></source>
-                </video>
-                <div class="pure-g" id="controller">
-                    <div class="pure-u-1-12">
-                        <span id="play" class="icon icon-play"></span>
-                        <span id="stop" class="icon icon-stop"></span>
-                    </div>
-                    <div class="pure-u-13-24 overflow-h">
-                        <div id="progressBar" class="controlBar">
-                            <div id="innerBar" class="controlInner"></div>
+    <div class="box" style="border: 2px solid orangered; width: 600px; height: 450px;">
+        <div class="barrage-container-wrap clearfix" style="width: 600px; height: 450px;">
+            <div class="pure-g">
+                <div class="pure-u-1">
+                    <div class="player">
+                        <video id="player" width="600" height="450">您的浏览器不支持HTML5
+                            <source src="/static/videos/echo-hereweare.mp4"></source>
+                        </video>
+                        <div class="pure-g" id="controller">
+                            <div class="pure-u-1-12">
+                                <span id="play" class="icon icon-play"></span>
+                                <span id="stop" class="icon icon-stop"></span>
+                            </div>
+                            <div class="pure-u-13-24 overflow-h">
+                                <div id="progressBar" class="controlBar">
+                                    <div id="innerBar" class="controlInner"></div>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-4">
+                                <span id="timer">0:00</span>
+                                <span id="volume" class="icon icon-volume"></span>
+                                <div id="volume-control" class="controlBar">
+                                    <div id="volume-inner" class="controlInner"></div>
+                                </div>
+                            </div>
+                            <div class="pure-u-1-8 overflow-h">
+                                <span id="expand" class="icon icon-expand"></span>
+                                <span id="upload" class="icon icon-upload"></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="pure-u-1-4">
-                        <span id="timer">0:00</span>
-                        <span id="volume" class="icon icon-volume"></span>
-                        <div id="volume-control" class="controlBar">
-                            <div id="volume-inner" class="controlInner"></div>
-                        </div>
-                    </div>
-                    <div class="pure-u-1-8 overflow-h">
-                        <span id="expand" class="icon icon-expand"></span>
-                        <span id="upload" class="icon icon-upload"></span>
-                    </div>
+
+                    <div class="barrage-container" style="color: orangered"></div>
+
                 </div>
             </div>
         </div>
@@ -47,6 +173,13 @@
         </div>
     </div>
 </div>
+
+<div class="send-wrap" style="margin-left: 650px">
+    <input type="text" class="input" placeholder="弹幕发送">
+    <span class="send-btn">发送</span>
+</div>
+<br>
+
 
 <div style="margin:0 auto; width:600px; height:150px; border:1px solid #F00; padding-left:10px;padding-top: 20px;">
     <div class="input-group" style="width: 100%;">
@@ -69,7 +202,8 @@
     <br>
     <div>
         <button id="bf" type="button" class="btn btn-success btn-lg btn-block" onClick="dihejk()">Go-点击开始解析</button>
-        <button id="bf" type="button" class="btn btn-success btn-lg btn-block" onClick="dihejk()">New-点击全屏解析</button>
+        <button id="bf" type="button" class="btn btn-success btn-lg btn-block" onClick="dihejk()">New-点击全屏解析
+        </button>
     </div>
 </div>
 <div class="language">
@@ -92,10 +226,210 @@
         var cljurl = document.getElementById("player");
         window.open(jkv + diz, "_blank");
     }
-
 </script>
+<script>
+    ;(function () {
+        var barrageArray = [
+            {
+                url: '用户头像',
+                text: '秋天爱美丽',
+                level: 10
+            },
+            {
+                url: '用户头像',
+                text: '今天很开心啊',
+                level: 10
+            },
+            {
+                url: '用户头像',
+                text: 'winter has come',
+                level: 10
+            },
+            {
+                url: '',
+                text: '土耳其现在形势',
+                level: 10
+            },
+            {
+                url: '',
+                text: '没事早点回家吃饭啊',
+                level: 10
+            },
+            {
+                url: '',
+                text: '这主角真实醉了，不会回啊',
+                level: 10
+            },
+            {
+                url: '',
+                text: '背景音乐真好听啊',
+                level: 10
+            },
+            {
+                url: '',
+                text: '背景音乐是***',
+                level: 10
+            },
+            {
+                url: '',
+                text: '经费在燃烧啊',
+                level: 10
+            },
+            {
+                url: '',
+                text: '国产良心剧',
+                level: 10
+            },
+        ];
+        var barrageColorArray = [
+            '#000000', '#0099CC', '#333333', '#009966', '#FFFF66', '#9933FF', '#FFFF99', '#CCCCFF', '#CC9933', '#FFFF66'
+        ];
+        var barrageTipWidth = 50; //提示语的长度
 
+        var barrageBoxWrap = document.querySelector('.barrage-container-wrap');
+        ;
+        var barrageBox = document.querySelector('.barrage-container');
+        var inputBox = document.querySelector('.input');
+        var sendBtn = document.querySelector('.send-btn');
+
+        //容器的宽高度
+        var barrageWidth = ~~window.getComputedStyle(barrageBoxWrap).width.replace('px', '');
+        var barrageHeight = ~~window.getComputedStyle(barrageBoxWrap).height.replace('px', '');
+
+        //发送
+        function sendMsg() {
+            var inputValue = inputBox.value;
+            inputValue.replace(/\ +/g, "");
+
+            if (inputValue.length <= 0) {
+                alert('请输入');
+                return false;
+            }
+
+            //生成弹幕
+            createBarrage(inputValue, true);
+            inputBox.value = '';
+        }
+
+
+        //创建弹幕
+        function createBarrage(msg, isSendMsg) {
+            var divNode = document.createElement('div');
+            var spanNode = document.createElement('span');
+
+            divNode.innerHTML = msg;
+            divNode.classList.add('barrage-item');
+            barrageBox.appendChild(divNode);
+
+            spanNode.innerHTML = '举报';
+            spanNode.classList.add('barrage-tip');
+            divNode.appendChild(spanNode);
+
+            barrageOffsetLeft = getRandom(barrageWidth, barrageWidth * 2);
+            barrageOffsetLeft = isSendMsg ? barrageWidth : barrageOffsetLeft;
+            barrageOffsetTop = getRandom(10, barrageHeight - 10);
+            barrageColor = barrageColorArray[Math.floor(Math.random() * (barrageColorArray.length))];
+            // 弹幕颜色
+            //barrageColor = barrageColorArray[3];
+
+            //执行初始化滚动
+            initBarrage.call(divNode, {
+                left: barrageOffsetLeft,
+                top: barrageOffsetTop,
+                color: barrageColor
+            });
+        }
+
+        //初始化弹幕移动(速度，延迟)
+        function initBarrage(obj) {
+            //初始化
+            obj.top = obj.top || 0;
+            obj.class = obj.color || '#fff';
+            this.style.left = obj.left + 'px';
+            this.style.top = obj.top + 'px';
+            this.style.color = obj.color;
+
+            //添加属性
+            this.distance = 0;
+            this.width = ~~window.getComputedStyle(this).width.replace('px', '');
+            this.offsetLeft = obj.left;
+            this.timer = null;
+
+            //弹幕子节点
+            var barrageChileNode = this.children[0];
+            barrageChileNode.style.left = (this.width - barrageTipWidth) / 2 + 'px';
+
+            //运动
+            barrageAnimate(this);
+
+            //停止
+            this.onmouseenter = function () {
+                barrageChileNode.style.display = 'block';
+                cancelAnimationFrame(this.timer);
+            };
+
+            this.onmouseleave = function () {
+                barrageChileNode.style.display = 'none';
+                barrageAnimate(this);
+            };
+
+            //举报
+            barrageChileNode.onclick = function () {
+                alert('举报成功');
+            }
+        }
+
+        //弹幕动画
+        function barrageAnimate(obj) {
+            move(obj);
+
+            if (Math.abs(obj.distance) < obj.width + obj.offsetLeft) {
+                obj.timer = requestAnimationFrame(function () {
+                    barrageAnimate(obj);
+                });
+            } else {
+                cancelAnimationFrame(obj.timer);
+                //删除节点
+                obj.parentNode.removeChild(obj);
+            }
+        }
+
+        //移动
+        function move(obj) {
+            obj.distance--;
+            obj.style.transform = 'translateX(' + obj.distance + 'px)';
+            obj.style.webkitTransform = 'translateX(' + obj.distance + 'px)';
+        }
+
+        //随机获取高度
+        function getRandom(start, end) {
+            return start + (Math.random() * (end - start));
+        }
+
+
+        /*******初始化事件**********/
+        //系统数据
+        barrageArray.forEach(function (item, index) {
+            createBarrage(item.text, false);
+        });
+
+        //点击发送
+        sendBtn.onclick = sendMsg;   //点击发送
+
+        //回车
+        inputBox.onkeydown = function (e) {
+            e = e || window.event;
+            if (e.keyCode == 13) {
+                sendBtn.click();
+            }
+        }
+
+    })()
+
+    //兼容写法
+</script>
 <script src="/static/js/jquery-1.9.0.min.js"></script>
 <script src="/static/js/main.js"></script>
+</div>
 </body>
 </html>
