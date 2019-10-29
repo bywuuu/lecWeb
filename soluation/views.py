@@ -8,6 +8,9 @@ from django.shortcuts import render
 
 
 # 立即免费体验
+from about.models import Barrage
+
+
 def conten1(request):
     if request.method == 'GET':
         return render(request, 'soluation/soluation.html')
@@ -126,8 +129,6 @@ def video_player(request):
 
     print(link_list)
     return render(request, 'soluation/video_player.html', locals())
-
-
 
 def test(request):
     return None
